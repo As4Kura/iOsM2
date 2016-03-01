@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  iHelps
 //
-//  Created by Moi on 01/03/2016.
+//  Created by WeUnited on 01/03/2016.
 //  Copyright © 2016 NXN. All rights reserved.
 //
 
