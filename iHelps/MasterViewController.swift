@@ -12,6 +12,7 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
+    let dao = DAOServiceGlobal()
 
 
     override func viewDidLoad() {
@@ -38,6 +39,10 @@ class MasterViewController: UITableViewController {
     }
 
     func insertNewObject(sender: AnyObject) {
+        
+        dao.creerServiceG("3 jours",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"titre",descriptionService: "description")
+        dao.retrieve()
+        
         objects.insert(NSDate(), atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
