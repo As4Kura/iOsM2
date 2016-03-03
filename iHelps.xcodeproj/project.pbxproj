@@ -22,6 +22,14 @@
 		EDE282D61C874D0500B34565 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDE282D41C874D0500B34565 /* Model.xcdatamodeld */; };
 		EDE282D81C8752E200B34565 /* FServiceGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE282D71C8752E200B34565 /* FServiceGlobal.swift */; };
 		EDE282FB1C87568700B34565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE282FA1C87568700B34565 /* AppDelegate.swift */; };
+		EDEEAD221C88A65500BE6EFE /* FUtilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD211C88A65500BE6EFE /* FUtilisateur.swift */; };
+		EDEEAD241C88BA2500BE6EFE /* TestsBdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD231C88BA2500BE6EFE /* TestsBdd.swift */; };
+		EDEEAD2B1C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD251C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift */; };
+		EDEEAD2C1C88C3D100BE6EFE /* MessageMur.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD261C88C3D100BE6EFE /* MessageMur.swift */; };
+		EDEEAD2D1C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD271C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift */; };
+		EDEEAD2E1C88C3D100BE6EFE /* Categorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD281C88C3D100BE6EFE /* Categorie.swift */; };
+		EDEEAD2F1C88C3D100BE6EFE /* InstanceService+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD291C88C3D100BE6EFE /* InstanceService+CoreDataProperties.swift */; };
+		EDEEAD301C88C3D100BE6EFE /* InstanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD2A1C88C3D100BE6EFE /* InstanceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,14 @@
 		EDE282D51C874D0500B34565 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		EDE282D71C8752E200B34565 /* FServiceGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FServiceGlobal.swift; sourceTree = "<group>"; };
 		EDE282FA1C87568700B34565 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDEEAD211C88A65500BE6EFE /* FUtilisateur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUtilisateur.swift; sourceTree = "<group>"; };
+		EDEEAD231C88BA2500BE6EFE /* TestsBdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsBdd.swift; sourceTree = "<group>"; };
+		EDEEAD251C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessageMur+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EDEEAD261C88C3D100BE6EFE /* MessageMur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageMur.swift; sourceTree = "<group>"; };
+		EDEEAD271C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Categorie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EDEEAD281C88C3D100BE6EFE /* Categorie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categorie.swift; sourceTree = "<group>"; };
+		EDEEAD291C88C3D100BE6EFE /* InstanceService+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InstanceService+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EDEEAD2A1C88C3D100BE6EFE /* InstanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +109,12 @@
 		ED23EE4A1C88457000E2CC70 /* Modele */ = {
 			isa = PBXGroup;
 			children = (
+				EDEEAD251C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift */,
+				EDEEAD261C88C3D100BE6EFE /* MessageMur.swift */,
+				EDEEAD271C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift */,
+				EDEEAD281C88C3D100BE6EFE /* Categorie.swift */,
+				EDEEAD291C88C3D100BE6EFE /* InstanceService+CoreDataProperties.swift */,
+				EDEEAD2A1C88C3D100BE6EFE /* InstanceService.swift */,
 				ED23EE461C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift */,
 				ED23EE471C883A5000E2CC70 /* Utilisateur.swift */,
 				ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */,
@@ -124,10 +146,11 @@
 		ED395B221C86342C00FF6D49 /* iHelps */ = {
 			isa = PBXGroup;
 			children = (
+				EDE282FA1C87568700B34565 /* AppDelegate.swift */,
 				ED23EE4A1C88457000E2CC70 /* Modele */,
 				EDE282FC1C875A3900B34565 /* Facades */,
-				EDE282FA1C87568700B34565 /* AppDelegate.swift */,
 				ED23EE401C8830AA00E2CC70 /* Facade.swift */,
+				EDEEAD231C88BA2500BE6EFE /* TestsBdd.swift */,
 				ED395B251C86342C00FF6D49 /* MasterViewController.swift */,
 				ED395B271C86342C00FF6D49 /* DetailViewController.swift */,
 				ED395B291C86342C00FF6D49 /* Main.storyboard */,
@@ -161,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				EDE282D71C8752E200B34565 /* FServiceGlobal.swift */,
+				EDEEAD211C88A65500BE6EFE /* FUtilisateur.swift */,
 			);
 			name = Facades;
 			sourceTree = "<group>";
@@ -298,13 +322,21 @@
 			files = (
 				ED23EE451C883A1F00E2CC70 /* ServiceGlobal.swift in Sources */,
 				ED395B281C86342C00FF6D49 /* DetailViewController.swift in Sources */,
+				EDEEAD221C88A65500BE6EFE /* FUtilisateur.swift in Sources */,
 				ED395B261C86342C00FF6D49 /* MasterViewController.swift in Sources */,
+				EDEEAD2F1C88C3D100BE6EFE /* InstanceService+CoreDataProperties.swift in Sources */,
+				EDEEAD2D1C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift in Sources */,
+				EDEEAD2C1C88C3D100BE6EFE /* MessageMur.swift in Sources */,
 				EDE282D61C874D0500B34565 /* Model.xcdatamodeld in Sources */,
 				ED23EE481C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift in Sources */,
 				ED23EE441C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift in Sources */,
 				ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */,
+				EDEEAD2B1C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift in Sources */,
+				EDEEAD301C88C3D100BE6EFE /* InstanceService.swift in Sources */,
 				ED23EE491C883A5000E2CC70 /* Utilisateur.swift in Sources */,
 				EDE282FB1C87568700B34565 /* AppDelegate.swift in Sources */,
+				EDEEAD2E1C88C3D100BE6EFE /* Categorie.swift in Sources */,
+				EDEEAD241C88BA2500BE6EFE /* TestsBdd.swift in Sources */,
 				EDE282D81C8752E200B34565 /* FServiceGlobal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

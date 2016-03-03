@@ -13,6 +13,7 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
     let facade = Facade()
+    let testsBdd = TestsBdd ()
 
 
     override func viewDidLoad() {
@@ -37,28 +38,14 @@ class MasterViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
     func insertNewObject(sender: AnyObject) {
         
-        facade.creerServiceG("42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"nouveau titre",descriptionService: "description")
-        
-        let resultats = Array<ServiceGlobal>(facade.getAllServiceG())
-        
-        if resultats.count > 0
-        {
-            print("dans if")
-            for resultat in resultats
-            { // 6
-                if let t = resultat.titre // 7
-                {
-                    print(t)
-                }
-                
-            }
-           
-        }
-        print("apres if")
-            
+        ///////////////TESTS EN BDD////////////
+       testsBdd.fonctionDeTestsEnBase()
+        ///////////////TESTS EN BDD////////////        
         
         objects.insert(NSDate(), atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)

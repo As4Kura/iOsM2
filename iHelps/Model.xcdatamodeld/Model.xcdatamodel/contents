@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+    <entity name="Categorie" representedClassName=".Categorie" syncable="YES">
+        <attribute name="nomCategorie" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="InstanceService" representedClassName=".InstanceService" syncable="YES">
+        <attribute name="commentaireConso" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commentaireProposeur" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateRealisation" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="noteConso" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="noteProposeur" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="consommateur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Utilisateur" inverseName="servicesRecus" inverseEntity="Utilisateur" syncable="YES"/>
+        <relationship name="serviceGlobal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ServiceGlobal" inverseName="instancesService" inverseEntity="ServiceGlobal" syncable="YES"/>
+    </entity>
+    <entity name="MessageMur" representedClassName=".MessageMur" syncable="YES">
+        <attribute name="contenu" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="ServiceGlobal" representedClassName=".ServiceGlobal" syncable="YES">
         <attribute name="descriptionService" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="idServiceGlobal" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="periodeDebut" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="periodeFin" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="temps" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categorie" syncable="YES"/>
+        <relationship name="instancesService" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="InstanceService" inverseName="serviceGlobal" inverseEntity="InstanceService" syncable="YES"/>
+        <relationship name="messagesMur" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MessageMur" syncable="YES"/>
         <relationship name="proposeur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Utilisateur" inverseName="servicesProposes" inverseEntity="Utilisateur" syncable="YES"/>
     </entity>
     <entity name="Utilisateur" representedClassName=".Utilisateur" syncable="YES">
         <attribute name="adresseUtilisateur" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="idUtilisateur" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="loginUtilisateur" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mdpUtilisateur" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="servicesProposes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ServiceGlobal" inverseName="proposeur" inverseEntity="ServiceGlobal" syncable="YES"/>
+        <relationship name="servicesRecus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="InstanceService" inverseName="consommateur" inverseEntity="InstanceService" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Utilisateur" positionX="-63" positionY="-18" width="128" height="120"/>
-        <element name="ServiceGlobal" positionX="169" positionY="-81" width="128" height="150"/>
+        <element name="ServiceGlobal" positionX="-63" positionY="-36" width="128" height="178"/>
+        <element name="Utilisateur" positionX="-252" positionY="161" width="128" height="118"/>
+        <element name="Categorie" positionX="97" positionY="5" width="128" height="58"/>
+        <element name="MessageMur" positionX="-2" positionY="198" width="128" height="60"/>
+        <element name="InstanceService" positionX="-254" positionY="-54" width="128" height="150"/>
     </elements>
 </model>
