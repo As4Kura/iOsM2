@@ -19,16 +19,14 @@ class FUtilisateur{
         
         let SGlobal = NSEntityDescription.insertNewObjectForEntityForName("Utilisateur", inManagedObjectContext: contexte)
         
-        
-        //SGlobal.setValue(1, forKey: "idUtilisateur")
         SGlobal.setValue(login, forKey: "loginUtilisateur")
         SGlobal.setValue(mdp, forKey: "mdpUtilisateur")
         SGlobal.setValue(adresse, forKey: "adresseUtilisateur")
         
-        //6
+        
         do
         {
-            try contexte.save() // 5
+            try contexte.save()
             print ("user sauvegardé")
             
         }

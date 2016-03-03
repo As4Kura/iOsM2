@@ -20,10 +20,10 @@ class Facade
     
     func creerServiceG(proposeur : Utilisateur, temps : String, periodeDebut : NSDate , periodeFin : NSDate ,titre : String , descriptionService : String)
     {
-        fServiceG.creerServiceG(proposeur, temps: temps, periodeDebut : periodeDebut , periodeFin : periodeFin ,titre : titre , descriptionService : descriptionService)        
+        fServiceG.creerServiceG(proposeur, temps: temps, periodeDebut : periodeDebut , periodeFin : periodeFin ,titre : titre , descriptionService : descriptionService)
     }
     
-    func getAllServiceG()->Array<ServiceGlobal>
+    func getAllServiceG()-> Array<ServiceGlobal>
     {
         return fServiceG.getAllServiceG()
     }
@@ -34,7 +34,7 @@ class Facade
        fUtilisateur.creerUtilisateur(login , mdp: mdp , adresse: adresse )        
     }
     
-    func getAllUtilisateur()->Array<Utilisateur>
+    func getAllUtilisateur() ->Array<Utilisateur>
     {
         return fUtilisateur.getAllUtilisateur()
     }
@@ -55,7 +55,8 @@ class Facade
                 let managedObjectData:NSManagedObject = managedObject as! NSManagedObject
                 managedContext.deleteObject(managedObjectData)
             }
-        } catch let error as NSError {
+        }
+        catch let error as NSError {
             print("Detele all data in \(entity) error : \(error) \(error.userInfo)")
         }
     }

@@ -17,7 +17,6 @@ class FServiceGlobal{
     func creerServiceG(proposeur : Utilisateur , temps : String, periodeDebut : NSDate , periodeFin : NSDate ,titre : String , descriptionService : String)
     {
         
-        //3
         let SGlobal = NSEntityDescription.insertNewObjectForEntityForName("ServiceGlobal", inManagedObjectContext: contexte)
         
         SGlobal.setValue(titre, forKey: "titre")
@@ -30,7 +29,7 @@ class FServiceGlobal{
        
         do
         {
-            try contexte.save() // 5
+            try contexte.save()
             print ("ServiceG sauvegardé")
             
         }
