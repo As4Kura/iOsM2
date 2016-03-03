@@ -12,7 +12,7 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
-    let dao = DAOServiceGlobal()
+    let facade = Facade()
 
 
     override func viewDidLoad() {
@@ -40,8 +40,25 @@ class MasterViewController: UITableViewController {
 
     func insertNewObject(sender: AnyObject) {
         
-        dao.creerServiceG("3 jours",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"titre",descriptionService: "description")
-        dao.retrieve()
+        facade.creerServiceG("42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"nouveau titre",descriptionService: "description")
+        
+        let resultats = Array<ServiceGlobal>(facade.getAllServiceG())
+        
+        if resultats.count > 0
+        {
+            print("dans if")
+            for resultat in resultats
+            { // 6
+                if let t = resultat.titre // 7
+                {
+                    print(t)
+                }
+                
+            }
+           
+        }
+        print("apres if")
+            
         
         objects.insert(NSDate(), atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
