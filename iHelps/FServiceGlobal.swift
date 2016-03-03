@@ -15,8 +15,9 @@ let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDele
 //2
 let contexte: NSManagedObjectContext = appDel.managedObjectContext
 
-class DAOServiceGlobal{
+class FServiceGlobal{
     
+    //func creerServiceG(t String, pD : NSDate , pF : NSDate ,tit : String , dS : String)
     func creerServiceG(temps : String, periodeDebut : NSDate , periodeFin : NSDate ,titre : String , descriptionService : String)
     {
         
@@ -34,16 +35,21 @@ class DAOServiceGlobal{
         
         
         //6
-        do {
+        do
+        {
             try contexte.save() // 5
             print ("sauvegardé")
             
-        } catch {
+        }
+        catch
+        {
             print("Problème lors de la sauvegarde !")
         }
     }
     
-    func retrieve() {
+    
+    func getAllServiceG() ->Array<ServiceGlobal>
+    {
         // 1
         let requete = NSFetchRequest(entityName: "ServiceGlobal")
         
@@ -53,22 +59,17 @@ class DAOServiceGlobal{
         // 3
         requete.returnsObjectsAsFaults = false
         
-        do {
-            let resultats = try contexte.executeFetchRequest(requete) // 4
-            
-            // 5
-            if resultats.count > 0 {
-                for resultat in resultats as! [NSManagedObject] { // 6
-                    print(resultat.valueForKey("titre")!) // 7
-                    if let t = resultat.valueForKey("temps")
-                    {
-                        print(t)
-                    }
-                }
-            }
-        } catch {
-            print("Echec de la requête Fetch !")
+        do
+        {
+            return try contexte.executeFetchRequest(requete)as! [ServiceGlobal]
         }
+            
+        catch
+        {
+            print("Echec de la requête Fetch !")
+            return [ServiceGlobal] ()
+        }
+        
         
     }
     

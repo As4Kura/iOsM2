@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE401C8830AA00E2CC70 /* Facade.swift */; };
+		ED23EE441C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */; };
+		ED23EE451C883A1F00E2CC70 /* ServiceGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE431C883A1F00E2CC70 /* ServiceGlobal.swift */; };
+		ED23EE481C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE461C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift */; };
+		ED23EE491C883A5000E2CC70 /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE471C883A5000E2CC70 /* Utilisateur.swift */; };
 		ED395B261C86342C00FF6D49 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED395B251C86342C00FF6D49 /* MasterViewController.swift */; };
 		ED395B281C86342C00FF6D49 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED395B271C86342C00FF6D49 /* DetailViewController.swift */; };
 		ED395B2B1C86342C00FF6D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED395B291C86342C00FF6D49 /* Main.storyboard */; };
@@ -15,7 +20,7 @@
 		ED395B3B1C86342C00FF6D49 /* iHelpsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED395B3A1C86342C00FF6D49 /* iHelpsTests.swift */; };
 		ED395B461C86342C00FF6D49 /* iHelpsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED395B451C86342C00FF6D49 /* iHelpsUITests.swift */; };
 		EDE282D61C874D0500B34565 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDE282D41C874D0500B34565 /* Model.xcdatamodeld */; };
-		EDE282D81C8752E200B34565 /* DAOServiceGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE282D71C8752E200B34565 /* DAOServiceGlobal.swift */; };
+		EDE282D81C8752E200B34565 /* FServiceGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE282D71C8752E200B34565 /* FServiceGlobal.swift */; };
 		EDE282FB1C87568700B34565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE282FA1C87568700B34565 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED23EE401C8830AA00E2CC70 /* Facade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
+		ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ServiceGlobal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ED23EE431C883A1F00E2CC70 /* ServiceGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceGlobal.swift; sourceTree = "<group>"; };
+		ED23EE461C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Utilisateur+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ED23EE471C883A5000E2CC70 /* Utilisateur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
 		ED395B201C86342C00FF6D49 /* iHelps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHelps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED395B251C86342C00FF6D49 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		ED395B271C86342C00FF6D49 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +61,7 @@
 		ED395B451C86342C00FF6D49 /* iHelpsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iHelpsUITests.swift; sourceTree = "<group>"; };
 		ED395B471C86342C00FF6D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDE282D51C874D0500B34565 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		EDE282D71C8752E200B34565 /* DAOServiceGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOServiceGlobal.swift; sourceTree = "<group>"; };
+		EDE282D71C8752E200B34565 /* FServiceGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FServiceGlobal.swift; sourceTree = "<group>"; };
 		EDE282FA1C87568700B34565 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED23EE4A1C88457000E2CC70 /* Modele */ = {
+			isa = PBXGroup;
+			children = (
+				ED23EE461C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift */,
+				ED23EE471C883A5000E2CC70 /* Utilisateur.swift */,
+				ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */,
+				ED23EE431C883A1F00E2CC70 /* ServiceGlobal.swift */,
+			);
+			name = Modele;
+			sourceTree = "<group>";
+		};
 		ED395B171C86342C00FF6D49 = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +124,10 @@
 		ED395B221C86342C00FF6D49 /* iHelps */ = {
 			isa = PBXGroup;
 			children = (
-				EDE282FC1C875A3900B34565 /* DAO */,
+				ED23EE4A1C88457000E2CC70 /* Modele */,
+				EDE282FC1C875A3900B34565 /* Facades */,
 				EDE282FA1C87568700B34565 /* AppDelegate.swift */,
+				ED23EE401C8830AA00E2CC70 /* Facade.swift */,
 				ED395B251C86342C00FF6D49 /* MasterViewController.swift */,
 				ED395B271C86342C00FF6D49 /* DetailViewController.swift */,
 				ED395B291C86342C00FF6D49 /* Main.storyboard */,
@@ -134,12 +157,12 @@
 			path = iHelpsUITests;
 			sourceTree = "<group>";
 		};
-		EDE282FC1C875A3900B34565 /* DAO */ = {
+		EDE282FC1C875A3900B34565 /* Facades */ = {
 			isa = PBXGroup;
 			children = (
-				EDE282D71C8752E200B34565 /* DAOServiceGlobal.swift */,
+				EDE282D71C8752E200B34565 /* FServiceGlobal.swift */,
 			);
-			name = DAO;
+			name = Facades;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,11 +296,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED23EE451C883A1F00E2CC70 /* ServiceGlobal.swift in Sources */,
 				ED395B281C86342C00FF6D49 /* DetailViewController.swift in Sources */,
 				ED395B261C86342C00FF6D49 /* MasterViewController.swift in Sources */,
 				EDE282D61C874D0500B34565 /* Model.xcdatamodeld in Sources */,
+				ED23EE481C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift in Sources */,
+				ED23EE441C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift in Sources */,
+				ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */,
+				ED23EE491C883A5000E2CC70 /* Utilisateur.swift in Sources */,
 				EDE282FB1C87568700B34565 /* AppDelegate.swift in Sources */,
-				EDE282D81C8752E200B34565 /* DAOServiceGlobal.swift in Sources */,
+				EDE282D81C8752E200B34565 /* FServiceGlobal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
