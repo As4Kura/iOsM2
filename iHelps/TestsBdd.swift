@@ -2,7 +2,7 @@
 //  TestsBdd.swift
 //  iHelps
 //
-//  Created by Moi on 03/03/2016.
+//  Created by nicolas catanoso on 03/03/2016.
 //  Copyright © 2016 NXN. All rights reserved.
 //
 
@@ -20,58 +20,91 @@ let facade = Facade()
 
 func fonctionDeTestsEnBase()
 {
-    facade.deleteAllData( "ServiceGlobal")
-    facade.deleteAllData( "Utilisateur")
+    facade.deleteBDD()
     
-    facade.creerUtilisateur("login30", mdp: "mdp1", adresse: "adresse")
+    facade.creerUtilisateur("login0", mdp: "mdp1", adresse: "adresse")
+    facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "adresse")
     
-    let resultats = Array<Utilisateur>(facade.getAllUtilisateur())
+    let utilisateurs = Array<Utilisateur>(facade.getAllUtilisateur())
     
-    if resultats.count > 0
+    if utilisateurs.count > 0
     {
-        facade.creerServiceG(resultats[0], temps: "42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"1er service ",descriptionService: "description")
-        facade.creerServiceG(resultats[0], temps: "42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"2eme service",descriptionService: "description")
+        facade.creerServiceG(utilisateurs[0], temps: "42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"1er service ",descriptionService: "description")
+        facade.creerServiceG(utilisateurs[0], temps: "42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"2eme service",descriptionService: "description")
+                
         
-        var i = 0
-        for resultat in resultats
+       
+        for util in utilisateurs
         {
-            if let t = resultat.loginUtilisateur
+            if let u = util.loginUtilisateur
             {
-                print(String(i)+"login:"+t)
+                print("login:"+u)
                 
             }
             
-            i++
         }
         
     }
     
     
-    let resultatsS = Array<ServiceGlobal>(facade.getAllServiceG())
+    let services = Array<ServiceGlobal>(facade.getAllServiceG())
     
-    if resultatsS.count > 0
+    if services.count > 0
     {
+        facade.creerInstanceS(utilisateurs[1], serviceGlobal: services[0], dateRealisation: NSDate(), noteConso: 6, commentaireConso: "commentaireConso1", noteProposeur:7, commentaireProposeur: "commentaireProposeur1")
         
-        for resultat in resultatsS
+        for servG in services
         {
-            if let t = resultat.titre
+            if let s = servG.titre
             {
-                print("titreDepuisService:"+t)
+                print("titreDepuisService:"+s)
             }
-            if let l = resultat.proposeur
+            if let p = servG.proposeur
             {
-                let Sarray = l.getServicesProposesAsAnArray()
-                for service in Sarray
+                
+                for serviceG in p.getServicesProposesAsAnArray()
                 {
-                    print("titreService>user>service0:"+service.titre!)
+                    print("titreService>user>service0:"+serviceG.titre!)
+                }
+                
+                
+                
+                for serviceRecu in p.getServicesRecusAsAnArray()
+                {
+                    print("commentaireServiceRecu:"+serviceRecu.commentaireConso!)
+                }
+            }
+            
+        }
+        
+    }
+    
+    
+     let instancesS = Array<InstanceService>(facade.getAllInstanceS())
+    
+    
+    if instancesS.count > 0
+    {
+        for instance in instancesS
+        {
+            if let conso = instance.consommateur
+            {
+                print("description:"+instance.description)
+                print("loginConso:"+conso.loginUtilisateur!)
+                
+                for i in instance.serviceGlobal!.getInstancesServiceAsAnArray()
+                {
+                    print("instance>serviceGlobal>instance:"+i.commentaireConso!)
+                }
+                
+                for serviceRecu in conso.getServicesRecusAsAnArray()
+                {
+                    print("instance>consommateur>instance:"+serviceRecu.commentaireConso!)
                 }
                 
             }
-            
         }
-        
     }
-    
 }
 
 }
