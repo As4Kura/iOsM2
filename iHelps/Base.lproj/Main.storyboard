@@ -6,6 +6,86 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="BoM-nm-KVI">
+            <objects>
+                <viewController id="H7K-E1-YDJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mVE-Zn-wnx"/>
+                        <viewControllerLayoutGuide type="bottom" id="rsa-xp-nq1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5hf-gQ-suL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nNH-wT-05J">
+                                <rect key="frame" x="112" y="120" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dt7-pn-E8O">
+                                <rect key="frame" x="112" y="158" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-yN-2Em">
+                                <rect key="frame" x="114" y="207" width="92" height="30"/>
+                                <state key="normal" title="Se connecter"/>
+                                <connections>
+                                    <segue destination="yi0-eS-xca" kind="show" id="P5F-tK-pih"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83M-Zt-P9f">
+                                <rect key="frame" x="62" y="464" width="197" height="30"/>
+                                <state key="normal" title="Continuer sans se connecter"/>
+                                <connections>
+                                    <segue destination="yi0-eS-xca" kind="show" id="YcY-eT-6Qc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqT-nI-VUj">
+                                <rect key="frame" x="103" y="301" width="115" height="30"/>
+                                <state key="normal" title="Créer un compte"/>
+                                <connections>
+                                    <segue destination="vgr-uR-KiJ" kind="show" id="Dok-y0-eVL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ITk-Ns-WhV"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VDG-26-KuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="-894"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="E1L-tk-ZP8">
+            <objects>
+                <viewController id="vgr-uR-KiJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nqX-j8-V1C"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nce-EB-BLQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y3u-aH-CrS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Création de compte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-1l-PMX">
+                                <rect key="frame" x="84" y="72" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4c-di-8d3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="-114"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="yNE-67-R25">
             <objects>
                 <viewController id="yi0-eS-xca" sceneMemberID="viewController">
@@ -310,16 +390,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="yi0-eS-xca" kind="relationship" relationship="rootViewController" id="ml4-NV-htY"/>
+                        <segue destination="H7K-E1-YDJ" kind="relationship" relationship="rootViewController" id="HW3-sJ-1sW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2O-3R-7Qp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="78" y="-114"/>
+            <point key="canvasLocation" x="78" y="-894"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JlY-c0-if7"/>
+        <segue reference="YcY-eT-6Qc"/>
         <segue reference="wgg-ct-Jb3"/>
+        <segue reference="JlY-c0-if7"/>
     </inferredMetricsTieBreakers>
 </document>
