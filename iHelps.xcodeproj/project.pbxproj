@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A24D01C8C89CB0059DE7C /* FInstanceService.swift */; };
 		ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE401C8830AA00E2CC70 /* Facade.swift */; };
 		ED23EE441C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */; };
 		ED23EE451C883A1F00E2CC70 /* ServiceGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE431C883A1F00E2CC70 /* ServiceGlobal.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		494A24D01C8C89CB0059DE7C /* FInstanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FInstanceService.swift; sourceTree = "<group>"; };
 		ED23EE401C8830AA00E2CC70 /* Facade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
 		ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ServiceGlobal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ED23EE431C883A1F00E2CC70 /* ServiceGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceGlobal.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				EDE282D71C8752E200B34565 /* FServiceGlobal.swift */,
 				EDEEAD211C88A65500BE6EFE /* FUtilisateur.swift */,
+				494A24D01C8C89CB0059DE7C /* FInstanceService.swift */,
 			);
 			name = Facades;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				ED395B261C86342C00FF6D49 /* MasterViewController.swift in Sources */,
 				EDEEAD2F1C88C3D100BE6EFE /* InstanceService+CoreDataProperties.swift in Sources */,
 				EDEEAD2D1C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift in Sources */,
+				494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */,
 				EDEEAD2C1C88C3D100BE6EFE /* MessageMur.swift in Sources */,
 				EDE282D61C874D0500B34565 /* Model.xcdatamodeld in Sources */,
 				ED23EE481C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift in Sources */,
