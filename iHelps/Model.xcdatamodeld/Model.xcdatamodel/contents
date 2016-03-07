@@ -14,6 +14,7 @@
     </entity>
     <entity name="MessageMur" representedClassName=".MessageMur" syncable="YES">
         <attribute name="contenu" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="emetteur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Utilisateur" syncable="YES"/>
     </entity>
     <entity name="ServiceGlobal" representedClassName=".ServiceGlobal" syncable="YES">
         <attribute name="descriptionService" optional="YES" attributeType="String" syncable="YES"/>
@@ -34,10 +35,10 @@
         <relationship name="servicesRecus" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="InstanceService" inverseName="consommateur" inverseEntity="InstanceService" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Categorie" positionX="97" positionY="5" width="128" height="58"/>
+        <element name="InstanceService" positionX="-254" positionY="-54" width="128" height="150"/>
+        <element name="MessageMur" positionX="-2" positionY="198" width="128" height="73"/>
         <element name="ServiceGlobal" positionX="-63" positionY="-36" width="128" height="178"/>
         <element name="Utilisateur" positionX="-252" positionY="161" width="128" height="118"/>
-        <element name="Categorie" positionX="97" positionY="5" width="128" height="58"/>
-        <element name="MessageMur" positionX="-2" positionY="198" width="128" height="60"/>
-        <element name="InstanceService" positionX="-254" positionY="-54" width="128" height="150"/>
     </elements>
 </model>
