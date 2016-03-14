@@ -37,6 +37,11 @@ class Facade
     
     
     //UTILISATEUR//
+    func connexion (login : String, mdp : String)-> Utilisateur?
+    {
+        fUtilisateur.connexion(<#T##login: String##String#>, mdp: <#T##String#>)
+    }
+    
     func creerUtilisateur(login : String , mdp : String, adresse : String )
     {
        fUtilisateur.creerUtilisateur(login , mdp: mdp , adresse: adresse )        
