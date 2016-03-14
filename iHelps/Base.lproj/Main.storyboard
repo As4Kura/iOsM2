@@ -87,9 +87,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="label_error" destination="ZYx-cw-KnF" id="qVa-UF-i44"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4c-di-8d3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
