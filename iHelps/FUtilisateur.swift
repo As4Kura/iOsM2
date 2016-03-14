@@ -17,11 +17,11 @@ class FUtilisateur{
     func creerUtilisateur(login : String , mdp : String, adresse : String )
     {
         
-        let SGlobal = NSEntityDescription.insertNewObjectForEntityForName("Utilisateur", inManagedObjectContext: contexte)
+        let em = NSEntityDescription.insertNewObjectForEntityForName("Utilisateur", inManagedObjectContext: contexte)
         
-        SGlobal.setValue(login, forKey: "loginUtilisateur")
-        SGlobal.setValue(mdp, forKey: "mdpUtilisateur")
-        SGlobal.setValue(adresse, forKey: "adresseUtilisateur")
+        em.setValue(login, forKey: "loginUtilisateur")
+        em.setValue(mdp, forKey: "mdpUtilisateur")
+        em.setValue(adresse, forKey: "adresseUtilisateur")
         
         
         do
@@ -92,6 +92,29 @@ class FUtilisateur{
         }
         
         
-}
+    }
+    
+    func envoyerMessageMur(contenu : String , emetteur : Utilisateur, serviceG : ServiceGlobal )
+    {
+        
+        let em = NSEntityDescription.insertNewObjectForEntityForName("MessageMur", inManagedObjectContext: contexte)
+        
+        em.setValue(contenu, forKey: "contenu")
+        em.setValue(emetteur, forKey: "emetteur")
+        em.setValue(serviceG, forKey: "serviceG")
+        
+        
+        do
+        {
+            try contexte.save()
+            print ("MessageMur sauvegardé")
+            
+        }
+        catch
+        {
+            print("Problème lors de la sauvegarde !")
+        }
+    }
+
 
 }

@@ -53,6 +53,11 @@ class Facade
         return fUtilisateur.connexionUtilisateur(login, mdp: mdp)
     }
     
+    func envoyerMessageMur(contenu : String , emetteur : Utilisateur, serviceG : ServiceGlobal )
+    {
+        fUtilisateur.envoyerMessageMur(contenu, emetteur: emetteur, serviceG: serviceG)
+    }
+    
     func creerUtilisateur(login : String , mdp : String, adresse : String )
     {
        fUtilisateur.creerUtilisateur(login , mdp: mdp , adresse: adresse )        

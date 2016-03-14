@@ -15,6 +15,7 @@
     <entity name="MessageMur" representedClassName=".MessageMur" syncable="YES">
         <attribute name="contenu" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="emetteur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Utilisateur" syncable="YES"/>
+        <relationship name="serviceG" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ServiceGlobal" inverseName="messagesMur" inverseEntity="ServiceGlobal" syncable="YES"/>
     </entity>
     <entity name="ServiceGlobal" representedClassName=".ServiceGlobal" syncable="YES">
         <attribute name="descriptionService" optional="YES" attributeType="String" syncable="YES"/>
@@ -24,7 +25,7 @@
         <attribute name="titre" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categorie" syncable="YES"/>
         <relationship name="instancesService" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="InstanceService" inverseName="serviceGlobal" inverseEntity="InstanceService" syncable="YES"/>
-        <relationship name="messagesMur" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MessageMur" syncable="YES"/>
+        <relationship name="messagesMur" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MessageMur" inverseName="serviceG" inverseEntity="MessageMur" syncable="YES"/>
         <relationship name="proposeur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Utilisateur" inverseName="servicesProposes" inverseEntity="Utilisateur" syncable="YES"/>
     </entity>
     <entity name="Utilisateur" representedClassName=".Utilisateur" syncable="YES">
@@ -37,7 +38,7 @@
     <elements>
         <element name="Categorie" positionX="97" positionY="5" width="128" height="58"/>
         <element name="InstanceService" positionX="-254" positionY="-54" width="128" height="150"/>
-        <element name="MessageMur" positionX="-2" positionY="198" width="128" height="73"/>
+        <element name="MessageMur" positionX="-2" positionY="198" width="128" height="88"/>
         <element name="ServiceGlobal" positionX="-63" positionY="-36" width="128" height="178"/>
         <element name="Utilisateur" positionX="-252" positionY="161" width="128" height="118"/>
     </elements>

@@ -2,7 +2,7 @@
 //  ServiceGlobal+CoreDataProperties.swift
 //  iHelps
 //
-//  Created by nicolas catanoso on 03/03/2016.
+//  Created by Moi on 14/03/2016.
 //  Copyright © 2016 NXN. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -19,9 +19,9 @@ extension ServiceGlobal {
     @NSManaged var periodeFin: NSDate?
     @NSManaged var temps: String?
     @NSManaged var titre: String?
-    @NSManaged var proposeur: Utilisateur?
     @NSManaged var categories: NSSet?
-    @NSManaged var messagesMur: NSSet?
     @NSManaged var instancesService: NSSet?
+    @NSManaged var messagesMur: NSSet?
+    @NSManaged var proposeur: Utilisateur?
 
 }

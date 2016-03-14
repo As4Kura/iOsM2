@@ -29,7 +29,7 @@ func fonctionDeTestsEnBase()
     
     let categories = facade.getAllCategorie()
     
-    if categories.count > 0
+    /*if categories.count > 0
     {
         
         for c in categories
@@ -42,7 +42,7 @@ func fonctionDeTestsEnBase()
             
         }
         
-    }
+    }*/
 
     
     if let utilisateur = facade.connexionUtilisateur("login0", mdp: "mdp0")
@@ -61,19 +61,6 @@ func fonctionDeTestsEnBase()
     {
         facade.creerServiceG(utilisateurs[0], temps: "42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"1er service ",descriptionService: "description",categories: categories)
         facade.creerServiceG(utilisateurs[0], temps: "42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"2eme service",descriptionService: "description",categories : categories)
-                
-        
-       
-        for util in utilisateurs
-        {
-            if let u = util.loginUtilisateur
-            {
-                print("login:"+u)
-                
-            }
-            
-        }
-        
     }
     
     
@@ -82,12 +69,18 @@ func fonctionDeTestsEnBase()
     if services.count > 0
     {
         facade.creerInstanceS(utilisateurs[1], serviceGlobal: services[0], dateRealisation: NSDate(), noteConso: 6, commentaireConso: "commentaireConso1", noteProposeur:7, commentaireProposeur: "commentaireProposeur1")
+        facade.envoyerMessageMur("mon premier messageMur", emetteur: utilisateurs[0], serviceG: services[0])
         
         for servG in services
         {
             for c in servG.getCategoriesAsAnArray()
             {
                 print("nom categorie:"+c.nomCategorie!)
+            }
+            
+            for m in servG.getMessagesMurAsAnArray()
+            {
+                print("contenu MMur:"+m.contenu!)
             }
            /* if let p = servG.proposeur
             {

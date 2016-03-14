@@ -23,7 +23,7 @@ class ServiceGlobal: NSManagedObject {
         return categories!.allObjects as! [Categorie]
     }
     
-    func getmessagesMurAsAnArray() ->Array<MessageMur>
+    func getMessagesMurAsAnArray() ->Array<MessageMur>
     {
         return messagesMur!.allObjects as! [MessageMur]
     }
