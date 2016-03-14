@@ -25,7 +25,7 @@ class FServiceGlobal{
         SGlobal.setValue(periodeDebut, forKey: "periodeDebut")
         SGlobal.setValue(periodeFin, forKey: "periodeFin")
         SGlobal.setValue(proposeur, forKey: "proposeur")
-       // SGlobal.setValue([NSSet setWithArray:categories], forKey: "categories")
+        SGlobal.setValue(NSSet(array: categories), forKey: "categories")
         
         
         

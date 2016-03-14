@@ -22,12 +22,12 @@ func fonctionDeTestsEnBase()
 {
     facade.deleteBDD()
     
-    //facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "adresse0")
-    //facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "adresse1")
+    facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "adresse0")
+    facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "adresse1")
     facade.creerCategorie("première catégorie")
     facade.creerCategorie("2e catégorie")
     
-    let categories = Array<Categorie>(facade.getAllCategorie())
+    let categories = facade.getAllCategorie()
     
     if categories.count > 0
     {
@@ -42,7 +42,7 @@ func fonctionDeTestsEnBase()
             
         }
         
-    }	
+    }
 
     
     if let utilisateur = facade.connexionUtilisateur("login0", mdp: "mdp0")
@@ -55,7 +55,7 @@ func fonctionDeTestsEnBase()
     }
     
     
-    let utilisateurs = Array<Utilisateur>(facade.getAllUtilisateur())
+    let utilisateurs = facade.getAllUtilisateur()
     
     if utilisateurs.count > 0
     {
@@ -77,7 +77,7 @@ func fonctionDeTestsEnBase()
     }
     
     
-    let services = Array<ServiceGlobal>(facade.getAllServiceG())
+    let services = facade.getAllServiceG()
     
     if services.count > 0
     {
@@ -89,7 +89,7 @@ func fonctionDeTestsEnBase()
             {
                 print("nom categorie:"+c.nomCategorie!)
             }
-            if let p = servG.proposeur
+           /* if let p = servG.proposeur
             {
                 
                 for serviceG in p.getServicesProposesAsAnArray()
@@ -103,14 +103,14 @@ func fonctionDeTestsEnBase()
                 {
                     print("commentaireServiceRecu:"+serviceRecu.commentaireConso!)
                 }
-            }
+            }*/
             
         }
         
     }
     /*
     
-     let instancesS = Array<InstanceService>(facade.getAllInstanceS())
+     let instancesS = facade.getAllInstanceS()
     
     
     if instancesS.count > 0
