@@ -12,9 +12,12 @@ class ViewController: UIViewController {
     
     let testsBdd = TestsBdd ()
 
+    @IBAction func lancerTestsBDD(sender: AnyObject) {
+        testsBdd.fonctionDeTestsEnBase()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        testsBdd.fonctionDeTestsEnBase()
+        
     }
 
     override func didReceiveMemoryWarning() {

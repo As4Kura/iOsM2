@@ -50,7 +50,15 @@ class FUtilisateur{
         
         do {
             let utilisateurs = try contexte.executeFetchRequest(requete) as! [Utilisateur]
+            if utilisateurs.isEmpty
+            {
+                return nil
+            }
+            
+            else
+            {            
             return utilisateurs[0]
+            }
             
            }
         

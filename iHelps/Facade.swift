@@ -23,15 +23,26 @@ class Facade
     
     
     //SERVICE//
-    func creerServiceG(proposeur : Utilisateur, temps : String, periodeDebut : NSDate , periodeFin : NSDate ,titre : String , descriptionService : String)
+    func creerServiceG(proposeur : Utilisateur, temps : String, periodeDebut : NSDate , periodeFin : NSDate ,titre : String , descriptionService : String, categories :[Categorie])
     {
-        fServiceG.creerServiceG(proposeur, temps: temps, periodeDebut : periodeDebut , periodeFin : periodeFin ,titre : titre , descriptionService : descriptionService)
+        fServiceG.creerServiceG(proposeur, temps: temps, periodeDebut : periodeDebut , periodeFin : periodeFin ,titre : titre , descriptionService : descriptionService, categories : categories )
     }
     
     
     func getAllServiceG()-> Array<ServiceGlobal>
     {
         return fServiceG.getAllServiceG()
+    }
+    
+    func getAllCategorie()-> Array<Categorie>
+    {
+        return fServiceG.getAllCategorie()
+    }
+    
+    
+    func creerCategorie(nomCategorie : String)
+    {
+        fServiceG.creerCategorie(nomCategorie)
     }
     ////
     

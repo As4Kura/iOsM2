@@ -22,10 +22,30 @@ func fonctionDeTestsEnBase()
 {
     facade.deleteBDD()
     
-    facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "adresse0")
-    facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "adresse1")
+    //facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "adresse0")
+    //facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "adresse1")
+    facade.creerCategorie("première catégorie")
+    facade.creerCategorie("2e catégorie")
     
-    if let utilisateur = facade.connexionUtilisateur("login", mdp: "iugh")
+    let categories = Array<Categorie>(facade.getAllCategorie())
+    
+    if categories.count > 0
+    {
+        
+        for c in categories
+        {
+            if let n = c.nomCategorie
+            {
+                print("nom:"+n)
+                
+            }
+            
+        }
+        
+    }	
+
+    
+    if let utilisateur = facade.connexionUtilisateur("login0", mdp: "mdp0")
     {
         print("connecté !!!!!!"+utilisateur.adresseUtilisateur!)
     }
@@ -39,8 +59,8 @@ func fonctionDeTestsEnBase()
     
     if utilisateurs.count > 0
     {
-        facade.creerServiceG(utilisateurs[0], temps: "42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"1er service ",descriptionService: "description")
-        facade.creerServiceG(utilisateurs[0], temps: "42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"2eme service",descriptionService: "description")
+        facade.creerServiceG(utilisateurs[0], temps: "42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"1er service ",descriptionService: "description",categories: categories)
+        facade.creerServiceG(utilisateurs[0], temps: "42 ans",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"2eme service",descriptionService: "description",categories : categories)
                 
         
        
@@ -65,9 +85,9 @@ func fonctionDeTestsEnBase()
         
         for servG in services
         {
-            if let s = servG.titre
+            for c in servG.getCategoriesAsAnArray()
             {
-                print("titreDepuisService:"+s)
+                print("nom categorie:"+c.nomCategorie!)
             }
             if let p = servG.proposeur
             {
@@ -88,7 +108,7 @@ func fonctionDeTestsEnBase()
         }
         
     }
-    
+    /*
     
      let instancesS = Array<InstanceService>(facade.getAllInstanceS())
     
@@ -114,7 +134,7 @@ func fonctionDeTestsEnBase()
                 
             }
         }
-    }
+    }*/
 }
 
 }
