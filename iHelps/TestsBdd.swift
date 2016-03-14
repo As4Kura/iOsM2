@@ -25,7 +25,7 @@ func fonctionDeTestsEnBase()
     facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "adresse0")
     facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "adresse1")
     
-    if let utilisateur = facade.connexion("login", mdp: "iugh")
+    if let utilisateur = facade.connexionUtilisateur("login", mdp: "iugh")
     {
         print("connecté !!!!!!"+utilisateur.adresseUtilisateur!)
     }
