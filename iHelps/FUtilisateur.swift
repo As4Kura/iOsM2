@@ -37,6 +37,30 @@ class FUtilisateur{
     }
     
     
+    func connexionUtilisateur (login : String, mdp : String)-> Utilisateur?
+    {
+        let requete = NSFetchRequest(entityName: "Utilisateur")
+        
+        // 2
+        requete.predicate = NSPredicate(format: "loginUtilisateur = %@", login)
+        requete.predicate = NSPredicate(format: "mdpUtilisateur = %@", mdp)
+        
+        // 3
+        requete.returnsObjectsAsFaults = false
+        
+        do {
+            let utilisateurs = try contexte.executeFetchRequest(requete) as! [Utilisateur]
+            return utilisateurs[0]
+            
+           }
+        
+        catch {
+            print("Echec de la requête Fetch !")
+            return nil
+        }
+    }
+    
+    
     func getAllUtilisateur() ->Array<Utilisateur>
     {
         // 1

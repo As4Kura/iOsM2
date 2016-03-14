@@ -22,8 +22,18 @@ func fonctionDeTestsEnBase()
 {
     facade.deleteBDD()
     
-    facade.creerUtilisateur("login0", mdp: "mdp1", adresse: "adresse")
-    facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "adresse")
+    facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "adresse0")
+    facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "adresse1")
+    
+    if let utilisateur = facade.connexionUtilisateur("login", mdp: "iugh")
+    {
+        print("connecté !!!!!!"+utilisateur.adresseUtilisateur!)
+    }
+    else
+    {
+        print("mauvais login/mdp")
+    }
+    
     
     let utilisateurs = Array<Utilisateur>(facade.getAllUtilisateur())
     

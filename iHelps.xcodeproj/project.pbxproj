@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252C791B1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */; };
 		25547F961C8D72E30044C7AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25547F951C8D72E30044C7AA /* ViewController.swift */; };
 		494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A24D01C8C89CB0059DE7C /* FInstanceService.swift */; };
 		ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE401C8830AA00E2CC70 /* Facade.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreerUtilisateur_ViewController.swift; sourceTree = "<group>"; };
 		25547F951C8D72E30044C7AA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		494A24D01C8C89CB0059DE7C /* FInstanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FInstanceService.swift; sourceTree = "<group>"; };
 		ED23EE401C8830AA00E2CC70 /* Facade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		252C79191C96F15E00B1DBCF /* Controleurs */ = {
+			isa = PBXGroup;
+			children = (
+				252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */,
+			);
+			name = Controleurs;
+			sourceTree = "<group>";
+		};
 		ED23EE4A1C88457000E2CC70 /* Modele */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 				EDE282FC1C875A3900B34565 /* Facades */,
 				ED23EE401C8830AA00E2CC70 /* Facade.swift */,
 				EDEEAD231C88BA2500BE6EFE /* TestsBdd.swift */,
+				252C79191C96F15E00B1DBCF /* Controleurs */,
 				25547F951C8D72E30044C7AA /* ViewController.swift */,
 				ED395B291C86342C00FF6D49 /* Main.storyboard */,
 				EDE282D41C874D0500B34565 /* Model.xcdatamodeld */,
@@ -328,6 +339,7 @@
 				EDEEAD2C1C88C3D100BE6EFE /* MessageMur.swift in Sources */,
 				EDE282D61C874D0500B34565 /* Model.xcdatamodeld in Sources */,
 				ED23EE481C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift in Sources */,
+				252C791B1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift in Sources */,
 				25547F961C8D72E30044C7AA /* ViewController.swift in Sources */,
 				ED23EE441C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift in Sources */,
 				ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */,
