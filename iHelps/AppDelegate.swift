@@ -2,12 +2,13 @@
 //  AppDelegate.swift
 //  iHelps
 //
-//  Created by Moi on 02/03/2016.
+//  Created by Nicolas Opal on 02/03/2016.
 //  Copyright © 2016 NXN. All rights reserved.
 //
 
 import UIKit
 import CoreData
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        GMSServices.provideAPIKey("AIzaSyCPnAAEbABzcQfbM33e0IKcSesdZJPUkaA")
         return true
     }
 
