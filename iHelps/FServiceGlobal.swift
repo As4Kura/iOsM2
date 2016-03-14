@@ -14,7 +14,7 @@ import CoreData
 
 class FServiceGlobal{
     
-    func creerServiceG(proposeur : Utilisateur , temps : String, periodeDebut : NSDate , periodeFin : NSDate ,titre : String , descriptionService : String)
+    func creerServiceG(proposeur : Utilisateur , temps : String, periodeDebut : NSDate , periodeFin : NSDate ,titre : String , descriptionService : String, categories : [Categorie])
     {
         
         let SGlobal = NSEntityDescription.insertNewObjectForEntityForName("ServiceGlobal", inManagedObjectContext: contexte)
@@ -25,8 +25,10 @@ class FServiceGlobal{
         SGlobal.setValue(periodeDebut, forKey: "periodeDebut")
         SGlobal.setValue(periodeFin, forKey: "periodeFin")
         SGlobal.setValue(proposeur, forKey: "proposeur")
+       // SGlobal.setValue([NSSet setWithArray:categories], forKey: "categories")
         
-       
+        
+        
         do
         {
             try contexte.save()
@@ -41,12 +43,13 @@ class FServiceGlobal{
     }
     
     
+    
     func getAllServiceG() ->Array<ServiceGlobal>
     {
         
         let requete = NSFetchRequest(entityName: "ServiceGlobal")
         
-       
+        
         //  requete.predicate = NSPredicate(format: "idServiceGlobal = %d", 1)
         
         requete.returnsObjectsAsFaults = false
@@ -63,6 +66,52 @@ class FServiceGlobal{
         }
         
         
+    }
+
+    
+    func getAllCategorie() ->Array<Categorie>
+    {
+        
+        let requete = NSFetchRequest(entityName: "Categorie")
+        
+        
+        //  requete.predicate = NSPredicate(format: "idServiceGlobal = %d", 1)
+        
+        requete.returnsObjectsAsFaults = false
+        
+        do
+        {
+            return try contexte.executeFetchRequest(requete)as! [Categorie]
+        }
+            
+        catch
+        {
+            print("Echec de la requête Fetch !")
+            return [Categorie] ()
+        }
+        
+        
+    }
+
+    
+    func creerCategorie(nomCategorie : String)
+    {
+        
+        let SGlobal = NSEntityDescription.insertNewObjectForEntityForName("Categorie", inManagedObjectContext: contexte)
+        
+        SGlobal.setValue(nomCategorie, forKey: "nomCategorie")
+        
+        do
+        {
+            try contexte.save()
+            print ("Categorie sauvegardée")
+            
+        }
+            
+        catch
+        {
+            print("Problème lors de la sauvegarde !")
+        }
     }
     
     

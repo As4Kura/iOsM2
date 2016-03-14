@@ -17,4 +17,15 @@ class ServiceGlobal: NSManagedObject {
     {
         return instancesService!.allObjects as! [InstanceService]
     }
+    
+    func getCategoriesAsAnArray() ->Array<Categorie>
+    {
+        return categories!.allObjects as! [Categorie]
+    }
+    
+    func getmessagesMurAsAnArray() ->Array<MessageMur>
+    {
+        return messagesMur!.allObjects as! [MessageMur]
+    }
+
 }
