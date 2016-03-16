@@ -27,7 +27,7 @@ class FUtilisateur{
         do
         {
             try contexte.save()
-            print ("user sauvegardé")
+            //print ("user sauvegardé")
             
         }
         catch
@@ -115,6 +115,8 @@ class FUtilisateur{
             print("Problème lors de la sauvegarde !")
         }
     }
-
+    
+    
+    
 
 }

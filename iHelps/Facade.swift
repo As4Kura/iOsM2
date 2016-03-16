@@ -54,8 +54,24 @@ class Facade
     
     func creerCategorie(nomCategorie : String)
     {
-        fServiceG.creerCategorie(nomCategorie)
+        
+        let SGlobal = NSEntityDescription.insertNewObjectForEntityForName("Categorie", inManagedObjectContext: contexte)
+        
+        SGlobal.setValue(nomCategorie, forKey: "nomCategorie")
+        
+        do
+        {
+            try contexte.save()
+            print ("Categorie sauvegardée")
+            
+        }
+            
+        catch
+        {
+            print("Problème lors de la sauvegarde !")
+        }
     }
+
     ////
     
     
@@ -104,6 +120,16 @@ class Facade
     {
         return fUtilisateur.getAllUtilisateur()
     }
+    
+    func consoNoteCommenteProposeur(instanceS : InstanceService , note : Int, commentaire : String)
+    {
+        fInstanceS.consoNoteCommenteProposeur(instanceS as NSManagedObject, note: note, commentaire: commentaire)
+    }
+    
+    func proposeurNoteCommenteConso(instanceS : InstanceService , note : Int, commentaire : String)
+    {
+        fInstanceS.proposeurNoteCommenteConso(instanceS as NSManagedObject, note: note, commentaire: commentaire)
+    }
     ////
     
     
@@ -113,10 +139,10 @@ class Facade
         return fInstanceS.getAllInstanceS()
     }    
     
-    func creerInstanceS(consommateur : Utilisateur,serviceGlobal: ServiceGlobal, dateRealisation: NSDate , noteConso: Int, commentaireConso: String , noteProposeur: Int ,commentaireProposeur: String)
+    func creerInstanceS(consommateur : Utilisateur,serviceGlobal: ServiceGlobal, dateRealisation: NSDate)
 
     {
-        fInstanceS.creerInstanceS(consommateur ,serviceGlobal : serviceGlobal, dateRealisation: dateRealisation , noteConso: noteConso, commentaireConso: commentaireConso , noteProposeur: noteProposeur ,commentaireProposeur: commentaireProposeur )
+        fInstanceS.creerInstanceS(consommateur ,serviceGlobal : serviceGlobal, dateRealisation: dateRealisation)
     }
     ////
     

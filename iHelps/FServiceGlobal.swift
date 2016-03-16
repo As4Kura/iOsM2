@@ -32,7 +32,7 @@ class FServiceGlobal{
         do
         {
             try contexte.save()
-            print ("ServiceG sauvegardé")
+            //print ("ServiceG sauvegardé")
             
         }
             
@@ -94,25 +94,6 @@ class FServiceGlobal{
     }
 
     
-    func creerCategorie(nomCategorie : String)
-    {
         
-        let SGlobal = NSEntityDescription.insertNewObjectForEntityForName("Categorie", inManagedObjectContext: contexte)
-        
-        SGlobal.setValue(nomCategorie, forKey: "nomCategorie")
-        
-        do
-        {
-            try contexte.save()
-            print ("Categorie sauvegardée")
-            
-        }
-            
-        catch
-        {
-            print("Problème lors de la sauvegarde !")
-        }
-    }
-    
     
 }
