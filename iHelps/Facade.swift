@@ -20,7 +20,19 @@ class Facade
     let fUtilisateur = FUtilisateur()
     let fInstanceS = FInstanceService()
     ////
-    
+ 
+    // AFFICHER UNE ALERTE
+    func alerte(msg :String) -> UIAlertController
+    {
+        let alertController = UIAlertController(
+            title: "iHelps",
+            message: msg,
+            preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alertController.addAction(UIAlertAction(title: "J'ai compris", style: UIAlertActionStyle.Default,handler: nil))
+        return alertController
+
+    }
     
     //SERVICE//
     func creerServiceG(proposeur : Utilisateur, temps : String, periodeDebut : NSDate , periodeFin : NSDate ,titre : String , descriptionService : String, categories :[Categorie])
@@ -48,6 +60,21 @@ class Facade
     
     
     //UTILISATEUR//
+    
+    func needConnection(moi: AnyObject, segueName : String? = nil )
+    {
+        if (estConnecte() != nil ){
+            if let s = segueName {
+            moi.performSegueWithIdentifier(s, sender: moi)
+            }
+        }
+        else // Sinon, une alerte apparait pour expliquer la situation
+        {
+            let alertController = alerte("Vous devez être connecté pour accéder à cette fonctionnalité")
+            moi.presentViewController(alertController, animated: true, completion: nil)
+        }
+
+    }
     func estConnecte()-> Utilisateur?
     {
         if let login = NSUserDefaults.standardUserDefaults().objectForKey("userLogin") as? String {

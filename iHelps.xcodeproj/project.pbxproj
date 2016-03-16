@@ -10,6 +10,7 @@
 		252C791B1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */; };
 		25547F961C8D72E30044C7AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25547F951C8D72E30044C7AA /* ViewController.swift */; };
 		25DEDEEB1C99C18C00FA17F0 /* Home_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */; };
+		25DEDEED1C99D59E00FA17F0 /* Annonce_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */; };
 		494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A24D01C8C89CB0059DE7C /* FInstanceService.swift */; };
 		ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE401C8830AA00E2CC70 /* Facade.swift */; };
 		ED23EE441C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */; };
@@ -55,6 +56,7 @@
 		252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreerUtilisateur_ViewController.swift; sourceTree = "<group>"; };
 		25547F951C8D72E30044C7AA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home_ViewController.swift; sourceTree = "<group>"; };
+		25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annonce_ViewController.swift; sourceTree = "<group>"; };
 		494A24D01C8C89CB0059DE7C /* FInstanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FInstanceService.swift; sourceTree = "<group>"; };
 		ED23EE401C8830AA00E2CC70 /* Facade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
 		ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ServiceGlobal+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */,
 				25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */,
+				25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */,
 			);
 			name = Controleurs;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			files = (
 				ED23EE451C883A1F00E2CC70 /* ServiceGlobal.swift in Sources */,
 				EDEEAD221C88A65500BE6EFE /* FUtilisateur.swift in Sources */,
+				25DEDEED1C99D59E00FA17F0 /* Annonce_ViewController.swift in Sources */,
 				EDEEAD2F1C88C3D100BE6EFE /* InstanceService+CoreDataProperties.swift in Sources */,
 				EDEEAD2D1C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift in Sources */,
 				494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */,
