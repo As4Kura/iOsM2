@@ -15,7 +15,7 @@ import CoreData
 class FInstanceService
 {
     
-    func creerInstanceS(consommateur: Utilisateur,serviceGlobal: ServiceGlobal, dateRealisation: NSDate , noteConso: Int, commentaireConso: String , noteProposeur: Int ,commentaireProposeur: String )
+    func creerInstanceS(consommateur: Utilisateur,serviceGlobal: ServiceGlobal, dateRealisation: NSDate)
     {
         
         let SGlobal = NSEntityDescription.insertNewObjectForEntityForName("InstanceService", inManagedObjectContext: contexte)
@@ -23,17 +23,13 @@ class FInstanceService
         SGlobal.setValue(consommateur, forKey: "consommateur")
         SGlobal.setValue(serviceGlobal, forKey: "serviceGlobal")        
         SGlobal.setValue(dateRealisation, forKey: "dateRealisation")
-        SGlobal.setValue(noteConso, forKey: "noteConso")
-        SGlobal.setValue(commentaireConso, forKey: "commentaireConso")
-        SGlobal.setValue(noteProposeur, forKey: "noteProposeur")
-        SGlobal.setValue(commentaireProposeur, forKey: "commentaireProposeur")
-        
+             
         
         
         do
         {
             try contexte.save()
-            print ("InstanceS sauvegardée")
+            //print ("InstanceS sauvegardée")
             
         }
             
@@ -68,5 +64,45 @@ class FInstanceService
         
     }
     
+    
+    
+    func consoNoteCommenteProposeur(instanceS : NSManagedObject , note : Int, commentaire : String)
+    {
+        instanceS.setValue(note, forKey: "noteConso")
+        instanceS.setValue(commentaire, forKey: "commentaireConso")
+        
+        do
+        {
+            try contexte.save()
+            //print ("consoNoteComment Ajouté")
+            
+        }
+        catch
+        {
+            print("Problème lors de la modification !")
+        }
+        
+    }
+    
+    
+    
+    func proposeurNoteCommenteConso(instanceS : NSManagedObject , note : Int, commentaire : String)
+    {
+        instanceS.setValue(note, forKey: "noteProposeur")
+        instanceS.setValue(commentaire, forKey: "commentaireProposeur")
+        
+        do
+        {
+            try contexte.save()
+            //  print ("proposeurNoteComment Ajouté")
+            
+        }
+        catch
+        {
+            print("Problème lors de la modification !")
+        }
+        
+    }
+
     
 }
