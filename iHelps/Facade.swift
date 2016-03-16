@@ -48,6 +48,16 @@ class Facade
     
     
     //UTILISATEUR//
+    func estConnecte()-> Utilisateur?
+    {
+        if let login = NSUserDefaults.standardUserDefaults().objectForKey("userLogin") as? String {
+            if let mdp = NSUserDefaults.standardUserDefaults().objectForKey("userMDP") as? String {
+                return connexionUtilisateur(login, mdp: mdp)
+            }
+        }
+        return nil
+    }
+    
     func connexionUtilisateur (login : String, mdp : String)-> Utilisateur?
     {
         return fUtilisateur.connexionUtilisateur(login, mdp: mdp)
