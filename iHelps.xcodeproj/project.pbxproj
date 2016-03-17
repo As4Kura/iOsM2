@@ -11,6 +11,8 @@
 		25547F961C8D72E30044C7AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25547F951C8D72E30044C7AA /* ViewController.swift */; };
 		25DEDEEB1C99C18C00FA17F0 /* Home_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */; };
 		25DEDEED1C99D59E00FA17F0 /* Annonce_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */; };
+		4927A4C81C9AE5D900FFC841 /* JeuDeDonnees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4927A4C71C9AE5D900FFC841 /* JeuDeDonnees.swift */; };
+		4927A4CC1C9AE8A000FFC841 /* ListeAnnonces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4927A4CB1C9AE8A000FFC841 /* ListeAnnonces.swift */; };
 		494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A24D01C8C89CB0059DE7C /* FInstanceService.swift */; };
 		5CB253F21C9A0EA300795FC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB253F11C9A0EA300795FC8 /* MapKit.framework */; };
 		ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE401C8830AA00E2CC70 /* Facade.swift */; };
@@ -58,6 +60,8 @@
 		25547F951C8D72E30044C7AA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home_ViewController.swift; sourceTree = "<group>"; };
 		25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annonce_ViewController.swift; sourceTree = "<group>"; };
+		4927A4C71C9AE5D900FFC841 /* JeuDeDonnees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JeuDeDonnees.swift; sourceTree = "<group>"; };
+		4927A4CB1C9AE8A000FFC841 /* ListeAnnonces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListeAnnonces.swift; sourceTree = "<group>"; };
 		494A24D01C8C89CB0059DE7C /* FInstanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FInstanceService.swift; sourceTree = "<group>"; };
 		5CB253F11C9A0EA300795FC8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		ED23EE401C8830AA00E2CC70 /* Facade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 				252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */,
 				25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */,
 				25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */,
+				4927A4CB1C9AE8A000FFC841 /* ListeAnnonces.swift */,
 			);
 			name = Controleurs;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				ED23EE4A1C88457000E2CC70 /* Modele */,
 				EDE282FC1C875A3900B34565 /* Facades */,
 				ED23EE401C8830AA00E2CC70 /* Facade.swift */,
+				4927A4C71C9AE5D900FFC841 /* JeuDeDonnees.swift */,
 				EDEEAD231C88BA2500BE6EFE /* TestsBdd.swift */,
 				252C79191C96F15E00B1DBCF /* Controleurs */,
 				25547F951C8D72E30044C7AA /* ViewController.swift */,
@@ -346,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4927A4CC1C9AE8A000FFC841 /* ListeAnnonces.swift in Sources */,
 				ED23EE451C883A1F00E2CC70 /* ServiceGlobal.swift in Sources */,
 				EDEEAD221C88A65500BE6EFE /* FUtilisateur.swift in Sources */,
 				25DEDEED1C99D59E00FA17F0 /* Annonce_ViewController.swift in Sources */,
@@ -355,6 +362,7 @@
 				EDEEAD2C1C88C3D100BE6EFE /* MessageMur.swift in Sources */,
 				EDE282D61C874D0500B34565 /* Model.xcdatamodeld in Sources */,
 				25DEDEEB1C99C18C00FA17F0 /* Home_ViewController.swift in Sources */,
+				4927A4C81C9AE5D900FFC841 /* JeuDeDonnees.swift in Sources */,
 				ED23EE481C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift in Sources */,
 				252C791B1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift in Sources */,
 				25547F961C8D72E30044C7AA /* ViewController.swift in Sources */,

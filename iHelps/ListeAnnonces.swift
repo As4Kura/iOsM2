@@ -8,8 +8,12 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class ListeAnnonces: UITableViewController {
 
+    @IBAction func touch(sender: AnyObject) {
+        print("touché !!!")
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

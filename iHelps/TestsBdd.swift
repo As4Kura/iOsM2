@@ -24,11 +24,13 @@ func fonctionDeTestsEnBase()
     
     facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "adresse0")
     facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "adresse1")
+    
     facade.creerCategorie("Babysitting")
     facade.creerCategorie("Cours particuliers")
     facade.creerCategorie("Entretien maison")
     facade.creerCategorie("Animaux")
     facade.creerCategorie("Dépannage")
+    facade.creerCategorie("Autre")
     
     let categories = facade.getAllCategorie()
     let deuxCat = [Categorie](arrayLiteral: categories [0],categories [1])
@@ -128,7 +130,7 @@ func fonctionDeTestsEnBase()
             
             if let conso = instance.consommateur
             {
-                //print("description:"+instance.description)
+                print("description:"+instance.description)
                 print("loginConso:"+conso.loginUtilisateur!)
                 
                 for i in instance.serviceGlobal!.getInstancesServiceAsAnArray()

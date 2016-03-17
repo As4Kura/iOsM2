@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     let testsBdd = TestsBdd ()
     let facade = Facade()
+    let jeu = JeuDeDonnee()
     
     @IBOutlet weak var label_error: UILabel!
     @IBOutlet weak var login: UITextField!
@@ -54,6 +55,7 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        jeu.creationJeuDonnees()
         
     }
 

@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+class JeuDeDonnee
+{
+        
+    let facade = Facade()
+    
+    func creationJeuDonnees()
+    {
+        facade.deleteBDD()
+        
+        facade.creerCategorie("Babysitting")
+        facade.creerCategorie("Cours particuliers")
+        facade.creerCategorie("Entretien maison")
+        facade.creerCategorie("Animaux")
+        facade.creerCategorie("Dépannage")
+        facade.creerCategorie("Autre")
+        
+     }
+
+}
