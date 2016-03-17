@@ -22,7 +22,8 @@ class CreerUtilisateur_ViewController: UIViewController {
     @IBAction func creerUtilisateur(sender: AnyObject) {
         if ( login.text == "" || motDePasse.text == "" || adresse.text == "")
         {
-            label_error.text = "Merci de donner tout les renseignements ! :-)"
+            let alertController = facade.alerte("Merci de donner tout les renseignements ! :-)")
+            self.presentViewController(alertController, animated: true, completion: nil)
         } else
         {
             facade.creerUtilisateur(login.text!, mdp: motDePasse.text!, adresse: adresse.text!)

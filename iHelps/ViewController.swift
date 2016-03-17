@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
     
@@ -34,14 +35,20 @@ class ViewController: UIViewController {
             label_error.text = "Connexion effectuée :-)"
             performSegueWithIdentifier("connexionOK", sender: self)
         } else {
-            label_error.text = "Erreur de connexion"
+            
+            let alertController = facade.alerte("Connexion échouée. Vérifiez les infos saisies")
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
         
     }
     
+    // Utile aussi pour la déconnexion.
     @IBAction func continuerSansSauvegarder(sender: AnyObject) {
-        // remove NSUserDefaults ...
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("userLogin")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("userMDP")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("userAdresse")
     }
+    
     @IBAction func lancerTestsBDD(sender: AnyObject) {
         testsBdd.fonctionDeTestsEnBase()
     }

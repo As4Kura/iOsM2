@@ -173,7 +173,7 @@
                                 <rect key="frame" x="61" y="72" width="199" height="30"/>
                                 <state key="normal" title="Proposer un nouveau service"/>
                                 <connections>
-                                    <segue destination="bw7-aq-yhY" kind="show" id="Cqc-4n-mW5"/>
+                                    <action selector="creerService:" destination="yi0-eS-xca" eventType="touchUpInside" id="IzS-H5-ixz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Effectuer une recherche par :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJV-Jy-r1K">
@@ -200,7 +200,7 @@
                                 <rect key="frame" x="81" y="518" width="159" height="30"/>
                                 <state key="normal" title="Accéder à mon compte"/>
                                 <connections>
-                                    <segue destination="YTj-HI-3qO" kind="show" id="eLB-jP-q6i"/>
+                                    <action selector="goMonCompte:" destination="yi0-eS-xca" eventType="touchUpInside" id="c6n-JX-dSK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -208,6 +208,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="xx9-gJ-OWm"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="rdz-SI-Kb8"/>
+                        <segue destination="YTj-HI-3qO" kind="show" identifier="goMonCompte" id="EGD-1g-USY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWE-f5-aXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -363,12 +367,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Catégorie..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0P-ek-ydg">
-                                <rect key="frame" x="116" y="114" width="89" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre du service :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37W-RR-SRb">
                                 <rect key="frame" x="96" y="149" width="128" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -402,6 +400,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nfm-Eu-hs0">
+                                <rect key="frame" x="0.0" y="101" width="320" height="43"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -436,6 +437,13 @@
                                     <segue destination="p0q-JB-lHo" kind="show" id="wgg-ct-Jb3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDO-GH-2Vl">
+                                <rect key="frame" x="105" y="339" width="110" height="30"/>
+                                <state key="normal" title="Afficher la carte"/>
+                                <connections>
+                                    <segue destination="1T4-j3-Zro" kind="show" id="XJ9-eg-Q2W"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -444,6 +452,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cN9-gs-7JA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="662" y="633"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7mf-eq-y92">
+            <objects>
+                <viewController id="1T4-j3-Zro" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xIN-C4-eEI"/>
+                        <viewControllerLayoutGuide type="bottom" id="4V2-ZB-gRa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qf1-0M-vFO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3vK-YR-sTd">
+                                <rect key="frame" x="20" y="127" width="280" height="433"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ja9-hh-tpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="1360"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WTs-Sj-I8U">
@@ -525,12 +557,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2m-Y6-xk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="1435"/>
+            <point key="canvasLocation" x="431" y="2063"/>
         </scene>
-        <!--View Controller-->
+        <!--Annonce View Controller-->
         <scene sceneID="D0W-rl-eQZ">
             <objects>
-                <viewController id="p0q-JB-lHo" sceneMemberID="viewController">
+                <viewController id="p0q-JB-lHo" customClass="Annonce_ViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pKJ-vn-duI"/>
                         <viewControllerLayoutGuide type="bottom" id="YHG-Kg-2d3"/>
@@ -554,13 +586,16 @@
                                 <rect key="frame" x="102" y="269" width="127" height="30"/>
                                 <state key="normal" title="Contacter en privé"/>
                                 <connections>
-                                    <segue destination="vOn-yH-tI1" kind="show" id="cbK-Yr-J0m"/>
+                                    <action selector="contactPrive:" destination="p0q-JB-lHo" eventType="touchUpInside" id="KCA-QG-zEX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="vOn-yH-tI1" kind="show" identifier="goMessagerie" id="xPp-cq-5k4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfd-vr-3sL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -586,7 +621,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6nh-jY-gZI"/>
-        <segue reference="OYX-V0-DNq"/>
-        <segue reference="cbK-Yr-J0m"/>
+        <segue reference="wgg-ct-Jb3"/>
+        <segue reference="xPp-cq-5k4"/>
     </inferredMetricsTieBreakers>
 </document>
