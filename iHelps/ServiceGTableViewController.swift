@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  ServiceGTableViewController.swift
 //  iHelps
 //
 //  Created by nicolas catanoso on 17/03/2016.
@@ -8,20 +8,20 @@
 
 import UIKit
 
-class ListeAnnonces: UITableViewController {
+class ServiceGTableViewController: UITableViewController {
+    
+    let facade = Facade()
+    var servicesG = [ServiceGlobal]()
 
-    @IBAction func touch(sender: AnyObject) {
-        print("touché !!!")
-        
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadSampleServiceG()
+    }
+    
+    func loadSampleServiceG()
+    {
+        servicesG = facade.getAllServiceG()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,24 +32,29 @@ class ListeAnnonces: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+       
+        return servicesG.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        
+        let cellIdentifier = "ServiceGTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ServiceGTableViewCell
 
-        // Configure the cell...
+        let serviceG = servicesG[indexPath.row]
+        cell.titreServiceG.text = serviceG.titre
+        cell.descriptionS.text = serviceG.descriptionService
+        cell.nomProposeur.text = "proposé par " + (serviceG.proposeur?.loginUtilisateur)!
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
