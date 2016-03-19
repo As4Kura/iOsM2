@@ -33,7 +33,7 @@ class ViewController: UIViewController {
             NSUserDefaults.standardUserDefaults().setObject(currentUser.mdpUtilisateur, forKey: "userMDP")
             NSUserDefaults.standardUserDefaults().synchronize()
             
-            label_error.text = "Connexion effectuée :-)"
+//            label_error.text = "Connexion effectuée :-)"
             performSegueWithIdentifier("connexionOK", sender: self)
         } else {
             
