@@ -195,6 +195,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Recherche" id="xx9-gJ-OWm">
+                        <barButtonItem key="backBarButtonItem" title="Déconnexion" id="nTp-tp-hnI"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PtJ-zz-8Gg">
                             <connections>
                                 <action selector="creerService:" destination="yi0-eS-xca" id="ywe-65-fm3"/>
@@ -448,7 +449,7 @@
             </objects>
             <point key="canvasLocation" x="662" y="633"/>
         </scene>
-        <!--Recherche-->
+        <!--Services Disponibles-->
         <scene sceneID="Niu-UB-RdN">
             <objects>
                 <tableViewController id="NtO-PB-Uyr" customClass="ServiceGTableViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
@@ -498,8 +499,8 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Recherche" id="jgT-Xv-LKk">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="qH0-er-rM8"/>
+                    <navigationItem key="navigationItem" title="Services Disponibles" id="jgT-Xv-LKk">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="Pie-zR-kMK"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ipc-mT-YXv">
                             <connections>
                                 <action selector="creerService:" destination="NtO-PB-Uyr" id="uPP-jx-7Xp"/>
@@ -507,6 +508,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="fx0-OS-gnq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWq-3i-j7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
