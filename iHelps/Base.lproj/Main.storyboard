@@ -530,6 +530,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="fx0-OS-gnq"/>
+                        <segue destination="p0q-JB-lHo" kind="show" identifier="goDetailAnnonce" action="showDetailViewController:sender:" id="TkV-Ha-SHq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWq-3i-j7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -618,10 +619,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Affichage d'une annonce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaF-zg-by4">
-                                <rect key="frame" x="65" y="72" width="191" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaF-zg-by4">
+                                <rect key="frame" x="20" y="72" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mur ..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-gP-3bn">
@@ -630,17 +631,53 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyh-Hm-IKv">
-                                <rect key="frame" x="102" y="269" width="127" height="30"/>
+                                <rect key="frame" x="97" y="347" width="127" height="30"/>
                                 <state key="normal" title="Contacter en privé"/>
                                 <connections>
                                     <action selector="contactPrive:" destination="p0q-JB-lHo" eventType="touchUpInside" id="KCA-QG-zEX"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Description" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucA-jb-TWK">
+                                <rect key="frame" x="45" y="211" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Proposeur" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHG-3w-ZXc">
+                                <rect key="frame" x="20" y="101" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date Debut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khJ-kQ-0vF">
+                                <rect key="frame" x="20" y="130" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date Fin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYD-TN-Pcr">
+                                <rect key="frame" x="20" y="159" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="temps" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4V6-gf-4lF">
+                                <rect key="frame" x="25" y="146" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="dateDebut" destination="khJ-kQ-0vF" id="w8h-9J-dfU"/>
+                        <outlet property="dateFin" destination="ZYD-TN-Pcr" id="CUF-nR-XJ1"/>
+                        <outlet property="descriptionAnnonce" destination="ucA-jb-TWK" id="5Gx-kw-9Nd"/>
+                        <outlet property="proposeur" destination="yHG-3w-ZXc" id="Szq-ar-tvL"/>
+                        <outlet property="temps" destination="4V6-gf-4lF" id="mOj-gR-8se"/>
+                        <outlet property="titre" destination="UaF-zg-by4" id="PZg-xZ-2bI"/>
                         <segue destination="vOn-yH-tI1" kind="show" identifier="goMessagerie" id="xPp-cq-5k4"/>
                     </connections>
                 </viewController>
@@ -668,7 +705,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6nh-jY-gZI"/>
+        <segue reference="TkV-Ha-SHq"/>
         <segue reference="fx0-OS-gnq"/>
-        <segue reference="JlY-c0-if7"/>
+        <segue reference="xPp-cq-5k4"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -55,9 +55,29 @@ class ServiceGTableViewController: UITableViewController {
         cell.descriptionS.text = serviceG.descriptionService
         cell.nomProposeur.text = "proposé par " + (serviceG.proposeur?.loginUtilisateur)!
 
+        
+        
+        
         return cell
     }
 
+    
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // pass any object as parameter, i.e. the tapped row
+        performSegueWithIdentifier("goDetailAnnonce", sender: indexPath.row)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goDetailAnnonce" {
+            //            if let indexpath = table.indexPathForSelectedRow {
+            let dvc = segue.destinationViewController as! Annonce_ViewController
+            dvc.service = servicesG[sender as! Int]
+            //           }
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

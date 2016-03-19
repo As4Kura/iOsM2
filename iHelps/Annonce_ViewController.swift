@@ -11,14 +11,32 @@ import UIKit
 class Annonce_ViewController: UIViewController {
 
     let facade = Facade()
+    var service : ServiceGlobal?
     
+    @IBOutlet weak var titre: UILabel!
+    @IBOutlet weak var proposeur: UILabel!
+    @IBOutlet weak var temps: UILabel!
+    @IBOutlet weak var dateDebut: UILabel!
+    @IBOutlet weak var dateFin: UILabel!
+    @IBOutlet weak var descriptionAnnonce: UITextView!
+   
+   
     @IBAction func contactPrive(sender: AnyObject) {
         facade.needConnection(self,segueName: "goMessagerie")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        titre.text = service?.titre
+        proposeur.text = service?.proposeur?.loginUtilisateur
+        temps.text = service?.temps
+        descriptionAnnonce.text = service?.descriptionService
+        
+        print(service?.periodeDebut)
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm" //format style. Browse online to get a format that fits your needs.
+        dateDebut.text = dateFormatter.stringFromDate((service?.periodeDebut)!)
+        dateFin.text = dateFormatter.stringFromDate((service?.periodeFin)!)
     }
 
     override func didReceiveMemoryWarning() {
