@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Connexion-->
         <scene sceneID="BoM-nm-KVI">
             <objects>
                 <viewController id="H7K-E1-YDJ" customClass="ViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ITk-Ns-WhV"/>
+                    <navigationItem key="navigationItem" title="Connexion" id="ITk-Ns-WhV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="label_error" destination="91N-O0-RWh" id="k2w-Le-5Ng"/>
@@ -78,7 +78,7 @@
             </objects>
             <point key="canvasLocation" x="662" y="-894"/>
         </scene>
-        <!--Creer Utilisateur View Controller-->
+        <!--Création de compte-->
         <scene sceneID="E1L-tk-ZP8">
             <objects>
                 <viewController id="vgr-uR-KiJ" customClass="CreerUtilisateur_ViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,15 +90,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Création de compte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-1l-PMX">
-                                <rect key="frame" x="84" y="72" width="152" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywh-oR-BuO">
-                                <rect key="frame" x="105" y="421" width="110" height="30"/>
-                                <state key="normal" title="Créer utilisateur"/>
+                                <rect key="frame" x="113" y="421" width="94" height="30"/>
+                                <state key="normal" title="Créer compte"/>
                                 <connections>
                                     <action selector="creerUtilisateur:" destination="vgr-uR-KiJ" eventType="touchUpInside" id="Pau-uu-dtQ"/>
                                 </connections>
@@ -145,6 +139,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Création de compte" id="agx-Qp-me9" userLabel="Création de compte"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="adresse" destination="sVc-5M-YoY" id="VAw-sC-McO"/>
@@ -157,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="78" y="-114"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Recherche-->
         <scene sceneID="yNE-67-R25">
             <objects>
                 <viewController id="yi0-eS-xca" customClass="Home_ViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
@@ -169,13 +164,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9s-JZ-PlX">
-                                <rect key="frame" x="61" y="72" width="199" height="30"/>
-                                <state key="normal" title="Proposer un nouveau service"/>
-                                <connections>
-                                    <action selector="creerService:" destination="yi0-eS-xca" eventType="touchUpInside" id="IzS-H5-ixz"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Effectuer une recherche par :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJV-Jy-r1K">
                                 <rect key="frame" x="48" y="191" width="224" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -206,7 +194,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xx9-gJ-OWm"/>
+                    <navigationItem key="navigationItem" title="Recherche" id="xx9-gJ-OWm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PtJ-zz-8Gg">
+                            <connections>
+                                <action selector="creerService:" destination="yi0-eS-xca" id="ywe-65-fm3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="rdz-SI-Kb8"/>
@@ -217,7 +211,7 @@
             </objects>
             <point key="canvasLocation" x="662" y="-114"/>
         </scene>
-        <!--View Controller-->
+        <!--Mon Compte-->
         <scene sceneID="Ice-Xk-eou">
             <objects>
                 <viewController id="YTj-HI-3qO" sceneMemberID="viewController">
@@ -229,12 +223,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mon compte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y22-2x-mR1">
-                                <rect key="frame" x="112" y="78" width="97" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuU-6s-sQR">
                                 <rect key="frame" x="91" y="137" width="139" height="30"/>
                                 <state key="normal" title="Accéder à mes infos"/>
@@ -256,13 +244,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Mon Compte" id="vYE-91-6Jq" userLabel="Mon compte">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="rAT-KE-JJM"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Y1Z-z6-iTK">
+                            <connections>
+                                <segue destination="bw7-aq-yhY" kind="show" id="Ba5-iW-wxO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWr-gd-uaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="78" y="633"/>
         </scene>
-        <!--View Controller-->
+        <!--Mes infos-->
         <scene sceneID="ouA-6F-sFS">
             <objects>
                 <viewController id="s23-Ma-cyp" sceneMemberID="viewController">
@@ -274,12 +270,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mes infos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-49-kde">
-                                <rect key="frame" x="123" y="72" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prénom :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSn-Je-td8">
                                 <rect key="frame" x="20" y="115" width="69" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -333,13 +323,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Mes infos" id="P8d-PP-KRI" userLabel="Mes infos">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="qaW-Gj-D6P"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aem-2H-BNz">
+                            <connections>
+                                <segue destination="bw7-aq-yhY" kind="show" id="Kzn-zN-hDV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4a0-Yj-Z3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="78" y="1435"/>
         </scene>
-        <!--View Controller-->
+        <!--Proposer mon aide-->
         <scene sceneID="Oqh-Ti-XxR">
             <objects>
                 <viewController id="bw7-aq-yhY" sceneMemberID="viewController">
@@ -351,12 +349,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Proposition d'aide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSw-PP-mGu">
-                                <rect key="frame" x="92" y="72" width="138" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Je propose..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcV-YQ-xyi">
                                 <rect key="frame" x="91" y="172" width="138" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -406,6 +398,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Proposer mon aide" id="f6B-nc-rHC" userLabel="Proposer mon aide">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="3w2-Jw-Kmr"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5m-5i-Hmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -453,7 +448,7 @@
             </objects>
             <point key="canvasLocation" x="662" y="633"/>
         </scene>
-        <!--ServiceG Table View Controller-->
+        <!--Recherche-->
         <scene sceneID="Niu-UB-RdN">
             <objects>
                 <tableViewController id="NtO-PB-Uyr" customClass="ServiceGTableViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
@@ -502,6 +497,16 @@
                             <outlet property="delegate" destination="NtO-PB-Uyr" id="DvE-Ik-n7r"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Recherche" id="jgT-Xv-LKk">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="qH0-er-rM8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ipc-mT-YXv">
+                            <connections>
+                                <action selector="creerService:" destination="NtO-PB-Uyr" id="uPP-jx-7Xp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWq-3i-j7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -531,7 +536,7 @@
             </objects>
             <point key="canvasLocation" x="636" y="1360"/>
         </scene>
-        <!--View Controller-->
+        <!--Messagerie-->
         <scene sceneID="8Un-Gk-yzF">
             <objects>
                 <viewController id="vOn-yH-tI1" sceneMemberID="viewController">
@@ -543,18 +548,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Espace Messagerie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1z-Tu-i0D">
-                                <rect key="frame" x="86" y="20" width="149" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messagerie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44e-vu-heY">
-                                <rect key="frame" x="116" y="72" width="89" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5h-AX-mDp">
                                 <rect key="frame" x="20" y="118" width="139" height="30"/>
                                 <state key="normal" title="Écrire un message..."/>
@@ -573,6 +566,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Messagerie" id="JzS-xC-Kap" userLabel="Messagerie">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="nZn-2c-uFB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kK0-KW-hoO">
+                            <connections>
+                                <segue destination="bw7-aq-yhY" kind="show" id="mzw-Fe-WOF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2m-Y6-xk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -640,7 +643,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6nh-jY-gZI"/>
         <segue reference="JlY-c0-if7"/>
+        <segue reference="6nh-jY-gZI"/>
+        <segue reference="rdz-SI-Kb8"/>
     </inferredMetricsTieBreakers>
 </document>

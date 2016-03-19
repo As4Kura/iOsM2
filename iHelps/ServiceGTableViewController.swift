@@ -13,6 +13,9 @@ class ServiceGTableViewController: UITableViewController {
     let facade = Facade()
     var servicesG = [ServiceGlobal]()
 
+    @IBAction func creerService(sender: AnyObject) {
+        facade.needConnection(self, segueName: "newService")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
