@@ -16,6 +16,8 @@
 		494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A24D01C8C89CB0059DE7C /* FInstanceService.swift */; };
 		4952C1111C9B20C60048B403 /* ServiceGTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952C1101C9B20C60048B403 /* ServiceGTableViewCell.swift */; };
 		4952C1131C9B25C80048B403 /* ServiceGTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */; };
+		49DF01171C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF01151C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift */; };
+		49DF01181C9DE9FE002A58FB /* MessagePrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF01161C9DE9FE002A58FB /* MessagePrive.swift */; };
 		5CB253F21C9A0EA300795FC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB253F11C9A0EA300795FC8 /* MapKit.framework */; };
 		ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE401C8830AA00E2CC70 /* Facade.swift */; };
 		ED23EE441C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */; };
@@ -67,6 +69,8 @@
 		494A24D01C8C89CB0059DE7C /* FInstanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FInstanceService.swift; sourceTree = "<group>"; };
 		4952C1101C9B20C60048B403 /* ServiceGTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceGTableViewCell.swift; path = ../ServiceGTableViewCell.swift; sourceTree = "<group>"; };
 		4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceGTableViewController.swift; sourceTree = "<group>"; };
+		49DF01151C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagePrive+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		49DF01161C9DE9FE002A58FB /* MessagePrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePrive.swift; sourceTree = "<group>"; };
 		5CB253F11C9A0EA300795FC8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		ED23EE401C8830AA00E2CC70 /* Facade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
 		ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ServiceGlobal+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 		ED23EE4A1C88457000E2CC70 /* Modele */ = {
 			isa = PBXGroup;
 			children = (
+				49DF01151C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift */,
+				49DF01161C9DE9FE002A58FB /* MessagePrive.swift */,
 				EDEEAD251C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift */,
 				EDEEAD261C88C3D100BE6EFE /* MessageMur.swift */,
 				EDEEAD271C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift */,
@@ -368,6 +374,7 @@
 				EDEEAD2C1C88C3D100BE6EFE /* MessageMur.swift in Sources */,
 				4952C1111C9B20C60048B403 /* ServiceGTableViewCell.swift in Sources */,
 				EDE282D61C874D0500B34565 /* Model.xcdatamodeld in Sources */,
+				49DF01171C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift in Sources */,
 				25DEDEEB1C99C18C00FA17F0 /* Home_ViewController.swift in Sources */,
 				4927A4C81C9AE5D900FFC841 /* JeuDeDonnees.swift in Sources */,
 				ED23EE481C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift in Sources */,
@@ -382,6 +389,7 @@
 				EDE282FB1C87568700B34565 /* AppDelegate.swift in Sources */,
 				EDEEAD2E1C88C3D100BE6EFE /* Categorie.swift in Sources */,
 				EDEEAD241C88BA2500BE6EFE /* TestsBdd.swift in Sources */,
+				49DF01181C9DE9FE002A58FB /* MessagePrive.swift in Sources */,
 				EDE282D81C8752E200B34565 /* FServiceGlobal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

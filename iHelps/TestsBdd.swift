@@ -67,8 +67,10 @@ func fonctionDeTestsEnBase()
     
     let utilisateurs = facade.getAllUtilisateur()
     
-    if utilisateurs.count > 0
+    if utilisateurs.count > 1
     {
+        
+        
         facade.creerServiceG(utilisateurs[0], temps: "2h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"garde d'enfants, hmmm",descriptionService: "mettre des somniferes dans le biberon",categories: deuxCat)
         facade.creerServiceG(utilisateurs[0], temps: "3h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"cours de chat",descriptionService: "dormir,rien faire, dormir",categories : quatreCat)
     }
@@ -88,7 +90,7 @@ func fonctionDeTestsEnBase()
         {
             for c in servG.getCategoriesAsAnArray()
             {
-                print("nom categorie:"+c.nomCategorie!)
+                print( servG.titre! + " nom categorie:"+c.nomCategorie!)
             }
             
             for m in servG.getMessagesMurAsAnArray()
@@ -130,7 +132,7 @@ func fonctionDeTestsEnBase()
             
             if let conso = instance.consommateur
             {
-                print("description:"+instance.description)
+               // print("description:"+instance.description)
                 print("loginConso:"+conso.loginUtilisateur!)
                 
                 for i in instance.serviceGlobal!.getInstancesServiceAsAnArray()
