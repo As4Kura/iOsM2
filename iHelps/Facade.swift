@@ -29,7 +29,17 @@ class Facade
             message: msg,
             preferredStyle: UIAlertControllerStyle.Alert)
         
-        alertController.addAction(UIAlertAction(title: "J'ai compris", style: UIAlertActionStyle.Default,handler: nil))
+        let connexionAction = UIAlertAction(title: "Se Connecter", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            
+        }
+        let cancelAction = UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Cancel) {
+            UIAlertAction in
+        }
+        
+        // Add the actions
+        alertController.addAction(connexionAction)
+        alertController.addAction(cancelAction)
         return alertController
 
     }
