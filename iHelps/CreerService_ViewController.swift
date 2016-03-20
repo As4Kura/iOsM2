@@ -8,24 +8,29 @@
 
 import UIKit
 
-class CreerService_ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
 
+    @IBOutlet var switchs: [UISwitch]!
+   
     
-    @IBOutlet weak var categoriePicker: UIPickerView!
     var categories = Facade().getAllCategorie()
-    var idCategorie = 0
     
     @IBOutlet weak var titre: UITextField!
     @IBOutlet weak var dateDebut: UIDatePicker!
     @IBOutlet weak var dateFin: UIDatePicker!
     @IBOutlet weak var descriptionService: UITextField!
     
+    @IBOutlet weak var tmpAConsacrer: UITextField!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        categoriePicker.delegate = self
-        categoriePicker.dataSource = self
+        for s in switchs
+        {
+            s.transform = CGAffineTransformMakeScale(0.75, 0.75)
+            
+        }
 
+      
         // Do any additional setup after loading the view.
     }
 
@@ -34,31 +39,57 @@ class CreerService_ViewController: UIViewController, UIPickerViewDataSource, UIP
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categories.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        idCategorie = row
-        return categories[row].nomCategorie
-    }
+  
     
     
     @IBAction func validerService(sender: AnyObject) {
         let facade = Facade()
-        if ( titre.text != "" && descriptionService.text != "" )
+        var boolSwitch = false
+        var cat : [Categorie] = []
+        
+        for s in switchs
+        {
+            s.transform = CGAffineTransformMakeScale(0.75, 0.75)
+            if s.on
+            {
+                boolSwitch = true
+                cat.append(categories[s.tag])
+            }
+        }
+        
+        
+        if ( titre.text != "" && descriptionService.text != "" && boolSwitch && tmpAConsacrer.text != "" && tmpAConsacrer.text != "")
         {
             
-            var cat : [Categorie] = []
-            cat.append(categories[idCategorie])
-            facade.creerServiceG(facade.estConnecte()!, temps: "2 semaines", periodeDebut: dateDebut.date, periodeFin: dateFin.date, titre: titre.text!, descriptionService: descriptionService.text!, categories: cat)
-        } else {
+          
+         
+            facade.creerServiceG(facade.estConnecte()!, temps: tmpAConsacrer.text!, periodeDebut: dateDebut.date, periodeFin: dateFin.date, titre: titre.text!, descriptionService: descriptionService.text!, categories: cat)
+        
+            let services = facade.getAllServiceG()
             
-            let alertController = facade.alerte("Merci de donner tout les renseignements ! :-)")
+            if services.count > 0
+            {
+                
+                for servG in services
+                {
+                    for c in servG.getCategoriesAsAnArray()
+                    {
+                        print( servG.titre! + " nom categorie:"+c.nomCategorie!)
+                    }
+
+                }
+            }
+        
+        
+        }
+        else {
+            var msgAlerte = "Merci de donner tout les renseignements ! :-)"
+            if(boolSwitch == false)
+            {
+                msgAlerte = "Veuillez selectionner au moins une catégorie"
+            }
+            
+            let alertController = facade.alerte(msgAlerte)
             self.presentViewController(alertController, animated: true, completion: nil)        }
     }
     

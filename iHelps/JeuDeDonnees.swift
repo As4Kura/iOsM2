@@ -17,9 +17,8 @@ class JeuDeDonnee
     {
         facade.deleteBDD()
         
-        facade.creerCategorie("Babysitting")
+        facade.creerCategorie("Service maison")
         facade.creerCategorie("Cours particuliers")
-        facade.creerCategorie("Entretien maison")
         facade.creerCategorie("Animaux")
         facade.creerCategorie("Dépannage")
         facade.creerCategorie("Autre")
