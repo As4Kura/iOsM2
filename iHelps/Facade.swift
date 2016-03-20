@@ -29,17 +29,7 @@ class Facade
             message: msg,
             preferredStyle: UIAlertControllerStyle.Alert)
         
-        let connexionAction = UIAlertAction(title: "Se Connecter", style: UIAlertActionStyle.Default) {
-            UIAlertAction in
-            
-        }
-        let cancelAction = UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Cancel) {
-            UIAlertAction in
-        }
-        
-        // Add the actions
-        alertController.addAction(connexionAction)
-        alertController.addAction(cancelAction)
+        alertController.addAction(UIAlertAction(title: "J'ai compris", style: UIAlertActionStyle.Default,handler: nil))
         return alertController
 
     }
@@ -121,8 +111,26 @@ class Facade
         }
         else // Sinon, une alerte apparait pour expliquer la situation
         {
-            let alertController = alerte("Vous devez être connecté pour accéder à cette fonctionnalité")
+            
+            let alertController = UIAlertController(
+                title: "iHelps",
+                message: "Vous devez être connecté pour accéder à cette fonctionnalité",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            
+            
+            let connexionAction = UIAlertAction(title: "Se Connecter", style: UIAlertActionStyle.Default) {
+                UIAlertAction in moi.performSegueWithIdentifier("goConnexion", sender: moi)
+            }
+            let cancelAction = UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Cancel) {
+                UIAlertAction in
+            }
+            
+            // Add the actions
+            alertController.addAction(connexionAction)
+            alertController.addAction(cancelAction)
+         
             moi.presentViewController(alertController, animated: true, completion: nil)
+            
         }
 
     }
