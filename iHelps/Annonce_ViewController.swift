@@ -28,16 +28,17 @@ class Annonce_ViewController: UIViewController {
         super.viewDidLoad()
 
         if ( service != nil ){
-        titre.text = service?.titre
-        proposeur.text = service?.proposeur?.loginUtilisateur
-        temps.text = service?.temps
-        descriptionAnnonce.text = service?.descriptionService
+            titre.text = service?.titre
+            proposeur.text = "Proposé par " + (service?.proposeur?.loginUtilisateur)!
+            temps.text = service?.temps
+            descriptionAnnonce.text = service?.descriptionService
         
-        print(service?.periodeDebut)
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm" //format style. Browse online to get a format that fits your needs.
-        dateDebut.text = dateFormatter.stringFromDate((service?.periodeDebut)!)
-        dateFin.text = dateFormatter.stringFromDate((service?.periodeFin)!)
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm" //format style. Browse online to get a format that fits your needs.
+            dateFormatter.dateStyle = .LongStyle
+            dateFormatter.locale = NSLocale(localeIdentifier: "fr-FR")
+            dateDebut.text = dateFormatter.stringFromDate((service?.periodeDebut)!)
+            dateFin.text = dateFormatter.stringFromDate((service?.periodeFin)!)
         }
     }
     override func didReceiveMemoryWarning() {
