@@ -646,7 +646,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-Eh-suj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insérez ici le message à envoyer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-Eh-suj">
                                 <rect key="frame" x="20" y="193" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -663,7 +663,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2m-Y6-xk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -775,9 +774,7 @@
                         <outlet property="titre" destination="UaF-zg-by4" id="PZg-xZ-2bI"/>
                         <segue destination="H7K-E1-YDJ" kind="show" id="dc9-80-bwD"/>
                         <segue destination="7Tl-zf-cmq" kind="show" identifier="goDemanderService" action="showDetailViewController:sender:" id="KbI-WY-9M4"/>
-                        <segue destination="vOn-yH-tI1" kind="popoverPresentation" identifier="goContactPrive" id="cLy-Pk-2Go">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
+                        <segue destination="vOn-yH-tI1" kind="show" identifier="goContactPrive" id="bfe-2R-g8F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfd-vr-3sL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -847,7 +844,7 @@
         <segue reference="YcY-eT-6Qc"/>
         <segue reference="dc9-80-bwD"/>
         <segue reference="1pj-HR-uFR"/>
-        <segue reference="Gp0-Lg-kut"/>
-        <segue reference="cLy-Pk-2Go"/>
+        <segue reference="bfe-2R-g8F"/>
+        <segue reference="mzw-Fe-WOF"/>
     </inferredMetricsTieBreakers>
 </document>
