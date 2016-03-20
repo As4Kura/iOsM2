@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyJ-dc-LTf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyJ-dc-LTf">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Connexion-->
@@ -250,7 +250,7 @@
                         <barButtonItem key="backBarButtonItem" title="Retour" id="rAT-KE-JJM"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Y1Z-z6-iTK">
                             <connections>
-                                <segue destination="H7K-E1-YDJ" kind="show" identifier="goConnexion" id="66a-Ft-tht"/>
+                                <segue destination="bw7-aq-yhY" kind="show" id="hUu-na-X3t"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -337,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4a0-Yj-Z3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="78" y="1435"/>
+            <point key="canvasLocation" x="78" y="1360"/>
         </scene>
         <!--Proposer mon aide-->
         <scene sceneID="Oqh-Ti-XxR">
@@ -622,7 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ja9-hh-tpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="636" y="1360"/>
+            <point key="canvasLocation" x="662" y="1360"/>
         </scene>
         <!--Messagerie-->
         <scene sceneID="8Un-Gk-yzF">
@@ -668,7 +668,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2m-Y6-xk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="431" y="2063"/>
+            <point key="canvasLocation" x="636" y="2115"/>
         </scene>
         <!--Service-->
         <scene sceneID="D0W-rl-eQZ">
@@ -688,34 +688,21 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyh-Hm-IKv">
-                                <rect key="frame" x="97" y="347" width="127" height="30"/>
-                                <state key="normal" title="Contacter en privé"/>
-                                <connections>
-                                    <action selector="contactPrive:" destination="p0q-JB-lHo" eventType="touchUpInside" id="KCA-QG-zEX"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Description" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucA-jb-TWK">
-                                <rect key="frame" x="45" y="211" width="240" height="128"/>
+                                <rect key="frame" x="40" y="212" width="265" height="64"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Proposeur" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHG-3w-ZXc">
-                                <rect key="frame" x="20" y="101" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date Debut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khJ-kQ-0vF">
                                 <rect key="frame" x="20" y="130" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date Fin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYD-TN-Pcr">
                                 <rect key="frame" x="20" y="159" width="204" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -725,11 +712,46 @@
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mur ..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-gP-3bn">
-                                <rect key="frame" x="112" y="486" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message à publier sur le mur" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-gP-3bn">
+                                <rect key="frame" x="20" y="486" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKD-it-dNk">
+                                <rect key="frame" x="136" y="524" width="48" height="30"/>
+                                <state key="normal" title="Publier"/>
+                                <connections>
+                                    <action selector="publier:" destination="p0q-JB-lHo" eventType="touchUpInside" id="bds-8g-xnX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFN-Ic-ONx">
+                                <rect key="frame" x="20" y="183" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mur:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teC-gJ-Bnr">
+                                <rect key="frame" x="25" y="284" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbO-gl-l7A">
+                                <rect key="frame" x="20" y="101" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickProposeur:" destination="p0q-JB-lHo" eventType="touchUpInside" id="nW3-7t-lbS"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Le mur de ce service ne comporte aucun message." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sQ-ah-iWO">
+                                <rect key="frame" x="20" y="313" width="280" height="165"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -746,16 +768,58 @@
                         <outlet property="dateDebut" destination="khJ-kQ-0vF" id="w8h-9J-dfU"/>
                         <outlet property="dateFin" destination="ZYD-TN-Pcr" id="CUF-nR-XJ1"/>
                         <outlet property="descriptionAnnonce" destination="ucA-jb-TWK" id="5Gx-kw-9Nd"/>
-                        <outlet property="proposeur" destination="yHG-3w-ZXc" id="Szq-ar-tvL"/>
+                        <outlet property="messageMur" destination="ufi-gP-3bn" id="mYX-Mo-HG6"/>
+                        <outlet property="mur" destination="0sQ-ah-iWO" id="k9b-TX-leM"/>
+                        <outlet property="proposeur" destination="kbO-gl-l7A" id="zQW-x5-pDc"/>
                         <outlet property="temps" destination="4V6-gf-4lF" id="mOj-gR-8se"/>
                         <outlet property="titre" destination="UaF-zg-by4" id="PZg-xZ-2bI"/>
-                        <segue destination="vOn-yH-tI1" kind="show" identifier="goMessagerie" id="xPp-cq-5k4"/>
                         <segue destination="H7K-E1-YDJ" kind="show" id="dc9-80-bwD"/>
+                        <segue destination="7Tl-zf-cmq" kind="show" identifier="goDemanderService" action="showDetailViewController:sender:" id="KbI-WY-9M4"/>
+                        <segue destination="vOn-yH-tI1" kind="popoverPresentation" identifier="goContactPrive" id="cLy-Pk-2Go">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfd-vr-3sL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="1360"/>
+            <point key="canvasLocation" x="1192" y="1360"/>
+        </scene>
+        <!--Demande de Service-->
+        <scene sceneID="KZn-q5-VCA">
+            <objects>
+                <viewController id="7Tl-zf-cmq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IFF-hk-fKE"/>
+                        <viewControllerLayoutGuide type="bottom" id="zxX-cw-K4P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wG0-2I-a9O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Demande de service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xj-25-Ieu">
+                                <rect key="frame" x="82" y="72" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iTu-uk-uRl">
+                                <rect key="frame" x="0.0" y="122" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="480177513.865668">
+                                    <!--2016-03-20 14:38:33 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Demande de Service" id="HUz-cc-nBB" userLabel="Service">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="Ei4-XO-iL5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wEW-2B-ElW"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Fe-bK-ocR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="1360"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H7c-Gv-nXv">
@@ -766,6 +830,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="otU-oU-QDq">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="H7K-E1-YDJ" kind="relationship" relationship="rootViewController" id="HW3-sJ-1sW"/>
                     </connections>
@@ -779,7 +847,7 @@
         <segue reference="YcY-eT-6Qc"/>
         <segue reference="dc9-80-bwD"/>
         <segue reference="1pj-HR-uFR"/>
-        <segue reference="xPp-cq-5k4"/>
-        <segue reference="mzw-Fe-WOF"/>
+        <segue reference="Gp0-Lg-kut"/>
+        <segue reference="cLy-Pk-2Go"/>
     </inferredMetricsTieBreakers>
 </document>

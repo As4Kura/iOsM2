@@ -14,13 +14,16 @@ class Annonce_ViewController: UIViewController {
     var service : ServiceGlobal?
     
     @IBOutlet weak var titre: UILabel!
-    @IBOutlet weak var proposeur: UILabel!
+    @IBOutlet weak var proposeur: UIButton!
     @IBOutlet weak var temps: UILabel!
     @IBOutlet weak var dateDebut: UILabel!
     @IBOutlet weak var dateFin: UILabel!
     @IBOutlet weak var descriptionAnnonce: UITextView!
    
    
+    @IBOutlet weak var mur: UITextView!
+    @IBOutlet weak var messageMur: UITextField!
+    
     @IBAction func contactPrive(sender: AnyObject) {
         facade.needConnection(self,segueName: "goMessagerie")
     }
@@ -29,7 +32,8 @@ class Annonce_ViewController: UIViewController {
 
         if ( service != nil ){
             titre.text = service?.titre
-            proposeur.text = "Proposé par " + (service?.proposeur?.loginUtilisateur)!
+            let propName = "Proposé par " + (service?.proposeur?.loginUtilisateur)!
+            proposeur.setTitle(propName, forState: .Normal)
             temps.text = service?.temps
             descriptionAnnonce.text = service?.descriptionService
         
@@ -40,13 +44,66 @@ class Annonce_ViewController: UIViewController {
             dateDebut.text = dateFormatter.stringFromDate((service?.periodeDebut)!)
             dateFin.text = dateFormatter.stringFromDate((service?.periodeFin)!)
         }
+        
+        updateMur()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func clickProposeur(sender: AnyObject) {
+        let alertController = UIAlertController(
+            title: "iHelps",
+            message: "Que voulez vous faire ?",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        
+        
+        let contactPrive = UIAlertAction(title: "Contacter en privé", style: UIAlertActionStyle.Default) {
+            UIAlertAction in self.performSegueWithIdentifier("goContactPrive", sender: self)
+        }
+        let demanderService = UIAlertAction(title: "Demander Service", style: UIAlertActionStyle.Cancel) {
+            UIAlertAction in self.performSegueWithIdentifier("goDemanderService", sender: self)
+        }
+        let annuler = UIAlertAction(title: "Ne rien faire", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+        }
+        
+        // Add the actions
+        alertController.addAction(contactPrive)
+        alertController.addAction(demanderService)
+        alertController.addAction(annuler)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
 
+    @IBAction func publier(sender: AnyObject) {
+        if ( messageMur.text != ""){
+            if ( facade.estConnecte() == nil ){
+                facade.needConnection(self)
+            }else {
+                facade.envoyerMessageMur(messageMur.text!, emetteur: facade.estConnecte()!, serviceG: service!)
+                updateMur()
+            }
+        }else
+        {
+            let alertController = facade.alerte("Merci de préciser le message à envoyer")
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        }
+    }
+    
+    func updateMur(){
+        let array = service?.getMessagesMurAsAnArray()
+        var texte = ""
+        array?.forEach{ mm in
+            texte += (mm.emetteur?.loginUtilisateur)!
+            texte += " --> "
+            texte += mm.contenu!
+            texte += "\n"
+        }
+        mur.text = texte
+    }
     /*
     // MARK: - Navigation
 
