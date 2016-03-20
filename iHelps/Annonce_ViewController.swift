@@ -27,6 +27,7 @@ class Annonce_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if ( service != nil ){
         titre.text = service?.titre
         proposeur.text = service?.proposeur?.loginUtilisateur
         temps.text = service?.temps
@@ -37,8 +38,8 @@ class Annonce_ViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm" //format style. Browse online to get a format that fits your needs.
         dateDebut.text = dateFormatter.stringFromDate((service?.periodeDebut)!)
         dateFin.text = dateFormatter.stringFromDate((service?.periodeFin)!)
+        }
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
