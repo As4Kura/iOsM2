@@ -68,13 +68,23 @@ func fonctionDeTestsEnBase()
     
     if utilisateurs.count > 1
     {
-        
+        facade.envoyerMessagePrive(" mon 1er messagePrive", emetteur: utilisateurs[0], receveur : utilisateurs[1])
         
         facade.creerServiceG(utilisateurs[0], temps: "2h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"garde d'enfants, hmmm",descriptionService: "mettre des somniferes dans le biberon",categories: deuxCat)
         facade.creerServiceG(utilisateurs[0], temps: "3h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"cours de chat",descriptionService: "dormir,rien faire, dormir",categories : quatreCat)
     }
     
+    /*let mps = facade.getAllMP()
     
+    if mps.count > 0
+    {
+        for mp in mps
+        {
+            
+                print("contenuMP" + mp.contenuMP!)
+        }
+    }*/
+
     let services = facade.getAllServiceG()
     
     if services.count > 0

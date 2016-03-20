@@ -22,4 +22,15 @@ class Utilisateur: NSManagedObject {
     {
         return servicesRecus!.allObjects as! [InstanceService]
     }
+    
+    func getMpRecusAsAnArray() ->Array<MessagePrive>
+    {
+        return mpRecus!.allObjects as! [MessagePrive]
+    }
+    
+    func getMpEnvoyesAsAnArray() ->Array<MessagePrive>
+    {
+        return mpRecus!.allObjects as! [MessagePrive]
+    }
+    
 }

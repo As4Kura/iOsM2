@@ -2,7 +2,7 @@
 //  Utilisateur+CoreDataProperties.swift
 //  iHelps
 //
-//  Created by nicolas catanoso on 19/03/2016.
+//  Created by nicolas catanoso on 20/03/2016.
 //  Copyright © 2016 NXN. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -17,9 +17,9 @@ extension Utilisateur {
     @NSManaged var adresseUtilisateur: String?
     @NSManaged var loginUtilisateur: String?
     @NSManaged var mdpUtilisateur: String?
+    @NSManaged var mpEnvoyes: NSSet?
+    @NSManaged var mpRecus: NSSet?
     @NSManaged var servicesProposes: NSSet?
     @NSManaged var servicesRecus: NSSet?
-    @NSManaged var mpRecus: NSManagedObject?
-    @NSManaged var mpEnvoyes: NSManagedObject?
 
 }

@@ -44,6 +44,31 @@ class Facade
 
     }
     
+    
+    func getAllMP() ->Array<MessagePrive>
+    {
+        
+        let requete = NSFetchRequest(entityName: "MessagePrive")
+        
+        
+                
+        requete.returnsObjectsAsFaults = false
+        
+        do
+        {
+            return try contexte.executeFetchRequest(requete)as! [MessagePrive]
+        }
+            
+        catch
+        {
+            print("Echec de la requête Fetch !")
+            return [MessagePrive] ()
+        }
+        
+        
+    }
+    
+    
     //SERVICE//
     func creerServiceG(proposeur : Utilisateur, temps : String, periodeDebut : NSDate , periodeFin : NSDate ,titre : String , descriptionService : String, categories :[Categorie])
     {
@@ -120,7 +145,13 @@ class Facade
     {
         fUtilisateur.envoyerMessageMur(contenu, emetteur: emetteur, serviceG: serviceG)
     }
+
     
+    func envoyerMessagePrive(contenu : String , emetteur : Utilisateur, receveur : Utilisateur)
+    {
+        fUtilisateur.envoyerMessagePrive(contenu, emetteur: emetteur, receveur : receveur)
+    }
+
     func creerUtilisateur(login : String , mdp : String, adresse : String )
     {
        fUtilisateur.creerUtilisateur(login , mdp: mdp , adresse: adresse )        
