@@ -53,28 +53,32 @@ class Annonce_ViewController: UIViewController {
     }
     
     @IBAction func clickProposeur(sender: AnyObject) {
-        let alertController = UIAlertController(
-            title: "iHelps",
-            message: "Que voulez vous faire ?",
-            preferredStyle: UIAlertControllerStyle.Alert)
+        if ( facade.estConnecte() == nil ){
+            facade.needConnection(self)
+        }else {
+            let alertController = UIAlertController(
+                title: "iHelps",
+                message: "Que voulez vous faire ?",
+                preferredStyle: UIAlertControllerStyle.Alert)
         
         
-        let contactPrive = UIAlertAction(title: "Contacter en privé", style: UIAlertActionStyle.Default) {
-            UIAlertAction in self.performSegueWithIdentifier("goContactPrive", sender: self)
-        }
-        let demanderService = UIAlertAction(title: "Demander Service", style: UIAlertActionStyle.Cancel) {
-            UIAlertAction in self.performSegueWithIdentifier("goDemanderService", sender: self)
-        }
-        let annuler = UIAlertAction(title: "Ne rien faire", style: UIAlertActionStyle.Default) {
-            UIAlertAction in
-        }
+            let contactPrive = UIAlertAction(title: "Contacter en privé", style: UIAlertActionStyle.Default) {
+                UIAlertAction in self.performSegueWithIdentifier("goContactPrive", sender: self)
+            }
+            let demanderService = UIAlertAction(title: "Demander Service", style: UIAlertActionStyle.Cancel) {
+                UIAlertAction in self.performSegueWithIdentifier("goDemanderService", sender: self)
+            }
+            let annuler = UIAlertAction(title: "Ne rien faire", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+            }
         
         // Add the actions
-        alertController.addAction(contactPrive)
-        alertController.addAction(demanderService)
-        alertController.addAction(annuler)
+            alertController.addAction(contactPrive)
+            alertController.addAction(demanderService)
+            alertController.addAction(annuler)
         
-        self.presentViewController(alertController, animated: true, completion: nil)
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
     }
 
     @IBAction func publier(sender: AnyObject) {

@@ -196,7 +196,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Recherche" id="xx9-gJ-OWm">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="nTp-tp-hnI"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="nTp-tp-hnI"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PtJ-zz-8Gg">
                             <connections>
                                 <action selector="creerService:" destination="yi0-eS-xca" id="ywe-65-fm3"/>
@@ -248,7 +248,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mon Compte" id="vYE-91-6Jq" userLabel="Mon compte">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="rAT-KE-JJM"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="rAT-KE-JJM"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Y1Z-z6-iTK">
                             <connections>
                                 <segue destination="bw7-aq-yhY" kind="show" id="hUu-na-X3t"/>
@@ -327,7 +327,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mes infos" id="P8d-PP-KRI" userLabel="Mes infos">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="qaW-Gj-D6P"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="qaW-Gj-D6P"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aem-2H-BNz">
                             <connections>
                                 <segue destination="bw7-aq-yhY" kind="show" id="Kzn-zN-hDV"/>
@@ -350,7 +350,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategorieTableViewCell" rowHeight="105" id="Dya-ak-Gxi" customClass="CategorieTableViewCell" customModule="iHelps" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="105"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dya-ak-Gxi" id="qXJ-9W-Y6i">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
@@ -375,7 +375,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Choisir une catégorie" id="l2v-CA-oNd">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="W2m-qD-grz"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="W2m-qD-grz"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2c0-aK-gSV">
                             <connections>
                                 <action selector="creerService:" destination="y59-l4-tpg" id="N02-Fc-xF9"/>
@@ -516,7 +516,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Proposer mon aide" id="f6B-nc-rHC" userLabel="Proposer mon aide">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="3w2-Jw-Kmr"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="3w2-Jw-Kmr"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -594,7 +594,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ServiceGTableViewCell" rowHeight="90" id="649-RC-7ST" customClass="ServiceGTableViewCell" customModule="iHelps" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="90"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="649-RC-7ST" id="E1Y-NA-oUV">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
@@ -635,7 +635,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Services Disponibles" id="jgT-Xv-LKk">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="Pie-zR-kMK"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="Pie-zR-kMK"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ipc-mT-YXv">
                             <connections>
                                 <action selector="creerService:" destination="NtO-PB-Uyr" id="uPP-jx-7Xp"/>
@@ -718,7 +718,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Messagerie" id="JzS-xC-Kap" userLabel="Messagerie">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="nZn-2c-uFB"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="nZn-2c-uFB"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kK0-KW-hoO">
                             <connections>
                                 <segue destination="bw7-aq-yhY" kind="show" id="mzw-Fe-WOF"/>
@@ -817,7 +817,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Service" id="TtL-qA-xcN" userLabel="Service">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="8Jq-kD-pfY"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="8Jq-kD-pfY"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sN5-Bn-1Ih">
                             <connections>
                                 <segue destination="bw7-aq-yhY" kind="show" id="Gp0-Lg-kut"/>
@@ -834,9 +834,9 @@
                         <outlet property="proposeur" destination="kbO-gl-l7A" id="zQW-x5-pDc"/>
                         <outlet property="temps" destination="4V6-gf-4lF" id="mOj-gR-8se"/>
                         <outlet property="titre" destination="UaF-zg-by4" id="PZg-xZ-2bI"/>
-                        <segue destination="H7K-E1-YDJ" kind="show" id="dc9-80-bwD"/>
                         <segue destination="7Tl-zf-cmq" kind="show" identifier="goDemanderService" action="showDetailViewController:sender:" id="KbI-WY-9M4"/>
                         <segue destination="vOn-yH-tI1" kind="show" identifier="goContactPrive" id="bfe-2R-g8F"/>
+                        <segue destination="H7K-E1-YDJ" kind="show" identifier="goConnexion" id="8k5-eO-Jpv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfd-vr-3sL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -871,7 +871,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Demande de Service" id="HUz-cc-nBB" userLabel="Service">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="Ei4-XO-iL5"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="Ei4-XO-iL5"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wEW-2B-ElW"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -903,7 +903,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZKo-6m-YOf"/>
+        <segue reference="HW3-sJ-1sW"/>
         <segue reference="YcY-eT-6Qc"/>
         <segue reference="Cyh-Md-Aqq"/>
         <segue reference="1pj-HR-uFR"/>
