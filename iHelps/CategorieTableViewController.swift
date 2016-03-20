@@ -1,33 +1,27 @@
 //
-//  ServiceGTableViewController.swift
+//  CategorieTableViewController.swift
 //  iHelps
 //
-//  Created by nicolas catanoso on 17/03/2016.
+//  Created by nicolas catanoso on 20/03/2016.
 //  Copyright © 2016 NXN. All rights reserved.
 //
 
 import UIKit
 
-class ServiceGTableViewController: UITableViewController {
-    
+class CategorieTableViewController: UITableViewController {
     let facade = Facade()
-    var servicesG = [ServiceGlobal]()
-    var categorie : Categorie?
-
+    let categories = Facade().getAllCategorie()
+    
+    
     @IBAction func creerService(sender: AnyObject) {
         facade.needConnection(self, segueName: "newService")
     }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleServiceG()
-    }
-    
-    func loadSampleServiceG()
-    {
-        servicesG = categorie!.getServicesGAsAnArray()
-        //servicesG = facade.getAllServiceG()
-        //servicesG = facade.getAllServiceGByCategorie(categorie)
-    }
+
+            }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,43 +37,34 @@ class ServiceGTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return servicesG.count
+        return categories.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cellIdentifier = "ServiceGTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ServiceGTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CategorieTableViewCell", forIndexPath: indexPath) as! CategorieTableViewCell
+        let categorie = categories[indexPath.row]
 
-        let serviceG = servicesG[indexPath.row]
-        cell.titreServiceG.text = serviceG.titre
-        cell.descriptionS.text = serviceG.descriptionService
-        cell.nomProposeur.text = "proposé par " + (serviceG.proposeur?.loginUtilisateur)!
+        cell.titreCategorie.text = categorie.nomCategorie
+        // Configure the cell...
 
-        
-        
-        
         return cell
     }
-
-    
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // pass any object as parameter, i.e. the tapped row
-        performSegueWithIdentifier("goDetailAnnonce", sender: indexPath.row)
+        performSegueWithIdentifier("goAnnoncesParCategorie", sender: indexPath.row)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "goDetailAnnonce" {
+        if segue.identifier == "goAnnoncesParCategorie" {
             //            if let indexpath = table.indexPathForSelectedRow {
-            let dvc = segue.destinationViewController as! Annonce_ViewController
-            dvc.service = servicesG[sender as! Int]
-            //           }g
+            let dvc = segue.destinationViewController as! ServiceGTableViewController
+            dvc.categorie = categories[sender as! Int]
+            //           }
         }
     }
-    
 
     /*
     // Override to support conditional editing of the table view.

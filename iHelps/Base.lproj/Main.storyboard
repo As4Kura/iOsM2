@@ -181,7 +181,7 @@
                                 <rect key="frame" x="127" y="318" width="67" height="30"/>
                                 <state key="normal" title="Catégorie"/>
                                 <connections>
-                                    <segue destination="NtO-PB-Uyr" kind="show" id="lgH-8p-02y"/>
+                                    <segue destination="y59-l4-tpg" kind="show" id="Seo-B2-3RH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyV-sR-j6W">
@@ -339,6 +339,58 @@
             </objects>
             <point key="canvasLocation" x="78" y="1435"/>
         </scene>
+        <!--Choisir une catégorie-->
+        <scene sceneID="9UT-zv-k2E">
+            <objects>
+                <tableViewController id="y59-l4-tpg" customClass="CategorieTableViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" id="hNu-iL-zBg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategorieTableViewCell" rowHeight="105" id="Dya-ak-Gxi" customClass="CategorieTableViewCell" customModule="iHelps" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dya-ak-Gxi" id="qXJ-9W-Y6i">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8F-jo-VjV">
+                                            <rect key="frame" x="8" y="8" width="304" height="73"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titreCategorie" destination="j8F-jo-VjV" id="4ln-ZL-nMz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="y59-l4-tpg" id="Y86-u7-Auw"/>
+                            <outlet property="delegate" destination="y59-l4-tpg" id="E7W-aZ-xDZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Choisir une catégorie" id="l2v-CA-oNd">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="W2m-qD-grz"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2c0-aK-gSV">
+                            <connections>
+                                <action selector="creerService:" destination="y59-l4-tpg" id="N02-Fc-xF9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="NtO-PB-Uyr" kind="show" identifier="goAnnoncesParCategorie" id="8OU-pU-ZOI"/>
+                        <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="Cyh-Md-Aqq"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNw-rg-Xiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="33"/>
+        </scene>
         <!--Proposer mon aide-->
         <scene sceneID="Oqh-Ti-XxR">
             <objects>
@@ -481,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5m-5i-Hmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="-114"/>
+            <point key="canvasLocation" x="1660" y="-114"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Zdc-vZ-INO">
@@ -590,6 +642,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="fx0-OS-gnq"/>
                         <segue destination="p0q-JB-lHo" kind="show" identifier="goDetailAnnonce" id="1pj-HR-uFR"/>
@@ -598,7 +651,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWq-3i-j7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="633"/>
+            <point key="canvasLocation" x="1146" y="859"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7mf-eq-y92">
@@ -755,7 +808,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfd-vr-3sL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="1360"/>
+            <point key="canvasLocation" x="1112" y="1788"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H7c-Gv-nXv">
@@ -777,9 +830,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="YcY-eT-6Qc"/>
-        <segue reference="dc9-80-bwD"/>
+        <segue reference="HW3-sJ-1sW"/>
+        <segue reference="Cyh-Md-Aqq"/>
         <segue reference="1pj-HR-uFR"/>
         <segue reference="xPp-cq-5k4"/>
-        <segue reference="mzw-Fe-WOF"/>
     </inferredMetricsTieBreakers>
 </document>

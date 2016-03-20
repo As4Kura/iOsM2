@@ -13,5 +13,8 @@ import CoreData
 class Categorie: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
-
+    func getServicesGAsAnArray() ->Array<ServiceGlobal>
+    {
+        return servicesG!.allObjects as! [ServiceGlobal]
+    }
 }
