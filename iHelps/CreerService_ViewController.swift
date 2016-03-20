@@ -14,6 +14,8 @@ class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
    
     
     var categories = Facade().getAllCategorie()
+    var oldTitre = ""
+    
     
     @IBOutlet weak var titre: UITextField!
     @IBOutlet weak var dateDebut: UIDatePicker!
@@ -47,6 +49,7 @@ class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
         var boolSwitch = false
         var cat : [Categorie] = []
         
+        print("-----------OldTitre = \(oldTitre) et NewTitre =\(titre.text!)")
         for s in switchs
         {
             s.transform = CGAffineTransformMakeScale(0.75, 0.75)
@@ -57,14 +60,17 @@ class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
             }
         }
         
-        
-        if ( titre.text != "" && descriptionService.text != "" && boolSwitch && tmpAConsacrer.text != "" && tmpAConsacrer.text != "")
+        if (oldTitre == titre.text!){
+            let msgAlerte = "Votre demande précédente a bien été prise en compte."
+            let alertController = facade.alerte(msgAlerte)
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }  else if ( titre.text != "" && descriptionService.text != "" && boolSwitch && tmpAConsacrer.text != "" && tmpAConsacrer.text != "")
         {
             
           
          
             facade.creerServiceG(facade.estConnecte()!, temps: tmpAConsacrer.text!, periodeDebut: dateDebut.date, periodeFin: dateFin.date, titre: titre.text!, descriptionService: descriptionService.text!, categories: cat)
-        
+            oldTitre = titre.text!
             let services = facade.getAllServiceG()
             
             if services.count > 0
@@ -81,8 +87,7 @@ class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
             }
         
         
-        }
-        else {
+        }else {
             var msgAlerte = "Merci de donner tout les renseignements ! :-)"
             if(boolSwitch == false)
             {
