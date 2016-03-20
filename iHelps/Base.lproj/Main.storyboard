@@ -206,6 +206,7 @@
                     <connections>
                         <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="rdz-SI-Kb8"/>
                         <segue destination="YTj-HI-3qO" kind="show" identifier="goMonCompte" id="EGD-1g-USY"/>
+                        <segue destination="H7K-E1-YDJ" kind="show" identifier="goConnexion" id="ZKo-6m-YOf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWE-f5-aXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -249,7 +250,7 @@
                         <barButtonItem key="backBarButtonItem" title="Retour" id="rAT-KE-JJM"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Y1Z-z6-iTK">
                             <connections>
-                                <segue destination="bw7-aq-yhY" kind="show" id="Ba5-iW-wxO"/>
+                                <segue destination="H7K-E1-YDJ" kind="show" identifier="goConnexion" id="66a-Ft-tht"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -592,6 +593,7 @@
                     <connections>
                         <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="fx0-OS-gnq"/>
                         <segue destination="p0q-JB-lHo" kind="show" identifier="goDetailAnnonce" id="1pj-HR-uFR"/>
+                        <segue destination="H7K-E1-YDJ" kind="show" identifier="goConnexion" id="fyw-b8-7tZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWq-3i-j7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -748,6 +750,7 @@
                         <outlet property="temps" destination="4V6-gf-4lF" id="mOj-gR-8se"/>
                         <outlet property="titre" destination="UaF-zg-by4" id="PZg-xZ-2bI"/>
                         <segue destination="vOn-yH-tI1" kind="show" identifier="goMessagerie" id="xPp-cq-5k4"/>
+                        <segue destination="H7K-E1-YDJ" kind="show" id="dc9-80-bwD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfd-vr-3sL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -773,9 +776,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Gp0-Lg-kut"/>
+        <segue reference="YcY-eT-6Qc"/>
+        <segue reference="dc9-80-bwD"/>
         <segue reference="1pj-HR-uFR"/>
-        <segue reference="6nh-jY-gZI"/>
         <segue reference="xPp-cq-5k4"/>
+        <segue reference="mzw-Fe-WOF"/>
     </inferredMetricsTieBreakers>
 </document>
