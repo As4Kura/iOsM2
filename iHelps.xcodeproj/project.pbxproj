@@ -20,7 +20,9 @@
 		4972FAF91C9EEC8E0074553A /* CategorieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */; };
 		49DF01171C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF01151C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift */; };
 		49DF01181C9DE9FE002A58FB /* MessagePrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF01161C9DE9FE002A58FB /* MessagePrive.swift */; };
+		5C684C2F1C9EF3E900C44234 /* Map_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C684C2E1C9EF3E900C44234 /* Map_ViewController.swift */; };
 		5CB253F21C9A0EA300795FC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB253F11C9A0EA300795FC8 /* MapKit.framework */; };
+		5CCFBAC71C9EF36B00D810AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCFBAC61C9EF36B00D810AF /* CoreLocation.framework */; };
 		ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE401C8830AA00E2CC70 /* Facade.swift */; };
 		ED23EE441C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */; };
 		ED23EE451C883A1F00E2CC70 /* ServiceGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE431C883A1F00E2CC70 /* ServiceGlobal.swift */; };
@@ -75,7 +77,9 @@
 		4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorieTableViewController.swift; sourceTree = "<group>"; };
 		49DF01151C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagePrive+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		49DF01161C9DE9FE002A58FB /* MessagePrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePrive.swift; sourceTree = "<group>"; };
+		5C684C2E1C9EF3E900C44234 /* Map_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map_ViewController.swift; sourceTree = "<group>"; };
 		5CB253F11C9A0EA300795FC8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5CCFBAC61C9EF36B00D810AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		ED23EE401C8830AA00E2CC70 /* Facade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
 		ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ServiceGlobal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ED23EE431C883A1F00E2CC70 /* ServiceGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceGlobal.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CCFBAC71C9EF36B00D810AF /* CoreLocation.framework in Frameworks */,
 				5CB253F21C9A0EA300795FC8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +147,7 @@
 				25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */,
 				25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */,
 				2576BEB41C9D919000E58272 /* CreerService_ViewController.swift */,
+				5C684C2E1C9EF3E900C44234 /* Map_ViewController.swift */,
 			);
 			name = Controleurs;
 			sourceTree = "<group>";
@@ -168,6 +174,7 @@
 		ED395B171C86342C00FF6D49 = {
 			isa = PBXGroup;
 			children = (
+				5CCFBAC61C9EF36B00D810AF /* CoreLocation.framework */,
 				5CB253F11C9A0EA300795FC8 /* MapKit.framework */,
 				ED395B221C86342C00FF6D49 /* iHelps */,
 				ED395B391C86342C00FF6D49 /* iHelpsTests */,
@@ -391,6 +398,7 @@
 				25547F961C8D72E30044C7AA /* ViewController.swift in Sources */,
 				ED23EE441C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift in Sources */,
 				ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */,
+				5C684C2F1C9EF3E900C44234 /* Map_ViewController.swift in Sources */,
 				EDEEAD2B1C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift in Sources */,
 				EDEEAD301C88C3D100BE6EFE /* InstanceService.swift in Sources */,
 				ED23EE491C883A5000E2CC70 /* Utilisateur.swift in Sources */,
