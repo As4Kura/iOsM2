@@ -87,7 +87,7 @@ class Facade
         do
         {
             try contexte.save()
-            print ("Categorie sauvegardée")
+            //print ("Categorie sauvegardée")
             
         }
             

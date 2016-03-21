@@ -38,7 +38,7 @@ func fonctionDeTestsEnBase()
     quatreCat.append(categories [3])
     
     
-    if categories.count > 0
+   /* if categories.count > 0
     {
         
         for c in categories
@@ -51,17 +51,17 @@ func fonctionDeTestsEnBase()
             
         }
         
-    }
+    }*/
 
     
-    if let utilisateur = facade.connexionUtilisateur("login0", mdp: "mdp0")
+   /* if let utilisateur = facade.connexionUtilisateur("login1", mdp: "mdp0")
     {
         print("connecté !!!!!!"+utilisateur.adresseUtilisateur!)
     }
     else
     {
         print("mauvais login/mdp")
-    }
+    }*/
     
     
     let utilisateurs = facade.getAllUtilisateur()
@@ -69,7 +69,10 @@ func fonctionDeTestsEnBase()
     if utilisateurs.count > 1
     {
         facade.envoyerMessagePrive(" mon 1er messagePrive", emetteur: utilisateurs[0], receveur : utilisateurs[1])
-        
+        facade.envoyerMessagePrive(" ma reponse ", emetteur: utilisateurs[1], receveur : utilisateurs[0])
+        facade.envoyerMessagePrive(" mon 2e messagePrive", emetteur: utilisateurs[0], receveur : utilisateurs[1])
+        facade.envoyerMessagePrive(" ma 2e reponse ", emetteur: utilisateurs[1], receveur : utilisateurs[0])
+
         facade.creerServiceG(utilisateurs[0], temps: "2h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"garde d'enfants, hmmm",descriptionService: "mettre des somniferes dans le biberon",categories: deuxCat)
         facade.creerServiceG(utilisateurs[0], temps: "3h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"cours de chat",descriptionService: "dormir,rien faire, dormir",categories : quatreCat)
     }
