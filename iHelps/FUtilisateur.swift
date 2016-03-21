@@ -42,11 +42,8 @@ class FUtilisateur{
         let requete = NSFetchRequest(entityName: "Utilisateur")
         
         // 2
-        requete.predicate = NSPredicate(format: "loginUtilisateur = %@", login)
-        requete.predicate = NSPredicate(format: "mdpUtilisateur = %@", mdp)
-        
-        // 3
-        requete.returnsObjectsAsFaults = false
+        requete.predicate = NSPredicate(format: "(loginUtilisateur == %@) AND (mdpUtilisateur like %@)", login,mdp)
+                requete.returnsObjectsAsFaults = false
         
         do {
             let utilisateurs = try contexte.executeFetchRequest(requete) as! [Utilisateur]
