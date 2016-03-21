@@ -82,7 +82,8 @@ class Annonce_ViewController: UIViewController {
         if ( facade.estConnecte() == nil)
         {
             facade.needConnection(self)
-        } else {
+        }
+        else {
             self.performSegueWithIdentifier("goDemanderService", sender: self)
         }
     }
@@ -109,7 +110,17 @@ class Annonce_ViewController: UIViewController {
             let dvc = segue.destinationViewController as! MP_ViewController
             dvc.contact = service?.proposeur!
         }
+        else if segue.identifier == "goDemanderService"
+        {
+            let dvc = segue.destinationViewController as! DemandeServiceViewController
+            dvc.serviceG = service
+   
+        }
+        
     }
+    
+   
+
     
     func updateMur(){
         let array = service?.getMessagesMurAsAnArray()

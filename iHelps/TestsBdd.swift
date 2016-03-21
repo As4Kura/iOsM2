@@ -95,7 +95,7 @@ func fonctionDeTestsEnBase()
         
         
         
-        facade.creerInstanceS(utilisateurs[1], serviceGlobal: services[0], dateRealisation: NSDate())
+       // facade.creerInstanceS(utilisateurs[1], serviceGlobal: services[0], dateRealisation: NSDate())
         facade.envoyerMessageMur("wesh t fraîche madmoizel", emetteur: utilisateurs[0], serviceG: services[0])
         
         for servG in services
