@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Je peux suivre ta trace genre TOUT LE TEMPS ? </string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Je peux suivre ta trace quand tu m&apos;utilise ?</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDocumentTypes</key>

@@ -23,7 +23,7 @@ class JeuDeDonnee
         facade.creerCategorie("Dépannage")
         facade.creerCategorie("Autre")
         
-        facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "3 rue d'Issoudin Orléans")
+        facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "3 rue Issoudin Orléans")
         facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "2 rue Madeleine Orléans")
         facade.creerUtilisateur("MarcoPolo", mdp: "m", adresse: "3 rue Rivoli Paris")
         facade.creerUtilisateur("Jean", mdp: "j", adresse: "3 rue de la paix Paris")
@@ -44,7 +44,7 @@ class JeuDeDonnee
             facade.envoyerMessagePrive("Parfait pour 15h", emetteur: utilisateurs[1], receveur : utilisateurs[0])
             
             facade.creerServiceG(utilisateurs[0], temps: "2h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"Garde d'enfants",descriptionService: "mettre des somniferes dans le biberon",categories: deuxCat)
-            facade.creerServiceG(utilisateurs[2], temps: "3h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"Cours de chat",descriptionService: "dormir,rien faire, dormir",categories : quatreCat)
+            facade.creerServiceG(utilisateurs[2], temps: "3h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"Cours de chat",descriptionService: "dormir, rien faire, dormir",categories : quatreCat)
         }
 
         
