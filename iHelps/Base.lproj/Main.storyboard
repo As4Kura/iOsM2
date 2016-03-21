@@ -872,6 +872,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7S-lQ-TeI">
+                                <rect key="frame" x="20" y="92" width="133" height="30"/>
+                                <state key="normal" title="Demander service !"/>
+                                <connections>
+                                    <action selector="demanderService:" destination="p0q-JB-lHo" eventType="touchUpInside" id="7dV-LH-JIy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -888,15 +895,16 @@
                         <outlet property="dateDebut" destination="khJ-kQ-0vF" id="w8h-9J-dfU"/>
                         <outlet property="dateFin" destination="ZYD-TN-Pcr" id="CUF-nR-XJ1"/>
                         <outlet property="descriptionAnnonce" destination="ucA-jb-TWK" id="5Gx-kw-9Nd"/>
+                        <outlet property="goDemanderService" destination="u7S-lQ-TeI" id="UlK-JY-lKf"/>
                         <outlet property="messageMur" destination="ufi-gP-3bn" id="mYX-Mo-HG6"/>
                         <outlet property="mur" destination="0sQ-ah-iWO" id="k9b-TX-leM"/>
                         <outlet property="proposeur" destination="kbO-gl-l7A" id="zQW-x5-pDc"/>
                         <outlet property="temps" destination="4V6-gf-4lF" id="mOj-gR-8se"/>
                         <outlet property="titre" destination="UaF-zg-by4" id="PZg-xZ-2bI"/>
-                        <segue destination="7Tl-zf-cmq" kind="show" identifier="goDemanderService" action="showDetailViewController:sender:" id="KbI-WY-9M4"/>
                         <segue destination="vOn-yH-tI1" kind="show" identifier="goContactPrive" id="bfe-2R-g8F"/>
                         <segue destination="H7K-E1-YDJ" kind="show" identifier="goConnexion" id="8k5-eO-Jpv"/>
                         <segue destination="9MY-V6-e3i" kind="show" identifier="goMP" id="2Pa-JK-Wco"/>
+                        <segue destination="7Tl-zf-cmq" kind="show" identifier="goDemanderService" id="NZE-qZ-Kok"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfd-vr-3sL" userLabel="First Responder" sceneMemberID="firstResponder"/>

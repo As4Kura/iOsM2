@@ -19,6 +19,7 @@ class Annonce_ViewController: UIViewController {
     @IBOutlet weak var dateDebut: UILabel!
     @IBOutlet weak var dateFin: UILabel!
     @IBOutlet weak var descriptionAnnonce: UITextView!
+    @IBOutlet weak var goDemanderService: UIButton!
    
    
     @IBOutlet weak var mur: UITextView!
@@ -65,21 +66,27 @@ class Annonce_ViewController: UIViewController {
             let contactPrive = UIAlertAction(title: "Contacter en privé", style: UIAlertActionStyle.Default) {
                 UIAlertAction in self.performSegueWithIdentifier("goMP", sender: self)
             }
-            let demanderService = UIAlertAction(title: "Demander Service", style: UIAlertActionStyle.Cancel) {
-                UIAlertAction in self.performSegueWithIdentifier("goDemanderService", sender: self)
-            }
-            let annuler = UIAlertAction(title: "Ne rien faire", style: UIAlertActionStyle.Default) {
+            let annuler = UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Default) {
                 UIAlertAction in
             }
         
         // Add the actions
             alertController.addAction(contactPrive)
-            alertController.addAction(demanderService)
             alertController.addAction(annuler)
         
             self.presentViewController(alertController, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func demanderService(sender: AnyObject) {
+        if ( facade.estConnecte() == nil)
+        {
+            facade.needConnection(self)
+        } else {
+            self.performSegueWithIdentifier("goDemanderService", sender: self)
+        }
+    }
+    
 
     @IBAction func publier(sender: AnyObject) {
         if ( messageMur.text != ""){
