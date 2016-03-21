@@ -25,14 +25,6 @@
                                     <action selector="seConnecter:" destination="H7K-E1-YDJ" eventType="touchUpInside" id="2zK-bb-JND"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83M-Zt-P9f">
-                                <rect key="frame" x="62" y="464" width="197" height="30"/>
-                                <state key="normal" title="Continuer sans se connecter"/>
-                                <connections>
-                                    <action selector="continuerSansSauvegarder:" destination="H7K-E1-YDJ" eventType="touchUpInside" id="V20-eo-pIj"/>
-                                    <segue destination="yi0-eS-xca" kind="show" id="YcY-eT-6Qc"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqT-nI-VUj">
                                 <rect key="frame" x="103" y="301" width="115" height="30"/>
                                 <state key="normal" title="Créer un compte"/>
@@ -45,9 +37,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z1-Lv-GaN">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z1-Lv-GaN">
                                 <rect key="frame" x="0.0" y="72" width="90" height="56"/>
-                                <state key="normal" title="testsBDD"/>
+                                <state key="normal" title="pas touche"/>
                                 <connections>
                                     <action selector="lancerTestsBDD:" destination="H7K-E1-YDJ" eventType="touchUpInside" id="65z-dE-qOC"/>
                                 </connections>
@@ -63,6 +55,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83M-Zt-P9f">
+                                <rect key="frame" x="62" y="464" width="197" height="30"/>
+                                <state key="normal" title="Continuer sans se connecter"/>
+                                <connections>
+                                    <action selector="continuerSansSauvegarder:" destination="H7K-E1-YDJ" eventType="touchUpInside" id="se7-PH-5G8"/>
+                                    <segue destination="yi0-eS-xca" kind="show" id="YcY-eT-6Qc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

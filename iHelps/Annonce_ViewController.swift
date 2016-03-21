@@ -123,12 +123,16 @@ class Annonce_ViewController: UIViewController {
 
     
     func updateMur(){
+        let dateFormater = NSDateFormatter()
+        dateFormater.dateFormat = "dd/MM/yy hh:mm"
         let array = service?.getMessagesMurAsAnArray()
         var texte = ""
         array?.forEach{ mm in
             texte += (mm.emetteur?.loginUtilisateur)!
             texte += " --> "
             texte += mm.contenu!
+            texte += " - "
+            texte += dateFormater.stringFromDate(mm.dateMM!)
             texte += "\n"
         }
         mur.text = texte

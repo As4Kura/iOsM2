@@ -145,10 +145,9 @@
 		252C79191C96F15E00B1DBCF /* Controleurs */ = {
 			isa = PBXGroup;
 			children = (
-				4972FAF61C9EEB520074553A /* CategorieTableViewCell.swift */,
+				49356C8A1CA073260020DC20 /* Cells */,
 				4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */,
 				4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */,
-				4952C1101C9B20C60048B403 /* ServiceGTableViewCell.swift */,
 				252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */,
 				25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */,
 				25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */,
@@ -159,6 +158,15 @@
 				EDDC88111CA052B900C313D3 /* DemandeServiceViewController.swift */,
 			);
 			name = Controleurs;
+			sourceTree = "<group>";
+		};
+		49356C8A1CA073260020DC20 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4972FAF61C9EEB520074553A /* CategorieTableViewCell.swift */,
+				4952C1101C9B20C60048B403 /* ServiceGTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		ED23EE4A1C88457000E2CC70 /* Modele */ = {

@@ -99,12 +99,13 @@ class FUtilisateur{
         em.setValue(contenu, forKey: "contenu")
         em.setValue(emetteur, forKey: "emetteur")
         em.setValue(serviceG, forKey: "serviceG")
+        em.setValue(NSDate(), forKey: "dateMM")
         
         
         do
         {
             try contexte.save()
-            print ("MessageMur sauvegardé")
+            //print ("MessageMur sauvegardé")
             
         }
         catch
@@ -127,7 +128,7 @@ class FUtilisateur{
         do
         {
             try contexte.save()
-            print ("MessagePrive sauvegardé")
+            //print ("MessagePrive sauvegardé")
             
         }
         catch
