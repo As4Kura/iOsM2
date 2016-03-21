@@ -20,8 +20,7 @@ class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var titre: UITextField!
     @IBOutlet weak var dateDebut: UIDatePicker!
     @IBOutlet weak var dateFin: UIDatePicker!
-    @IBOutlet weak var descriptionService: UITextField!
-    
+    @IBOutlet weak var descriptionService: UITextView!
     @IBOutlet weak var tmpAConsacrer: UITextField!
   
     override func viewDidLoad() {

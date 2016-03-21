@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		252C791B1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */; };
+		252C98B51CA02EC000D11A2D /* Messagerie_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C98B41CA02EC000D11A2D /* Messagerie_ViewController.swift */; };
+		252C98B71CA0343500D11A2D /* MP_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252C98B61CA0343500D11A2D /* MP_ViewController.swift */; };
 		25547F961C8D72E30044C7AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25547F951C8D72E30044C7AA /* ViewController.swift */; };
 		2576BEB51C9D919000E58272 /* CreerService_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2576BEB41C9D919000E58272 /* CreerService_ViewController.swift */; };
 		25DEDEEB1C99C18C00FA17F0 /* Home_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */; };
@@ -65,6 +67,8 @@
 
 /* Begin PBXFileReference section */
 		252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreerUtilisateur_ViewController.swift; sourceTree = "<group>"; };
+		252C98B41CA02EC000D11A2D /* Messagerie_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messagerie_ViewController.swift; sourceTree = "<group>"; };
+		252C98B61CA0343500D11A2D /* MP_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MP_ViewController.swift; sourceTree = "<group>"; };
 		25547F951C8D72E30044C7AA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2576BEB41C9D919000E58272 /* CreerService_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreerService_ViewController.swift; sourceTree = "<group>"; };
 		25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home_ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */,
 				2576BEB41C9D919000E58272 /* CreerService_ViewController.swift */,
 				5C684C2E1C9EF3E900C44234 /* Map_ViewController.swift */,
+				252C98B41CA02EC000D11A2D /* Messagerie_ViewController.swift */,
+				252C98B61CA0343500D11A2D /* MP_ViewController.swift */,
 			);
 			name = Controleurs;
 			sourceTree = "<group>";
@@ -384,11 +390,13 @@
 				EDEEAD2F1C88C3D100BE6EFE /* InstanceService+CoreDataProperties.swift in Sources */,
 				EDEEAD2D1C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift in Sources */,
 				494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */,
+				252C98B51CA02EC000D11A2D /* Messagerie_ViewController.swift in Sources */,
 				4972FAF91C9EEC8E0074553A /* CategorieTableViewController.swift in Sources */,
 				EDEEAD2C1C88C3D100BE6EFE /* MessageMur.swift in Sources */,
 				4952C1111C9B20C60048B403 /* ServiceGTableViewCell.swift in Sources */,
 				EDE282D61C874D0500B34565 /* Model.xcdatamodeld in Sources */,
 				49DF01171C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift in Sources */,
+				252C98B71CA0343500D11A2D /* MP_ViewController.swift in Sources */,
 				25DEDEEB1C99C18C00FA17F0 /* Home_ViewController.swift in Sources */,
 				4927A4C81C9AE5D900FFC841 /* JeuDeDonnees.swift in Sources */,
 				4972FAF71C9EEB520074553A /* CategorieTableViewCell.swift in Sources */,

@@ -63,7 +63,7 @@ class Annonce_ViewController: UIViewController {
         
         
             let contactPrive = UIAlertAction(title: "Contacter en privé", style: UIAlertActionStyle.Default) {
-                UIAlertAction in self.performSegueWithIdentifier("goContactPrive", sender: self)
+                UIAlertAction in self.performSegueWithIdentifier("goMP", sender: self)
             }
             let demanderService = UIAlertAction(title: "Demander Service", style: UIAlertActionStyle.Cancel) {
                 UIAlertAction in self.performSegueWithIdentifier("goDemanderService", sender: self)
@@ -94,6 +94,13 @@ class Annonce_ViewController: UIViewController {
             let alertController = facade.alerte("Merci de préciser le message à envoyer")
             self.presentViewController(alertController, animated: true, completion: nil)
             
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goMP" {
+            let dvc = segue.destinationViewController as! MP_ViewController
+            dvc.contact = service?.proposeur!
         }
     }
     

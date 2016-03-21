@@ -507,11 +507,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rwv-lV-l5U">
-                                <rect key="frame" x="20" y="269" width="280" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Description : " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dZP-S0-ruj">
+                                <rect key="frame" x="20" y="247" width="280" height="81"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="a0Q-uf-XIc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -522,7 +526,7 @@
                     <connections>
                         <outlet property="dateDebut" destination="baQ-l9-SMc" id="00E-KM-5hQ"/>
                         <outlet property="dateFin" destination="nXn-qU-GDz" id="bSX-gg-Vjp"/>
-                        <outlet property="descriptionService" destination="Rwv-lV-l5U" id="Ec5-tw-ZYJ"/>
+                        <outlet property="descriptionService" destination="dZP-S0-ruj" id="Lqy-HB-uMu"/>
                         <outlet property="titre" destination="zcV-YQ-xyi" id="6qS-WM-QE3"/>
                         <outlet property="tmpAConsacrer" destination="nXL-yL-449" id="YS9-yE-lyI"/>
                         <outletCollection property="switchs" destination="f8T-J7-BRI" collectionClass="NSMutableArray" id="NBu-hA-p85"/>
@@ -689,7 +693,7 @@
         <!--Messagerie-->
         <scene sceneID="8Un-Gk-yzF">
             <objects>
-                <viewController id="vOn-yH-tI1" sceneMemberID="viewController">
+                <viewController id="vOn-yH-tI1" customClass="Messagerie_ViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6mN-hX-N9W"/>
                         <viewControllerLayoutGuide type="bottom" id="OUN-xl-yFy"/>
@@ -698,21 +702,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5h-AX-mDp">
-                                <rect key="frame" x="20" y="118" width="139" height="30"/>
-                                <state key="normal" title="Écrire un message..."/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="01/06/16 à 13h37, Marcel à écrit :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StM-Zk-1oJ">
-                                <rect key="frame" x="20" y="164" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insérez ici le message à envoyer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-Eh-suj">
-                                <rect key="frame" x="20" y="193" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="leo-mg-JsH">
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messagerieCell" textLabel="Wc5-wI-gub" style="IBUITableViewCellStyleDefault" id="tVw-3w-KwK">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tVw-3w-KwK" id="QIj-R7-cqG">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wc5-wI-gub">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -726,10 +738,57 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="table" destination="leo-mg-JsH" id="ME9-sU-HzY"/>
+                        <segue destination="9MY-V6-e3i" kind="show" identifier="goMP" id="Ygf-r1-kIR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2m-Y6-xk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="636" y="2115"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RCB-xp-LsX">
+            <objects>
+                <viewController id="9MY-V6-e3i" customClass="MP_ViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lm5-Nu-rFZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wga-zu-8IX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xtb-ib-Eyg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJo-L2-1WC">
+                                <rect key="frame" x="20" y="480" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZo-me-G4Z">
+                                <rect key="frame" x="133" y="518" width="55" height="30"/>
+                                <state key="normal" title="Envoyer"/>
+                                <connections>
+                                    <action selector="envoyerMsg:" destination="9MY-V6-e3i" eventType="touchUpInside" id="0SI-34-yXk"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5cW-mk-guh">
+                                <rect key="frame" x="20" y="52" width="280" height="420"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="messageToSend" destination="YJo-L2-1WC" id="4da-7t-obH"/>
+                        <outlet property="messages" destination="5cW-mk-guh" id="VHT-Pp-wLa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSK-lO-CoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="2115"/>
         </scene>
         <!--Service-->
         <scene sceneID="D0W-rl-eQZ">
@@ -837,6 +896,7 @@
                         <segue destination="7Tl-zf-cmq" kind="show" identifier="goDemanderService" action="showDetailViewController:sender:" id="KbI-WY-9M4"/>
                         <segue destination="vOn-yH-tI1" kind="show" identifier="goContactPrive" id="bfe-2R-g8F"/>
                         <segue destination="H7K-E1-YDJ" kind="show" identifier="goConnexion" id="8k5-eO-Jpv"/>
+                        <segue destination="9MY-V6-e3i" kind="show" identifier="goMP" id="2Pa-JK-Wco"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfd-vr-3sL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -903,10 +963,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HW3-sJ-1sW"/>
         <segue reference="YcY-eT-6Qc"/>
-        <segue reference="Cyh-Md-Aqq"/>
+        <segue reference="8k5-eO-Jpv"/>
         <segue reference="1pj-HR-uFR"/>
         <segue reference="bfe-2R-g8F"/>
+        <segue reference="2Pa-JK-Wco"/>
+        <segue reference="Gp0-Lg-kut"/>
     </inferredMetricsTieBreakers>
 </document>
