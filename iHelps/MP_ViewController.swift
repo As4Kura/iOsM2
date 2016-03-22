@@ -52,6 +52,8 @@ class MP_ViewController: UIViewController {
             contenuMsg += msg.contenuMP!
             contenuMsg += "\n"
         }
+        
+        messages.text = contenuMsg
     }
 
 
