@@ -10,6 +10,7 @@
         <attribute name="dateRealisation" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="noteConso" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="noteProposeur" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="statut" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="consommateur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Utilisateur" inverseName="servicesRecus" inverseEntity="Utilisateur" syncable="YES"/>
         <relationship name="serviceGlobal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ServiceGlobal" inverseName="instancesService" inverseEntity="ServiceGlobal" syncable="YES"/>
     </entity>
@@ -47,7 +48,7 @@
     </entity>
     <elements>
         <element name="Categorie" positionX="97" positionY="5" width="128" height="75"/>
-        <element name="InstanceService" positionX="-254" positionY="-54" width="128" height="150"/>
+        <element name="InstanceService" positionX="-254" positionY="-54" width="128" height="165"/>
         <element name="MessageMur" positionX="-2" positionY="198" width="128" height="105"/>
         <element name="MessagePrive" positionX="-81" positionY="99" width="128" height="105"/>
         <element name="ServiceGlobal" positionX="-63" positionY="-36" width="128" height="180"/>
