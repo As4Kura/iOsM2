@@ -31,8 +31,9 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
-            print("> Yo, Manager !")
+                //print("> Yo, Manager !")
         }
+        getMapAnnotations()
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,10 +46,10 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate {
         let span = MKCoordinateSpanMake(0.1, 0.1)
         let center = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
         let region = MKCoordinateRegion(center: center, span: span)
-        print("> Définition de la région !")
+            //print("> Définition de la région !")
         mapView.setRegion(region, animated:true)
         locationManager.stopUpdatingLocation()
-        getMapAnnotations()
+        
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -59,41 +60,45 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func getMapAnnotations() {
-        
-        let geocoder = CLGeocoder()
         let utilsateurs = facade.getAllUtilisateur()
-        var tableau: [MKPointAnnotation] = []
+        //print(utilsateurs)
         //var adresses: [String] = []
         //var coords: [Double:Double]
         //var span = MKCoordinateSpanMake(0.5, 0.5)
+        //var tableau: [MKPointAnnotation] = []
         
         for u in utilsateurs {
-            let annotation = MKPointAnnotation()
-            //print("> Un utilisateur !")
             let adresse = u.adresseUtilisateur
+            let login = u.loginUtilisateur
+            
             if let adr = adresse {
-                print(adr)
-                geocoder.geocodeAddressString(adr, completionHandler: {(placemarks, error) -> Void in
-                    if((error) != nil){
-                        print("Error", error)
-                    }
-                    if let placemark = placemarks?.first {
-                        let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
-                        annotation.coordinate = coordinates
-                        let login = u.loginUtilisateur
-                        annotation.title = login
-                        annotation.subtitle = "Adresse"
-                        self.mapView.addAnnotation(annotation)
-                        tableau.append(annotation)
-                        //print("> On est là ! - " + login!)
-                    }
-                })
+                   // print(adr)
+                placer(adr, login:login!)
             }
         }
-        //print("> Y'a quoi dans le tableau ?")
-        mapView.addAnnotations(tableau)
-        for t in tableau {
-            print(t)
-        }
+    }
+    
+    func placer(adr:NSString, login:String) {
+        let geocoder = CLGeocoder()
+        let annotation = MKPointAnnotation()
+        var tableau: [MKPointAnnotation] = []
+        geocoder.geocodeAddressString(adr as String, completionHandler: {(placemarks, error) -> Void in
+            if((error) != nil){
+                print("Error", error)
+            }
+                //print("> Dans le geocoder !")
+            if let placemark = placemarks?.first {
+                
+                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+
+                annotation.coordinate = coordinates
+                annotation.title = login
+                annotation.subtitle = "Adresse"
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in self.mapView.addAnnotation(annotation)})
+
+                tableau.append(annotation)
+            }
+        })
     }
 }

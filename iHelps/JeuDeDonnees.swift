@@ -23,9 +23,13 @@ class JeuDeDonnee
         facade.creerCategorie("Dépannage")
         facade.creerCategorie("Autre")
         
-        facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "3 rue Issoudin Orléans")
-        facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "2 rue Madeleine Orléans")
-        facade.creerUtilisateur("MarcoPolo", mdp: "m", adresse: "3 rue Rivoli Paris")
+        facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "3 rue Issoudin Orleans")
+        facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "2 rue Madeleine Orleans")
+        facade.creerUtilisateur("Michel", mdp: "m", adresse: "5 rue Jeanne dArc Orleans")
+        facade.creerUtilisateur("Fernande", mdp: "f", adresse: "6 rue du Bourdon Blanc Orleans")
+        facade.creerUtilisateur("Emma", mdp: "e", adresse: "1 rue Charles de Coulomb Orleans")
+        facade.creerUtilisateur("Natacha", mdp: "n", adresse: "7 avenue du President John Kennedy Orleans")
+        facade.creerUtilisateur("Robert", mdp: "r", adresse: "8 rue Romain Rolland Orleans")
         facade.creerUtilisateur("Jean", mdp: "j", adresse: "3 rue de la paix Paris")
         
         let categories = facade.getAllCategorie()
