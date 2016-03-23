@@ -16,6 +16,9 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     let locationManager = CLLocationManager()
     
     let facade = Facade()
+    let services = Facade().getAllServiceG()
+    var currentPin = ServiceGlobal? ()
+    var tableau: [MKPointAnnotation] = []
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -81,27 +84,42 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         if (control as? UIButton)?.buttonType == UIButtonType.DetailDisclosure {
             mapView.deselectAnnotation(view.annotation, animated: false)
             // vvv---vvv
-            performSegueWithIdentifier("your segue Id to detail vc", sender: view)
+            performSegueWithIdentifier("goDetailAnnonce", sender: view)
         }
     }
+    
+    
+    
+   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    let aux = sender as! MKAnnotationView
+    
+        if segue.identifier == "goDetailAnnonce" {
+            //            if let indexpath = table.indexPathForSelectedRow {
+            let dvc = segue.destinationViewController as! Annonce_ViewController
+            let serviceG = facade.getService(((aux.annotation?.subtitle)!)!,titre: ((aux.annotation?.title)!)!)
+            dvc.service = serviceG
+            //           }
+        }
+    }
+    
     
     func getMapAnnotations() {
-        let utilsateurs = facade.getAllUtilisateur()
+       
         
-        for u in utilsateurs {
-            let adresse = u.adresseUtilisateur
-            let login = u.loginUtilisateur
+        for s in services {
+            let proposeur = s.proposeur
+            let adr = proposeur!.adresseUtilisateur
+            let login = proposeur!.loginUtilisateur
             
-            if let adr = adresse {
-                placer(adr, login:login!)
-            }
+                placer(adr!, titre: s.titre!, login:login!)
+            
         }
     }
     
-    func placer(adr:NSString, login:String) {
+    func placer(adr:NSString,titre: String, login:String) {
         let geocoder = CLGeocoder()
         let annotation = MKPointAnnotation()
-        var tableau: [MKPointAnnotation] = []
+        
         
         geocoder.geocodeAddressString(adr as String, completionHandler: {(placemarks, error) -> Void in
             if((error) != nil){
@@ -112,12 +130,12 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
                 let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
                 
                 annotation.coordinate = coordinates
-                annotation.title = login
-                annotation.subtitle = adr as String
+                annotation.title = titre
+                annotation.subtitle = login
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in self.mapView.addAnnotation(annotation)})
                 
-                tableau.append(annotation)
+                self.tableau.append(annotation)
             }
         })
     }
