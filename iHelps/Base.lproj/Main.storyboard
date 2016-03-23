@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyJ-dc-LTf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyJ-dc-LTf">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -864,12 +864,6 @@
                                     <action selector="clickProposeur:" destination="p0q-JB-lHo" eventType="touchUpInside" id="nW3-7t-lbS"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Le mur de ce service ne comporte aucun message." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sQ-ah-iWO">
-                                <rect key="frame" x="20" y="313" width="280" height="165"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7S-lQ-TeI">
                                 <rect key="frame" x="20" y="92" width="133" height="30"/>
                                 <state key="normal" title="Demander service !"/>
@@ -877,6 +871,9 @@
                                     <action selector="demanderService:" destination="p0q-JB-lHo" eventType="touchUpInside" id="7dV-LH-JIy"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Efo-0P-G6m">
+                                <rect key="frame" x="0.0" y="313" width="305" height="165"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -895,8 +892,8 @@
                         <outlet property="descriptionAnnonce" destination="ucA-jb-TWK" id="5Gx-kw-9Nd"/>
                         <outlet property="goDemanderService" destination="u7S-lQ-TeI" id="UlK-JY-lKf"/>
                         <outlet property="messageMur" destination="ufi-gP-3bn" id="mYX-Mo-HG6"/>
-                        <outlet property="mur" destination="0sQ-ah-iWO" id="k9b-TX-leM"/>
                         <outlet property="proposeur" destination="kbO-gl-l7A" id="zQW-x5-pDc"/>
+                        <outlet property="scroll" destination="Efo-0P-G6m" id="60d-zE-eIv"/>
                         <outlet property="temps" destination="4V6-gf-4lF" id="mOj-gR-8se"/>
                         <outlet property="titre" destination="UaF-zg-by4" id="PZg-xZ-2bI"/>
                         <segue destination="vOn-yH-tI1" kind="show" identifier="goContactPrive" id="bfe-2R-g8F"/>
@@ -984,12 +981,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o1S-BK-JgH"/>
-        <segue reference="1pj-HR-uFR"/>
         <segue reference="YcY-eT-6Qc"/>
-        <segue reference="HW3-sJ-1sW"/>
+        <segue reference="8k5-eO-Jpv"/>
+        <segue reference="1pj-HR-uFR"/>
+        <segue reference="2Pa-JK-Wco"/>
+        <segue reference="Gp0-Lg-kut"/>
         <segue reference="bfe-2R-g8F"/>
-        <segue reference="mzw-Fe-WOF"/>
-        <segue reference="Ygf-r1-kIR"/>
     </inferredMetricsTieBreakers>
 </document>
