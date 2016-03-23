@@ -10,6 +10,7 @@ import UIKit
 
 class DemandeServiceViewController: UIViewController {
     let facade = Facade()
+   
     var serviceG : ServiceGlobal?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,7 @@ class DemandeServiceViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var dateReal: UIDatePicker!
     @IBAction func envoyerDemande(sender: AnyObject)
     {
                  let alertController = UIAlertController(
@@ -33,18 +35,60 @@ class DemandeServiceViewController: UIViewController {
                 // Add the actions
                  alertController.addAction(ok)
         
-        facade.creerInstanceS(facade.estConnecte()!, serviceGlobal: serviceG!, dateRealisation: NSDate())
+    
+       let aux =  dateReal.date.timeIntervalSince1970
+       let p = aux + 3600
+       let dateRealisation = NSDate(timeIntervalSince1970: p)
+      
+        
+        
+        
+        facade.creerInstanceS(facade.estConnecte()!, serviceGlobal: serviceG!, dateRealisation: dateRealisation	)
         
         
                 self.presentViewController(alertController, animated: true, completion: nil)
         
         
+        
+        
+        let instancesS = facade.getAllInstanceS()
+        let services = facade.getAllServiceG()
+            for s in services
+            {
+                print("serviceG : " + String(s.periodeDebut!))
+                
+        }
+
+
+if instancesS.count > 0
+{
+
+
+
+for instance in instancesS
+{
+
+if let conso = instance.serviceGlobal
+{
+// print("description:"+instance.description)
+print("titre:" + conso.titre! + "date:" + String(instance.dateRealisation!) )
+
+
+
+}
     }
+        }
+    }
+    
+
+
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation
@@ -53,7 +97,7 @@ class DemandeServiceViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+    }*/
+
 
 }

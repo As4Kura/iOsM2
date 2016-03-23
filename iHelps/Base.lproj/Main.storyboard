@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyJ-dc-LTf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyJ-dc-LTf">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -350,7 +350,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategorieTableViewCell" rowHeight="105" id="Dya-ak-Gxi" customClass="CategorieTableViewCell" customModule="iHelps" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="105"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dya-ak-Gxi" id="qXJ-9W-Y6i">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
@@ -598,7 +598,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ServiceGTableViewCell" rowHeight="90" id="649-RC-7ST" customClass="ServiceGTableViewCell" customModule="iHelps" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="90"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="649-RC-7ST" id="E1Y-NA-oUV">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
@@ -707,7 +707,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messagerieCell" textLabel="Wc5-wI-gub" style="IBUITableViewCellStyleDefault" id="tVw-3w-KwK">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tVw-3w-KwK" id="QIj-R7-cqG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -929,13 +929,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="iTu-uk-uRl">
-                                <rect key="frame" x="0.0" y="122" width="320" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="480177513.865668">
-                                    <!--2016-03-20 14:38:33 +0000-->
-                                </date>
-                                <locale key="locale" localeIdentifier="fr"/>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myy-mg-EfS">
                                 <rect key="frame" x="79" y="411" width="163" height="94"/>
                                 <state key="normal" title="Envoyer demande"/>
@@ -943,14 +936,28 @@
                                     <action selector="envoyerDemande:" destination="7Tl-zf-cmq" eventType="touchUpInside" id="19U-vm-6Cp"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="iTu-uk-uRl">
+                                <rect key="frame" x="0.0" y="122" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="480177513.865668">
+                                    <!--2016-03-20 14:38:33 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="fr_FR"/>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Demande de Service" id="HUz-cc-nBB" userLabel="Service">
                         <barButtonItem key="backBarButtonItem" title=" " id="Ei4-XO-iL5"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wEW-2B-ElW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wEW-2B-ElW">
+                            <connections>
+                                <segue destination="bw7-aq-yhY" kind="show" id="o1S-BK-JgH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="dateReal" destination="iTu-uk-uRl" id="5NR-ee-0iX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Fe-bK-ocR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -979,11 +986,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YcY-eT-6Qc"/>
-        <segue reference="8k5-eO-Jpv"/>
+        <segue reference="o1S-BK-JgH"/>
         <segue reference="1pj-HR-uFR"/>
+        <segue reference="YcY-eT-6Qc"/>
+        <segue reference="HW3-sJ-1sW"/>
         <segue reference="bfe-2R-g8F"/>
-        <segue reference="2Pa-JK-Wco"/>
-        <segue reference="Gp0-Lg-kut"/>
+        <segue reference="Ygf-r1-kIR"/>
     </inferredMetricsTieBreakers>
 </document>

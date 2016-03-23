@@ -59,31 +59,46 @@ class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
             }
         }
         
-        if (oldTitre == titre.text!){
+        if (oldTitre == titre.text! && titre.text != ""){
             let msgAlerte = "Votre demande précédente a bien été prise en compte."
             let alertController = facade.alerte(msgAlerte)
             self.presentViewController(alertController, animated: true, completion: nil)
-        }  else if ( titre.text != "" && descriptionService.text != "" && boolSwitch && tmpAConsacrer.text != "" && tmpAConsacrer.text != "")
+        }
+        
+        else if ( titre.text != "" && descriptionService.text != "" && boolSwitch && tmpAConsacrer.text != "" && tmpAConsacrer.text != "")
         {
             
           
-         
-            facade.creerServiceG(facade.estConnecte()!, temps: tmpAConsacrer.text!, periodeDebut: dateDebut.date, periodeFin: dateFin.date, titre: titre.text!, descriptionService: descriptionService.text!, categories: cat)
-            oldTitre = titre.text!
-            let services = facade.getAllServiceG()
+            let aux =  dateDebut.date.timeIntervalSince1970
+            let p = aux + 3600
+            let periodeDebut = NSDate(timeIntervalSince1970: p)
             
-            if services.count > 0
-            {
-                
-                for servG in services
-                {
-                    for c in servG.getCategoriesAsAnArray()
-                    {
-                        print( servG.titre! + " nom categorie:"+c.nomCategorie!)
-                    }
+            let aux2 =  dateFin.date.timeIntervalSince1970
+            let p2 = aux2 + 3600
+            let periodeFin = NSDate(timeIntervalSince1970: p2)
+            
+            
 
-                }
+            facade.creerServiceG(facade.estConnecte()!, temps: tmpAConsacrer.text!, periodeDebut: periodeDebut, periodeFin: periodeFin, titre: titre.text!, descriptionService: descriptionService.text!, categories: cat)
+            oldTitre = titre.text!
+       
+            
+            let alertController = UIAlertController(
+                title: "iHelps",
+                message: "Annonce créée !",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            
+            
+            
+            let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
             }
+            
+            // Add the actions
+            alertController.addAction(ok)
+            
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
         
         
         }else {
