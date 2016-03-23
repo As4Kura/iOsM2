@@ -30,7 +30,7 @@ class Utilisateur: NSManagedObject {
     
     func getMpEnvoyesAsAnArray() ->Array<MessagePrive>
     {
-        return mpRecus!.allObjects as! [MessagePrive]
+        return mpEnvoyes!.allObjects as! [MessagePrive]
     }
     
 }

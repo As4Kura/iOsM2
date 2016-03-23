@@ -99,6 +99,7 @@ class FUtilisateur{
         em.setValue(contenu, forKey: "contenu")
         em.setValue(emetteur, forKey: "emetteur")
         em.setValue(serviceG, forKey: "serviceG")
+//        em.setValue(NSDate(), forKey: "dateMM")
         
         
         do
@@ -122,7 +123,7 @@ class FUtilisateur{
         em.setValue(contenu, forKey: "contenuMP")
         em.setValue(emetteur, forKey: "emetteur")
         em.setValue(receveur, forKey: "receveur")
-        
+        em.setValue(NSDate(), forKey: "dateMP")
         
         do
         {

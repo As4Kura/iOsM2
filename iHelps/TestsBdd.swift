@@ -68,10 +68,11 @@ func fonctionDeTestsEnBase()
     
     if utilisateurs.count > 1
     {
-        facade.envoyerMessagePrive(" mon 1er messagePrive", emetteur: utilisateurs[0], receveur : utilisateurs[1])
-        facade.envoyerMessagePrive(" ma reponse ", emetteur: utilisateurs[1], receveur : utilisateurs[0])
-        facade.envoyerMessagePrive(" mon 2e messagePrive", emetteur: utilisateurs[0], receveur : utilisateurs[1])
-        facade.envoyerMessagePrive(" ma 2e reponse ", emetteur: utilisateurs[1], receveur : utilisateurs[0])
+        facade.envoyerMessagePrive(" User0 envoie un MP à User1", emetteur: utilisateurs[0], receveur : utilisateurs[1])
+        facade.envoyerMessagePrive(" User1 repond à User0", emetteur: utilisateurs[1], receveur : utilisateurs[0])
+        facade.envoyerMessagePrive(" 2nd msg de User0 --> User1", emetteur: utilisateurs[0], receveur : utilisateurs[1])
+        sleep(1)
+        facade.envoyerMessagePrive(" User1 repond un petit roman à son amis le user0 qui lui a gentillement envoyer plusieurs message pour savoir comment va la progression de ses cours de chat !!", emetteur: utilisateurs[1], receveur : utilisateurs[0])
 
         facade.creerServiceG(utilisateurs[0], temps: "2h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"garde d'enfants, hmmm",descriptionService: "mettre des somniferes dans le biberon",categories: deuxCat)
         facade.creerServiceG(utilisateurs[0], temps: "3h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"cours de chat",descriptionService: "dormir,rien faire, dormir",categories : quatreCat)
