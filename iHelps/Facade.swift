@@ -76,6 +76,10 @@ class Facade
         return fServiceG.getAllCategorie()
     }
     
+    func getService(login : String, titre : String )-> ServiceGlobal
+    {
+        return fServiceG.getService(login, titre : titre)
+    }
     
     func creerCategorie(nomCategorie : String)
     {
