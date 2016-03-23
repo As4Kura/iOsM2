@@ -12,6 +12,11 @@ class Annonce_ViewController: UIViewController {
 
     let facade = Facade()
     var service : ServiceGlobal?
+    var listLabel : [UILabel] = []
+    var listMessages : [MessageMur] = []
+    var spacer :CGFloat = 0.0
+
+
     
     @IBOutlet weak var titre: UILabel!
     @IBOutlet weak var proposeur: UIButton!
@@ -21,8 +26,8 @@ class Annonce_ViewController: UIViewController {
     @IBOutlet weak var descriptionAnnonce: UITextView!
     @IBOutlet weak var goDemanderService: UIButton!
    
-   
-    @IBOutlet weak var mur: UITextView!
+
+    @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var messageMur: UITextField!
     
     @IBAction func contactPrive(sender: AnyObject) {
@@ -123,28 +128,67 @@ class Annonce_ViewController: UIViewController {
 
     
     func updateMur(){
+        listMessages = (service?.getMessagesMurAsAnArray())!
+        trierListMessages()
+        printMM()
+    }
+    
+    
+
+    func trierListMessages(){
+        listMessages.sortInPlace({ return $0.dateMM!.earlierDate($1.dateMM!) == $0.dateMM})
+    }
+    
+    func printMM(){
+        for lab in listLabel{
+            lab.removeFromSuperview()
+        }
+        listLabel.removeAll()
+        spacer = 0.0
+        
         let dateFormater = NSDateFormatter()
         dateFormater.dateFormat = "dd/MM/yy hh:mm"
-        let array = service?.getMessagesMurAsAnArray()
-        var texte = ""
-        array?.forEach{ mm in
-            texte += (mm.emetteur?.loginUtilisateur)!
-            texte += " --> "
-            texte += mm.contenu!
-            texte += " - "
-            texte += dateFormater.stringFromDate(mm.dateMM!)
-            texte += "\n"
+        
+        for msg in listMessages {
+            let label = UILabel(frame: CGRectMake(scroll.frame.minX, 0, scroll.frame.width, 0))
+            label.textColor = UIColor.whiteColor()
+            label.font = UIFont(name: label.font.fontName, size: 12)
+            var texte = msg.emetteur!.loginUtilisateur!
+            texte += " ("
+            texte += dateFormater.stringFromDate(msg.dateMM!)
+            texte += ") --> "
+            texte += msg.contenu!
+            label.text = texte
+            label.numberOfLines = 0
+            label.sizeToFit()
+            
+            if( msg.emetteur == facade.estConnecte()) // J'envoie !!
+            {
+                let label_center_x = (scroll.frame.maxX  - label.frame.width/2)
+                label.center = CGPointMake(label_center_x, spacer + label.frame.height/2 )
+                label.backgroundColor = UIColor(red: 0.431, green: 0.900, blue: 0.318, alpha: 1.0)
+                label.textAlignment = .Right
+            } else // Je recois
+            {
+                let label_center_x = (scroll.frame.minX  + label.frame.width/2)
+                label.center = CGPointMake(label_center_x, spacer + label.frame.height/2)
+                label.backgroundColor = UIColor(red: 0.988, green: 0.431, blue: 0.318, alpha: 1.0)
+                label.textAlignment = .Left
+            }
+            
+            if ( msg.emetteur == service?.proposeur)
+            {
+                label.backgroundColor = UIColor(red: 0.388, green: 0.431, blue: 0.918, alpha: 1.0)
+            }
+            spacer = spacer + label.frame.height + 8
+            
+            let size = CGSize(width: scroll.frame.width, height: spacer)
+            self.scroll.contentSize = size
+            
+            self.scroll.addSubview(label)
+            listLabel.append(label)
         }
-        mur.text = texte
+        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

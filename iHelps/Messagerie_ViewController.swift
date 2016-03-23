@@ -31,8 +31,8 @@ class Messagerie_ViewController: UIViewController,  UITableViewDataSource, UITab
             }
         }
         for msg in msgEnvoyes! {
-            if ( !senders.contains(msg.emetteur!) ){
-                senders.append(msg.emetteur!)
+            if ( !senders.contains(msg.receveur!) ){
+                senders.append(msg.receveur!)
             }
         }
         

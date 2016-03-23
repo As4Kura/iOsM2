@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyJ-dc-LTf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyJ-dc-LTf">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -32,7 +32,7 @@
                                     <segue destination="vgr-uR-KiJ" kind="show" id="Dok-y0-eVL"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="login0" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nNH-wT-05J">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="login1" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nNH-wT-05J">
                                 <rect key="frame" x="112" y="120" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -50,7 +50,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mdp0" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dt7-pn-E8O">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mdp1" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dt7-pn-E8O">
                                 <rect key="frame" x="112" y="158" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -703,7 +703,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="leo-mg-JsH">
-                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messagerieCell" textLabel="Wc5-wI-gub" style="IBUITableViewCellStyleDefault" id="tVw-3w-KwK">
@@ -759,11 +759,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJo-L2-1WC">
-                                <rect key="frame" x="20" y="480" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZo-me-G4Z">
                                 <rect key="frame" x="133" y="518" width="55" height="30"/>
                                 <state key="normal" title="Envoyer"/>
@@ -771,19 +766,22 @@
                                     <action selector="envoyerMsg:" destination="9MY-V6-e3i" eventType="touchUpInside" id="0SI-34-yXk"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5cW-mk-guh">
-                                <rect key="frame" x="20" y="52" width="280" height="420"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzv-ny-PfQ">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="472"/>
+                            </scrollView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJo-L2-1WC">
+                                <rect key="frame" x="20" y="480" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="messageToSend" destination="YJo-L2-1WC" id="4da-7t-obH"/>
-                        <outlet property="messages" destination="5cW-mk-guh" id="VHT-Pp-wLa"/>
+                        <outlet property="myView" destination="xtb-ib-Eyg" id="GW3-Kg-Awq"/>
+                        <outlet property="scroll" destination="nzv-ny-PfQ" id="d8c-RF-7ls"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSK-lO-CoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -866,12 +864,6 @@
                                     <action selector="clickProposeur:" destination="p0q-JB-lHo" eventType="touchUpInside" id="nW3-7t-lbS"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Le mur de ce service ne comporte aucun message." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sQ-ah-iWO">
-                                <rect key="frame" x="20" y="313" width="280" height="165"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7S-lQ-TeI">
                                 <rect key="frame" x="20" y="92" width="133" height="30"/>
                                 <state key="normal" title="Demander service !"/>
@@ -879,6 +871,9 @@
                                     <action selector="demanderService:" destination="p0q-JB-lHo" eventType="touchUpInside" id="7dV-LH-JIy"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Efo-0P-G6m">
+                                <rect key="frame" x="0.0" y="313" width="305" height="165"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -897,8 +892,8 @@
                         <outlet property="descriptionAnnonce" destination="ucA-jb-TWK" id="5Gx-kw-9Nd"/>
                         <outlet property="goDemanderService" destination="u7S-lQ-TeI" id="UlK-JY-lKf"/>
                         <outlet property="messageMur" destination="ufi-gP-3bn" id="mYX-Mo-HG6"/>
-                        <outlet property="mur" destination="0sQ-ah-iWO" id="k9b-TX-leM"/>
                         <outlet property="proposeur" destination="kbO-gl-l7A" id="zQW-x5-pDc"/>
+                        <outlet property="scroll" destination="Efo-0P-G6m" id="60d-zE-eIv"/>
                         <outlet property="temps" destination="4V6-gf-4lF" id="mOj-gR-8se"/>
                         <outlet property="titre" destination="UaF-zg-by4" id="PZg-xZ-2bI"/>
                         <segue destination="vOn-yH-tI1" kind="show" identifier="goContactPrive" id="bfe-2R-g8F"/>
@@ -986,11 +981,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o1S-BK-JgH"/>
-        <segue reference="1pj-HR-uFR"/>
         <segue reference="YcY-eT-6Qc"/>
-        <segue reference="HW3-sJ-1sW"/>
+        <segue reference="8k5-eO-Jpv"/>
+        <segue reference="1pj-HR-uFR"/>
+        <segue reference="2Pa-JK-Wco"/>
+        <segue reference="Gp0-Lg-kut"/>
         <segue reference="bfe-2R-g8F"/>
-        <segue reference="Ygf-r1-kIR"/>
     </inferredMetricsTieBreakers>
 </document>
