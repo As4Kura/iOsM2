@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyJ-dc-LTf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyJ-dc-LTf">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -25,14 +25,6 @@
                                     <action selector="seConnecter:" destination="H7K-E1-YDJ" eventType="touchUpInside" id="2zK-bb-JND"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83M-Zt-P9f">
-                                <rect key="frame" x="62" y="464" width="197" height="30"/>
-                                <state key="normal" title="Continuer sans se connecter"/>
-                                <connections>
-                                    <action selector="continuerSansSauvegarder:" destination="H7K-E1-YDJ" eventType="touchUpInside" id="V20-eo-pIj"/>
-                                    <segue destination="yi0-eS-xca" kind="show" id="YcY-eT-6Qc"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqT-nI-VUj">
                                 <rect key="frame" x="103" y="301" width="115" height="30"/>
                                 <state key="normal" title="Créer un compte"/>
@@ -45,9 +37,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z1-Lv-GaN">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z1-Lv-GaN">
                                 <rect key="frame" x="0.0" y="72" width="90" height="56"/>
-                                <state key="normal" title="testsBDD"/>
+                                <state key="normal" title="pas touche"/>
                                 <connections>
                                     <action selector="lancerTestsBDD:" destination="H7K-E1-YDJ" eventType="touchUpInside" id="65z-dE-qOC"/>
                                 </connections>
@@ -63,6 +55,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83M-Zt-P9f">
+                                <rect key="frame" x="62" y="464" width="197" height="30"/>
+                                <state key="normal" title="Continuer sans se connecter"/>
+                                <connections>
+                                    <action selector="continuerSansSauvegarder:" destination="H7K-E1-YDJ" eventType="touchUpInside" id="se7-PH-5G8"/>
+                                    <segue destination="yi0-eS-xca" kind="show" id="YcY-eT-6Qc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -912,7 +912,7 @@
         <!--Demande de Service-->
         <scene sceneID="KZn-q5-VCA">
             <objects>
-                <viewController id="7Tl-zf-cmq" sceneMemberID="viewController">
+                <viewController id="7Tl-zf-cmq" customClass="DemandeServiceViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IFF-hk-fKE"/>
                         <viewControllerLayoutGuide type="bottom" id="zxX-cw-K4P"/>
@@ -921,26 +921,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Demande de service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xj-25-Ieu">
-                                <rect key="frame" x="82" y="72" width="157" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quand souhaitez vous le service?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xj-25-Ieu">
+                                <rect key="frame" x="0.0" y="49" width="320" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iTu-uk-uRl">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myy-mg-EfS">
+                                <rect key="frame" x="79" y="411" width="163" height="94"/>
+                                <state key="normal" title="Envoyer demande"/>
+                                <connections>
+                                    <action selector="envoyerDemande:" destination="7Tl-zf-cmq" eventType="touchUpInside" id="19U-vm-6Cp"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="iTu-uk-uRl">
                                 <rect key="frame" x="0.0" y="122" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="480177513.865668">
                                     <!--2016-03-20 14:38:33 +0000-->
                                 </date>
+                                <locale key="locale" localeIdentifier="fr_FR"/>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Demande de Service" id="HUz-cc-nBB" userLabel="Service">
                         <barButtonItem key="backBarButtonItem" title=" " id="Ei4-XO-iL5"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wEW-2B-ElW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wEW-2B-ElW">
+                            <connections>
+                                <segue destination="bw7-aq-yhY" kind="show" id="o1S-BK-JgH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="dateReal" destination="iTu-uk-uRl" id="5NR-ee-0iX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Fe-bK-ocR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -969,9 +984,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HW3-sJ-1sW"/>
-        <segue reference="YcY-eT-6Qc"/>
+        <segue reference="o1S-BK-JgH"/>
         <segue reference="1pj-HR-uFR"/>
+        <segue reference="YcY-eT-6Qc"/>
+        <segue reference="HW3-sJ-1sW"/>
         <segue reference="bfe-2R-g8F"/>
         <segue reference="mzw-Fe-WOF"/>
         <segue reference="Ygf-r1-kIR"/>

@@ -20,25 +20,15 @@ let facade = Facade()
 
 func fonctionDeTestsEnBase()
 {
-    facade.deleteBDD()
+    //facade.deleteBDD()
     
-    facade.creerUtilisateur("login0", mdp: "mdp0", adresse: "adresse0")
-    facade.creerUtilisateur("login1", mdp: "mdp1", adresse: "adresse1")
+    let utilisateurs = facade.getAllUtilisateur()
     
-    facade.creerCategorie("Service maison")
-    facade.creerCategorie("Cours particuliers")
-    facade.creerCategorie("Animaux")
-    facade.creerCategorie("Dépannage")
-    facade.creerCategorie("Autre")
+   /* 
     
-    let categories = facade.getAllCategorie()
-    let deuxCat = [Categorie](arrayLiteral: categories [0],categories [1])
-    var quatreCat = [Categorie](deuxCat)
-    quatreCat.append(categories [2])
-    quatreCat.append(categories [3])
+    let categories = facade.getAllCaterogie()
     
-    
-   /* if categories.count > 0
+    if categories.count > 0
     {
         
         for c in categories
@@ -64,20 +54,7 @@ func fonctionDeTestsEnBase()
     }*/
     
     
-    let utilisateurs = facade.getAllUtilisateur()
-    
-    if utilisateurs.count > 1
-    {
-        facade.envoyerMessagePrive(" User0 envoie un MP à User1", emetteur: utilisateurs[0], receveur : utilisateurs[1])
-        facade.envoyerMessagePrive(" User1 repond à User0", emetteur: utilisateurs[1], receveur : utilisateurs[0])
-        facade.envoyerMessagePrive(" 2nd msg de User0 --> User1", emetteur: utilisateurs[0], receveur : utilisateurs[1])
-        sleep(1)
-        facade.envoyerMessagePrive(" User1 repond un petit roman à son amis le user0 qui lui a gentillement envoyer plusieurs message pour savoir comment va la progression de ses cours de chat !!", emetteur: utilisateurs[1], receveur : utilisateurs[0])
 
-        facade.creerServiceG(utilisateurs[0], temps: "2h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"garde d'enfants, hmmm",descriptionService: "mettre des somniferes dans le biberon",categories: deuxCat)
-        facade.creerServiceG(utilisateurs[0], temps: "3h",periodeDebut: NSDate(),periodeFin: NSDate(),titre :"cours de chat",descriptionService: "dormir,rien faire, dormir",categories : quatreCat)
-    }
-    
     /*let mps = facade.getAllMP()
     
     if mps.count > 0
@@ -91,13 +68,10 @@ func fonctionDeTestsEnBase()
 
     let services = facade.getAllServiceG()
     
-    if services.count > 0
+  /*  if services.count > 0
     {
         
-        
-        
-        facade.creerInstanceS(utilisateurs[1], serviceGlobal: services[0], dateRealisation: NSDate())
-        facade.envoyerMessageMur("wesh t fraîche madmoizel", emetteur: utilisateurs[0], serviceG: services[0])
+     
         
         for servG in services
         {
@@ -128,17 +102,16 @@ func fonctionDeTestsEnBase()
             
         }
         
-    }
+    }*/
     
     
      let instancesS = facade.getAllInstanceS()
     
     
-    if instancesS.count > 0
+   /* if instancesS.count > 0
     {
         
-        facade.proposeurNoteCommenteConso(instancesS[0], note:7, commentaire: "agrrléable!")
-        facade.consoNoteCommenteProposeur(instancesS[0], note: 6, commentaire: "ca va imhotep")
+        
         
         for instance in instancesS
         {
@@ -160,7 +133,7 @@ func fonctionDeTestsEnBase()
                 
             }
         }
-    }
+    }*/
 }
 
 }

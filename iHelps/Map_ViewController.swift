@@ -11,33 +11,16 @@ import MapKit
 import CoreLocation
 
 class Map_ViewController: UIViewController, CLLocationManagerDelegate {
-/*
-    var searchController:UISearchController!
-    var annotation:MKAnnotation!
-    var localSearchRequest:MKLocalSearchRequest!
-    var localSearch:MKLocalSearch!
-    var localSearchResponse:MKLocalSearchResponse!
-    var error:NSError!
-    var pointAnnotation:MKPointAnnotation!
-    var pinAnnotationView:MKPinAnnotationView!
-  */
-    // Initialiser avec les adresses à afficher
-    //var listedesadresses = [String]()
     
     let locationManager = CLLocationManager()
-    /*
-    var address = "1 rue Jeanne D'Arc, Orléans"
-    var geocoder = CLGeocoder()
-    geocoder.geocodeAddressString(address, {(placemarks: [AnyObject]!, error: NSError!) -> Void in if let placemark = placemarks?[0] as? CLPlacemark {
-            self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
-        }
-    })
-    */
+    
+    let facade = Facade()
+    
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Demande d'autorisation de l'utilisateur
         self.locationManager.requestAlwaysAuthorization()
         
@@ -48,27 +31,25 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
+                //print("> Yo, Manager !")
         }
-        
-        //let initialLocatio
+        getMapAnnotations()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        var locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        let coords:CLLocationCoordinate2D = manager.location!.coordinate
+        let span = MKCoordinateSpanMake(0.1, 0.1)
+        let center = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
+        let region = MKCoordinateRegion(center: center, span: span)
+            //print("> Définition de la région !")
+        mapView.setRegion(region, animated:true)
+        locationManager.stopUpdatingLocation()
         
-        let center = CLLocationCoordinate2D(latitude: locValue.latitude, longitude: locValue.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        
-        self.mapView.setRegion(region, animated:true)
-        var currentLocation = CLLocation()
-        
-        var locationLat = currentLocation.coordinate.latitude
-        var locationLong = currentLocation.coordinate.longitude
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -76,49 +57,48 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManagerDidPauseLocationUpdates(manager: CLLocationManager) {
-        
     }
     
-    /*
-    func getMapAnnotations(){
-        var annotations:Array = listedesadresses
+    func getMapAnnotations() {
+        let utilsateurs = facade.getAllUtilisateur()
+        //print(utilsateurs)
+        //var adresses: [String] = []
+        //var coords: [Double:Double]
+        //var span = MKCoordinateSpanMake(0.5, 0.5)
+        //var tableau: [MKPointAnnotation] = []
         
-    
-        // load plist file
-        var addresses: NSArray?
-        
-        if let items = addresses {
-            for item in items {
-                let lat = item.valueForKey("lat") as! Double
-                let long = item.valueForKey("long") as! Double
-                let annotation = Station(latitude:lat, longitude:long)
-                annotation.
+        for u in utilsateurs {
+            let adresse = u.adresseUtilisateur
+            let login = u.loginUtilisateur
+            
+            if let adr = adresse {
+                   // print(adr)
+                placer(adr, login:login!)
             }
         }
-    }*/
-    
-   /*
-    @IBAction func findMyLocation(sender:AnyObject)
-    {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
-        
-        let location = self.locationManager.location
-        
-        var latitude: Double = location.coordinate.latitude
-        var longitude: Double = location.coordinate.longitude
-    }*/
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    func placer(adr:NSString, login:String) {
+        let geocoder = CLGeocoder()
+        let annotation = MKPointAnnotation()
+        var tableau: [MKPointAnnotation] = []
+        geocoder.geocodeAddressString(adr as String, completionHandler: {(placemarks, error) -> Void in
+            if((error) != nil){
+                print("Error", error)
+            }
+                //print("> Dans le geocoder !")
+            if let placemark = placemarks?.first {
+                
+                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
 
+                annotation.coordinate = coordinates
+                annotation.title = login
+                annotation.subtitle = "Adresse"
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in self.mapView.addAnnotation(annotation)})
+
+                tableau.append(annotation)
+            }
+        })
+    }
 }

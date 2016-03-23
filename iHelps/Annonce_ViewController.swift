@@ -82,7 +82,8 @@ class Annonce_ViewController: UIViewController {
         if ( facade.estConnecte() == nil)
         {
             facade.needConnection(self)
-        } else {
+        }
+        else {
             self.performSegueWithIdentifier("goDemanderService", sender: self)
         }
     }
@@ -109,15 +110,29 @@ class Annonce_ViewController: UIViewController {
             let dvc = segue.destinationViewController as! MP_ViewController
             dvc.contact = service?.proposeur!
         }
+        else if segue.identifier == "goDemanderService"
+        {
+            let dvc = segue.destinationViewController as! DemandeServiceViewController
+            dvc.serviceG = service
+   
+        }
+        
     }
     
+   
+
+    
     func updateMur(){
+        let dateFormater = NSDateFormatter()
+        dateFormater.dateFormat = "dd/MM/yy hh:mm"
         let array = service?.getMessagesMurAsAnArray()
         var texte = ""
         array?.forEach{ mm in
             texte += (mm.emetteur?.loginUtilisateur)!
             texte += " --> "
             texte += mm.contenu!
+            texte += " - "
+            texte += dateFormater.stringFromDate(mm.dateMM!)
             texte += "\n"
         }
         mur.text = texte

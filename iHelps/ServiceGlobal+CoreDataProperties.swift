@@ -2,7 +2,7 @@
 //  ServiceGlobal+CoreDataProperties.swift
 //  iHelps
 //
-//  Created by nicolas catanoso on 20/03/2016.
+//  Created by nicolas catanoso on 21/03/2016.
 //  Copyright © 2016 NXN. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
