@@ -1,5 +1,5 @@
 //
-//  Star.swift
+//  StarFillMode.swift
 //  iHelps
 //
 //  Created by Nicolas Opal on 24/03/2016.
