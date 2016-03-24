@@ -66,6 +66,65 @@ class FInstanceService
     }
     
     
+    func delete(service : InstanceService)
+        
+    {
+        
+        // let requete = NSFetchRequest(entityName: "InstanceService")
+        // let deleteRequest = NSBatchDeleteRequest(fetchRequest: requete)
+        
+        //  requete.returnsObjectsAsFaults = false
+        
+        
+        
+        
+        do
+        {
+            try contexte.deleteObject(service)            // print("titreS:" + services[0].titre!)
+            
+        }
+            
+        catch
+        {
+            print("Echec de la requête Fetch !")
+            
+        }
+        
+    }
+    
+    
+    func accepterDemande(service : InstanceService)
+        
+    {
+        
+        // let requete = NSFetchRequest(entityName: "InstanceService")
+        // let deleteRequest = NSBatchDeleteRequest(fetchRequest: requete)
+        
+        //  requete.returnsObjectsAsFaults = false
+        let s = service as NSManagedObject
+        
+        s.setValue("accepted", forKey: "statut")
+        
+        
+        
+        do
+        {
+            try contexte.save()            // print("titreS:" + services[0].titre!)
+            
+        }
+            
+        catch
+        {
+            print("Echec de la requête Fetch !")
+            
+        }
+        
+    }
+
+
+    
+    
+    
     func getInstancesByStatutAndProposeur(statut : String, util: Utilisateur)->Array<InstanceService>
         
     {

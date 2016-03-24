@@ -207,6 +207,16 @@ class Facade
     {
         return fInstanceS.getInstancesByStatutAndConsommateur(statut, util : util)
     }
+    
+    func deleteInstance(service : InstanceService)
+    {
+        fInstanceS.delete(service)
+    }
+    
+    func accepterDemande(service : InstanceService)
+    {
+        fInstanceS.accepterDemande(service)
+    }
     ////
     
     
