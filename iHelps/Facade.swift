@@ -202,6 +202,11 @@ class Facade
     {
         return fInstanceS.getInstancesByStatutAndProposeur(statut, util : util)
     }
+    
+    func getInstancesByStatutAndConsommateur(statut : String, util : Utilisateur)->Array<InstanceService>
+    {
+        return fInstanceS.getInstancesByStatutAndConsommateur(statut, util : util)
+    }
     ////
     
     

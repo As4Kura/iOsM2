@@ -67,9 +67,9 @@ class FInstanceService
     
     
     func getInstancesByStatutAndProposeur(statut : String, util: Utilisateur)->Array<InstanceService>
-
+        
     {
-       
+        
         
         let requete = NSFetchRequest(entityName: "InstanceService")
         
@@ -83,7 +83,7 @@ class FInstanceService
         {
             return try contexte.executeFetchRequest(requete)as! [InstanceService]
             // print("titreS:" + services[0].titre!)
-           
+            
         }
             
         catch
@@ -91,9 +91,38 @@ class FInstanceService
             print("Echec de la requête Fetch !")
             return [InstanceService] ()
         }
-
+        
     }
+
     
+    func getInstancesByStatutAndConsommateur(statut : String, util: Utilisateur)->Array<InstanceService>
+        
+    {
+        
+        
+        let requete = NSFetchRequest(entityName: "InstanceService")
+        
+        requete.predicate = NSPredicate(format: "(statut like %@) AND (consommateur = %@)", statut,util)
+        requete.returnsObjectsAsFaults = false
+        
+        
+        
+        
+        do
+        {
+            return try contexte.executeFetchRequest(requete)as! [InstanceService]
+            // print("titreS:" + services[0].titre!)
+            
+        }
+            
+        catch
+        {
+            print("Echec de la requête Fetch !")
+            return [InstanceService] ()
+        }
+        
+    }
+
     
     
     func consoNoteCommenteProposeur(instanceS : NSManagedObject , note : Int, commentaire : String)

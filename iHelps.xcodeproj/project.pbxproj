@@ -35,6 +35,8 @@
 		ED395B301C86342C00FF6D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED395B2E1C86342C00FF6D49 /* LaunchScreen.storyboard */; };
 		ED395B3B1C86342C00FF6D49 /* iHelpsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED395B3A1C86342C00FF6D49 /* iHelpsTests.swift */; };
 		ED395B461C86342C00FF6D49 /* iHelpsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED395B451C86342C00FF6D49 /* iHelpsUITests.swift */; };
+		ED7330061CA4254400C489E3 /* ServicesJeProposeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7330051CA4254400C489E3 /* ServicesJeProposeTableViewController.swift */; };
+		ED7330081CA4275C00C489E3 /* ServicesJeProposeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7330071CA4275C00C489E3 /* ServicesJeProposeTableViewCell.swift */; };
 		EDDC88121CA052B900C313D3 /* DemandeServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDC88111CA052B900C313D3 /* DemandeServiceViewController.swift */; };
 		EDE282D61C874D0500B34565 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDE282D41C874D0500B34565 /* Model.xcdatamodeld */; };
 		EDE282D81C8752E200B34565 /* FServiceGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE282D71C8752E200B34565 /* FServiceGlobal.swift */; };
@@ -101,6 +103,8 @@
 		ED395B411C86342C00FF6D49 /* iHelpsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iHelpsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED395B451C86342C00FF6D49 /* iHelpsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iHelpsUITests.swift; sourceTree = "<group>"; };
 		ED395B471C86342C00FF6D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED7330051CA4254400C489E3 /* ServicesJeProposeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesJeProposeTableViewController.swift; sourceTree = "<group>"; };
+		ED7330071CA4275C00C489E3 /* ServicesJeProposeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesJeProposeTableViewCell.swift; sourceTree = "<group>"; };
 		EDDC88111CA052B900C313D3 /* DemandeServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemandeServiceViewController.swift; sourceTree = "<group>"; };
 		EDE282D51C874D0500B34565 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		EDE282D71C8752E200B34565 /* FServiceGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FServiceGlobal.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 		252C79191C96F15E00B1DBCF /* Controleurs */ = {
 			isa = PBXGroup;
 			children = (
+				ED7330051CA4254400C489E3 /* ServicesJeProposeTableViewController.swift */,
 				49356C8A1CA073260020DC20 /* Cells */,
 				4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */,
 				4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */,
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				4972FAF61C9EEB520074553A /* CategorieTableViewCell.swift */,
+				ED7330071CA4275C00C489E3 /* ServicesJeProposeTableViewCell.swift */,
 				4952C1101C9B20C60048B403 /* ServiceGTableViewCell.swift */,
 			);
 			name = Cells;
@@ -410,6 +416,7 @@
 				49DF01171C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift in Sources */,
 				252C98B71CA0343500D11A2D /* MP_ViewController.swift in Sources */,
 				25DEDEEB1C99C18C00FA17F0 /* Home_ViewController.swift in Sources */,
+				ED7330081CA4275C00C489E3 /* ServicesJeProposeTableViewCell.swift in Sources */,
 				4927A4C81C9AE5D900FFC841 /* JeuDeDonnees.swift in Sources */,
 				4972FAF71C9EEB520074553A /* CategorieTableViewCell.swift in Sources */,
 				ED23EE481C883A5000E2CC70 /* Utilisateur+CoreDataProperties.swift in Sources */,
@@ -417,6 +424,7 @@
 				252C791B1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift in Sources */,
 				25547F961C8D72E30044C7AA /* ViewController.swift in Sources */,
 				ED23EE441C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift in Sources */,
+				ED7330061CA4254400C489E3 /* ServicesJeProposeTableViewController.swift in Sources */,
 				ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */,
 				EDEEAD2B1C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift in Sources */,
 				EDEEAD301C88C3D100BE6EFE /* InstanceService.swift in Sources */,

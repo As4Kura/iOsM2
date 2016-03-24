@@ -59,6 +59,8 @@ class JeuDeDonnee
             
             facade.creerInstanceS(utilisateurs[1], serviceGlobal: services[0], dateRealisation: NSDate(timeIntervalSinceNow: 5000),statut: "waiting")
             
+            facade.creerInstanceS(utilisateurs[2], serviceGlobal: services[0], dateRealisation: NSDate(timeIntervalSinceNow: 8000),statut: "accepted")
+            
             facade.envoyerMessageMur("Combien d'expérience avez-vous?", emetteur: utilisateurs[1], serviceG: services[1])
             facade.envoyerMessageMur("9 vies", emetteur: services[1].proposeur!, serviceG: services[1])
              facade.envoyerMessageMur("LoL", emetteur: services[1].proposeur!, serviceG: services[1])
