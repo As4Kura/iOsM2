@@ -11,11 +11,20 @@ import UIKit
 class Note_ViewController: UIViewController {
 
     
+    
+    @IBOutlet weak var nomService: UILabel!
+    @IBOutlet weak var prenomPropo: UILabel!
+    @IBOutlet weak var noteEtoiles: CosmosView!
+    @IBOutlet weak var textCom: UITextView!
+    @IBOutlet weak var validerReview: UIButton!
+    
+    /*
     @IBOutlet weak var labelNomService: UILabel!
     @IBOutlet weak var labelPrenomUtil: UILabel!
     @IBOutlet weak var ratingStars: CosmosView!
     @IBOutlet weak var textCommentaire: UITextView!
     @IBOutlet weak var buttonValider: UIButton!
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
