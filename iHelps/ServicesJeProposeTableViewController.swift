@@ -14,6 +14,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
     let servicesAccepted = Facade().getInstancesByStatutAndProposeur("accepted", util: Facade().estConnecte()!)
     var services : [InstanceService] = []
     let facade = Facade()
+ //   var lastCell =
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +85,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
         
         
         let accept = UIAlertAction(title: "Accepter et contacter ", style: UIAlertActionStyle.Default) {
-            UIAlertAction in self.performSegueWithIdentifier("goMP", sender: self)
+            UIAlertAction in self.accepter(service,index: indexPath.row)
         }
 
         
@@ -117,7 +118,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
             
             
             let contacter = UIAlertAction(title: "Contacter " + login!, style: UIAlertActionStyle.Default) {
-                UIAlertAction in self.performSegueWithIdentifier("goMP", sender: self)
+                UIAlertAction in self.performSegueWithIdentifier("goMP", sender: indexPath.row)
             }
             
             // Add the actions
@@ -134,7 +135,6 @@ class ServicesJeProposeTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goMP" {
             let dvc = segue.destinationViewController as! MP_ViewController
-            print (sender?.parentViewController)
             let s = services[sender as! Int]
             dvc.contact = s.consommateur
         }
@@ -147,6 +147,15 @@ class ServicesJeProposeTableViewController: UITableViewController {
         
         self.facade.deleteInstance(serv);
         services.removeAtIndex(index)
+        self.tableView.reloadData()
+        
+    }
+    
+    func accepter(serv :InstanceService, index :Int)
+    {
+        
+        self.facade.accepterDemande(serv)
+        self.performSegueWithIdentifier("goMP", sender: index)
         self.tableView.reloadData()
         
     }

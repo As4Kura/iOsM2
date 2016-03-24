@@ -91,6 +91,36 @@ class FInstanceService
         }
         
     }
+    
+    
+    func accepterDemande(service : InstanceService)
+        
+    {
+        
+        // let requete = NSFetchRequest(entityName: "InstanceService")
+        // let deleteRequest = NSBatchDeleteRequest(fetchRequest: requete)
+        
+        //  requete.returnsObjectsAsFaults = false
+        let s = service as NSManagedObject
+        
+        s.setValue("accepted", forKey: "statut")
+        
+        
+        
+        do
+        {
+            try contexte.save()            // print("titreS:" + services[0].titre!)
+            
+        }
+            
+        catch
+        {
+            print("Echec de la requête Fetch !")
+            
+        }
+        
+    }
+
 
     
     
