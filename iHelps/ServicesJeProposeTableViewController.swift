@@ -13,6 +13,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
     let servicesWaiting = Facade().getInstancesByStatutAndProposeur("waiting", util: Facade().estConnecte()!)
     let servicesAccepted = Facade().getInstancesByStatutAndProposeur("accepted", util: Facade().estConnecte()!)
     var services : [InstanceService] = []
+    let facade = Facade()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +63,92 @@ class ServicesJeProposeTableViewController: UITableViewController {
         
        // cell.backgroundColor?.CGColor = [UIColor : redColor];
         return cell
+        
+       
+    }
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // pass any object as parameter, i.e. the tapped row
+        let service = services[indexPath.row]
+        let login = service.consommateur?.loginUtilisateur
+        let date = service.dateRealisation
+        
+        if service.statut == "waiting"
+        {
+        let alertController = UIAlertController(
+            title: "Accepter Demande?",
+            message: login! + " à besoin d'aide à la date " + String(date),
+            preferredStyle: UIAlertControllerStyle.Alert)
+        
+        
+        
+        let accept = UIAlertAction(title: "Accepter et contacter ", style: UIAlertActionStyle.Default) {
+            UIAlertAction in self.performSegueWithIdentifier("goMP", sender: self)
+        }
+
+        
+        let refus = UIAlertAction(title: "Refuser", style: UIAlertActionStyle.Default) {
+            UIAlertAction in self.deleteCell(service ,index: indexPath.row)
+        }
+
+        // Add the actions
+        alertController.addAction(accept)
+        alertController.addAction(refus)
+        
+        
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        
+        
+        else if service.statut == "accepted"
+        {
+            let alertController = UIAlertController(
+                title: "Service accepté",
+                message: "Vous n'avez pas encore noté ce service" ,
+                preferredStyle: UIAlertControllerStyle.Alert)
+            
+            
+            
+            let noter = UIAlertAction(title: "Noter " + login!, style: UIAlertActionStyle.Default) {
+                UIAlertAction in self.performSegueWithIdentifier("goNote", sender: self)
+            }
+            
+            
+            let contacter = UIAlertAction(title: "Contacter " + login!, style: UIAlertActionStyle.Default) {
+                UIAlertAction in self.performSegueWithIdentifier("goMP", sender: self)
+            }
+            
+            // Add the actions
+            alertController.addAction(noter)
+            alertController.addAction(contacter)
+            
+            
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goMP" {
+            let dvc = segue.destinationViewController as! MP_ViewController
+            print (sender?.parentViewController)
+            let s = services[sender as! Int]
+            dvc.contact = s.consommateur
+        }
+       
+        
+    }
+    
+    func deleteCell(serv :InstanceService, index :Int)
+    {
+        
+        self.facade.deleteInstance(serv);
+        services.removeAtIndex(index)
+        self.tableView.reloadData()
+        
     }
     
 

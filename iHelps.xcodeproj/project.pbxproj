@@ -149,10 +149,7 @@
 		252C79191C96F15E00B1DBCF /* Controleurs */ = {
 			isa = PBXGroup;
 			children = (
-				ED7330051CA4254400C489E3 /* ServicesJeProposeTableViewController.swift */,
-				49356C8A1CA073260020DC20 /* Cells */,
-				4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */,
-				4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */,
+				ED7330091CA42FE200C489E3 /* TableControleurs */,
 				252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */,
 				25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */,
 				25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */,
@@ -252,6 +249,17 @@
 				ED395B471C86342C00FF6D49 /* Info.plist */,
 			);
 			path = iHelpsUITests;
+			sourceTree = "<group>";
+		};
+		ED7330091CA42FE200C489E3 /* TableControleurs */ = {
+			isa = PBXGroup;
+			children = (
+				49356C8A1CA073260020DC20 /* Cells */,
+				ED7330051CA4254400C489E3 /* ServicesJeProposeTableViewController.swift */,
+				4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */,
+				4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */,
+			);
+			name = TableControleurs;
 			sourceTree = "<group>";
 		};
 		EDE282FC1C875A3900B34565 /* Facades */ = {

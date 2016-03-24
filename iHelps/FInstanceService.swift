@@ -66,6 +66,35 @@ class FInstanceService
     }
     
     
+    func delete(service : InstanceService)
+        
+    {
+        
+        // let requete = NSFetchRequest(entityName: "InstanceService")
+        // let deleteRequest = NSBatchDeleteRequest(fetchRequest: requete)
+        
+        //  requete.returnsObjectsAsFaults = false
+        
+        
+        
+        
+        do
+        {
+            try contexte.deleteObject(service)            // print("titreS:" + services[0].titre!)
+            
+        }
+            
+        catch
+        {
+            print("Echec de la requête Fetch !")
+            
+        }
+        
+    }
+
+    
+    
+    
     func getInstancesByStatutAndProposeur(statut : String, util: Utilisateur)->Array<InstanceService>
         
     {

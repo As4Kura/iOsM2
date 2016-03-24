@@ -311,6 +311,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="9MY-V6-e3i" kind="show" identifier="goMP" id="g1z-Gm-gvI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyF-xM-Jgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1004,7 +1007,7 @@
         <segue reference="YcY-eT-6Qc"/>
         <segue reference="Fz7-jR-6So"/>
         <segue reference="iaZ-hR-p5b"/>
-        <segue reference="2Pa-JK-Wco"/>
         <segue reference="JlY-c0-if7"/>
+        <segue reference="g1z-Gm-gvI"/>
     </inferredMetricsTieBreakers>
 </document>
