@@ -24,10 +24,10 @@ class Home_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let user = facade.estConnecte()
-        print ( " Home_ViewController login : \(user?.loginUtilisateur)" )
+        /*let user = facade.estConnecte()
+       print ( " Home_ViewController login : \(user?.loginUtilisateur)" )
         print ( " Home_ViewController Mot de Passe : \(user?.mdpUtilisateur)" )
-        print ( " Home_ViewController Adresse : \(user?.adresseUtilisateur)" )
+        print ( " Home_ViewController Adresse : \(user?.adresseUtilisateur)" )*/
      }
 
     override func didReceiveMemoryWarning() {

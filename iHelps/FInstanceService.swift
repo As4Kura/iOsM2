@@ -15,7 +15,7 @@ import CoreData
 class FInstanceService
 {
     
-    func creerInstanceS(consommateur: Utilisateur,serviceGlobal: ServiceGlobal, dateRealisation: NSDate)
+    func creerInstanceS(consommateur: Utilisateur,serviceGlobal: ServiceGlobal, dateRealisation: NSDate,statut : String)
     {
         
         let SGlobal = NSEntityDescription.insertNewObjectForEntityForName("InstanceService", inManagedObjectContext: contexte)
@@ -23,6 +23,7 @@ class FInstanceService
         SGlobal.setValue(consommateur, forKey: "consommateur")
         SGlobal.setValue(serviceGlobal, forKey: "serviceGlobal")        
         SGlobal.setValue(dateRealisation, forKey: "dateRealisation")
+        SGlobal.setValue(statut, forKey: "statut")
              
         
         
@@ -62,6 +63,35 @@ class FInstanceService
         }
         
         
+    }
+    
+    
+    func getInstancesByStatutAndProposeur(statut : String, util: Utilisateur)->Array<InstanceService>
+
+    {
+       
+        
+        let requete = NSFetchRequest(entityName: "InstanceService")
+        
+        requete.predicate = NSPredicate(format: "(statut like %@) AND (serviceGlobal.proposeur = %@)", statut,util)
+        requete.returnsObjectsAsFaults = false
+        
+        
+        
+        
+        do
+        {
+            return try contexte.executeFetchRequest(requete)as! [InstanceService]
+            // print("titreS:" + services[0].titre!)
+           
+        }
+            
+        catch
+        {
+            print("Echec de la requête Fetch !")
+            return [InstanceService] ()
+        }
+
     }
     
     

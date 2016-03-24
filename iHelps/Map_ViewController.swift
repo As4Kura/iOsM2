@@ -105,11 +105,11 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
         if segue.identifier == "goDetailAnnonce" {
             let aux = sender as! MKAnnotationView
-            //            if let indexpath = table.indexPathForSelectedRow {
+            
             let dvc = segue.destinationViewController as! Annonce_ViewController
             let serviceG = facade.getService(((aux.annotation?.subtitle)!)!,titre: ((aux.annotation?.title)!)!)
             dvc.service = serviceG
-            //           }
+            
         }
     }
     

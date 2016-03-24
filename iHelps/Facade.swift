@@ -192,10 +192,15 @@ class Facade
         return fInstanceS.getAllInstanceS()
     }    
     
-    func creerInstanceS(consommateur : Utilisateur,serviceGlobal: ServiceGlobal, dateRealisation: NSDate)
+    func creerInstanceS(consommateur : Utilisateur,serviceGlobal: ServiceGlobal, dateRealisation: NSDate, statut : String)
 
     {
-        fInstanceS.creerInstanceS(consommateur ,serviceGlobal : serviceGlobal, dateRealisation: dateRealisation)
+        fInstanceS.creerInstanceS(consommateur ,serviceGlobal : serviceGlobal, dateRealisation: dateRealisation,statut: statut)
+    }
+    
+    func getInstancesByStatutAndProposeur(statut : String, util : Utilisateur)->Array<InstanceService>
+    {
+        return fInstanceS.getInstancesByStatutAndProposeur(statut, util : util)
     }
     ////
     

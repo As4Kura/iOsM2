@@ -97,14 +97,16 @@ class FServiceGlobal{
     {
         
         let requete = NSFetchRequest(entityName: "ServiceGlobal")
-        let requeteU = NSFetchRequest(entityName: "Utilisateur")
-        var u = [Utilisateur]()
+        let requeteUtilisateur = NSFetchRequest(entityName: "Utilisateur")
+        
+        var utilisateurs = [Utilisateur]()
         var services = [ServiceGlobal]()
         
-        requeteU.predicate = NSPredicate(format: "loginUtilisateur == %@", login)
+        requeteUtilisateur.predicate = NSPredicate(format: "loginUtilisateur == %@", login)
+        
         do
         {
-            u =  try contexte.executeFetchRequest(requeteU)as! [Utilisateur]
+            utilisateurs =  try contexte.executeFetchRequest(requeteUtilisateur)as! [Utilisateur]
         }
             
         catch
@@ -113,12 +115,9 @@ class FServiceGlobal{
             return ServiceGlobal ()
         }
         
-        for e in u
-        {
-            print("util=" + e.loginUtilisateur!)
-        }
         
-        requete.predicate = NSPredicate(format: "(proposeur == %@) AND (titre like %@)", u[0],titre)
+        
+        requete.predicate = NSPredicate(format: "(proposeur == %@) AND (titre like %@)", utilisateurs[0],titre)
         requete.returnsObjectsAsFaults = false
         
         
@@ -127,7 +126,7 @@ class FServiceGlobal{
         do
         {
             services =  try contexte.executeFetchRequest(requete)as! [ServiceGlobal]
-            print("titreS:" + services[0].titre!)
+           // print("titreS:" + services[0].titre!)
             return services[0]
         }
             

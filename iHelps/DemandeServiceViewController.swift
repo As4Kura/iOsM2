@@ -43,7 +43,7 @@ class DemandeServiceViewController: UIViewController {
         
         
         
-        facade.creerInstanceS(facade.estConnecte()!, serviceGlobal: serviceG!, dateRealisation: dateRealisation	)
+        facade.creerInstanceS(facade.estConnecte()!, serviceGlobal: serviceG!, dateRealisation: dateRealisation, statut : "waiting"	)
         
         
                 self.presentViewController(alertController, animated: true, completion: nil)
@@ -51,38 +51,38 @@ class DemandeServiceViewController: UIViewController {
         
         
         
-        let instancesS = facade.getAllInstanceS()
+      /*  let instancesS = facade.getAllInstanceS()
         let services = facade.getAllServiceG()
             for s in services
             {
                 print("serviceG : " + String(s.periodeDebut!))
                 
         }
-
-
-if instancesS.count > 0
-{
-
-
-
-for instance in instancesS
-{
-
-if let conso = instance.serviceGlobal
-{
-// print("description:"+instance.description)
-print("titre:" + conso.titre! + "date:" + String(instance.dateRealisation!) )
-
-
-
-}
-    }
-        }
+        
+        
+        if instancesS.count > 0
+        {
+            
+            
+            
+            for instance in instancesS
+            {
+                
+                if let conso = instance.serviceGlobal
+                {
+                    // print("description:"+instance.description)
+                    print("titre:" + conso.titre! + "date:" + String(instance.dateRealisation!) )
+                    
+                    
+                    
+                }
+            }
+        }*/
     }
     
-
-
-
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
