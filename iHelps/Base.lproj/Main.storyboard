@@ -175,7 +175,7 @@
                                 <rect key="frame" x="108" y="269" width="105" height="30"/>
                                 <state key="normal" title="Géolocalisation"/>
                                 <connections>
-                                    <segue destination="kGh-cW-J85" kind="show" id="Hcm-XW-HGA"/>
+                                    <segue destination="1T4-j3-Zro" kind="show" id="cvd-MA-Xiw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZz-4n-Vf8">
@@ -540,54 +540,6 @@
             </objects>
             <point key="canvasLocation" x="1192" y="-114"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Zdc-vZ-INO">
-            <objects>
-                <viewController id="kGh-cW-J85" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HOB-hO-J8p"/>
-                        <viewControllerLayoutGuide type="bottom" id="oTO-Ks-eMB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="x8F-R3-YSq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Affichage des annonce par géolocalisation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euv-Hi-8zr">
-                                <rect key="frame" x="-2" y="72" width="325" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YV0-f0-hDX">
-                                <rect key="frame" x="93" y="269" width="134" height="30"/>
-                                <state key="normal" title="Exemple d'annonce"/>
-                                <connections>
-                                    <segue destination="p0q-JB-lHo" kind="show" id="wgg-ct-Jb3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDO-GH-2Vl">
-                                <rect key="frame" x="105" y="339" width="110" height="30"/>
-                                <state key="normal" title="Afficher la carte"/>
-                                <connections>
-                                    <segue destination="1T4-j3-Zro" kind="show" id="XJ9-eg-Q2W"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SYx-Rc-Tsx">
-                                <rect key="frame" x="93" y="145" width="121" height="29"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                            </segmentedControl>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cN9-gs-7JA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="662" y="633"/>
-        </scene>
         <!--Services Disponibles-->
         <scene sceneID="Niu-UB-RdN">
             <objects>
@@ -658,7 +610,7 @@
             </objects>
             <point key="canvasLocation" x="2058" y="711"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Recherche-->
         <scene sceneID="7mf-eq-y92">
             <objects>
                 <viewController id="1T4-j3-Zro" customClass="Map_ViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
@@ -681,15 +633,25 @@
                             <constraint firstItem="4V2-ZB-gRa" firstAttribute="top" secondItem="3vK-YR-sTd" secondAttribute="bottom" id="guY-JI-GGC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Recherche" id="bKv-yP-pf6">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Uyx-43-dDN"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gCT-w1-h9b">
+                            <connections>
+                                <action selector="creerService:" destination="1T4-j3-Zro" id="jAj-mt-vuU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="mapView" destination="3vK-YR-sTd" id="TaE-Yc-lB9"/>
                         <segue destination="p0q-JB-lHo" kind="show" identifier="goDetailAnnonce" id="Fz7-jR-6So"/>
+                        <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="vGi-GX-GiO"/>
+                        <segue destination="H7K-E1-YDJ" kind="show" identifier="goConnexion" id="c4R-eJ-khp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ja9-hh-tpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="1360"/>
+            <point key="canvasLocation" x="628" y="1248"/>
         </scene>
         <!--Messagerie-->
         <scene sceneID="8Un-Gk-yzF">
@@ -882,7 +844,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="8Jq-kD-pfY"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sN5-Bn-1Ih">
                             <connections>
-                                <segue destination="bw7-aq-yhY" kind="show" id="Gp0-Lg-kut"/>
+                                <action selector="creerService:" destination="p0q-JB-lHo" id="P4p-x5-aJ1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -901,6 +863,7 @@
                         <segue destination="H7K-E1-YDJ" kind="show" identifier="goConnexion" id="8k5-eO-Jpv"/>
                         <segue destination="9MY-V6-e3i" kind="show" identifier="goMP" id="2Pa-JK-Wco"/>
                         <segue destination="7Tl-zf-cmq" kind="show" identifier="goDemanderService" id="NZE-qZ-Kok"/>
+                        <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="iaZ-hR-p5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfd-vr-3sL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -982,11 +945,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Pa-JK-Wco"/>
-        <segue reference="Fz7-jR-6So"/>
         <segue reference="YcY-eT-6Qc"/>
         <segue reference="8k5-eO-Jpv"/>
-        <segue reference="Gp0-Lg-kut"/>
+        <segue reference="Fz7-jR-6So"/>
         <segue reference="bfe-2R-g8F"/>
+        <segue reference="2Pa-JK-Wco"/>
+        <segue reference="iaZ-hR-p5b"/>
     </inferredMetricsTieBreakers>
 </document>

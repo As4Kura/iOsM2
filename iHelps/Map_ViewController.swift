@@ -22,6 +22,16 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBAction func creerService(sender: AnyObject) {
+        if ( facade.estConnecte() == nil)
+        {
+            facade.needConnection(self)
+        }
+        else {
+            self.performSegueWithIdentifier("newService", sender: self)
+        }
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,9 +101,10 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    let aux = sender as! MKAnnotationView
+    
     
         if segue.identifier == "goDetailAnnonce" {
+            let aux = sender as! MKAnnotationView
             //            if let indexpath = table.indexPathForSelectedRow {
             let dvc = segue.destinationViewController as! Annonce_ViewController
             let serviceG = facade.getService(((aux.annotation?.subtitle)!)!,titre: ((aux.annotation?.title)!)!)

@@ -93,6 +93,16 @@ class Annonce_ViewController: UIViewController {
         }
     }
     
+    @IBAction func creerService(sender: AnyObject) {
+        if ( facade.estConnecte() == nil)
+        {
+            facade.needConnection(self)
+        }
+        else {
+            self.performSegueWithIdentifier("newService", sender: self)
+        }
+
+    }
 
     @IBAction func publier(sender: AnyObject) {
         if ( messageMur.text != ""){
