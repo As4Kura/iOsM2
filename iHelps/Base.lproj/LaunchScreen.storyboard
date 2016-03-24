@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +18,36 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iHelps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roS-Bm-51l">
+                                <rect key="frame" x="159" y="220" width="282" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="wYO-zZ-8Lt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="42"/>
+                                <color key="textColor" red="0.4698745707383396" green="0.92672202225130884" blue="0.46803026314574508" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenue !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bos-H2-qvn">
+                                <rect key="frame" x="179" y="329" width="243" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="4JP-6s-WUY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="roS-Bm-51l" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="AHT-8n-4qW"/>
+                            <constraint firstItem="roS-Bm-51l" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Bta-KQ-MiJ"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="bos-H2-qvn" secondAttribute="bottom" constant="117" id="GNc-4e-1gT"/>
+                            <constraint firstItem="roS-Bm-51l" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="200" id="V06-UA-bhg"/>
+                            <constraint firstItem="bos-H2-qvn" firstAttribute="centerX" secondItem="roS-Bm-51l" secondAttribute="centerX" id="cBm-mJ-3HI"/>
+                            <constraint firstItem="bos-H2-qvn" firstAttribute="firstBaseline" secondItem="roS-Bm-51l" secondAttribute="baseline" id="tkE-hy-9Gq"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

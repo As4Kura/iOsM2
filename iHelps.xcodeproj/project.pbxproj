@@ -23,6 +23,21 @@
 		4972FAF91C9EEC8E0074553A /* CategorieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */; };
 		49DF01171C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF01151C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift */; };
 		49DF01181C9DE9FE002A58FB /* MessagePrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF01161C9DE9FE002A58FB /* MessagePrive.swift */; };
+		5C2B56D61CA43D8900F1A7B4 /* Note_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56D51CA43D8900F1A7B4 /* Note_ViewController.swift */; };
+		5C2B56DA1CA44AF000F1A7B4 /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56D91CA44AF000F1A7B4 /* CosmosAccessibility.swift */; };
+		5C2B56DC1CA44BAF00F1A7B4 /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56DB1CA44BAF00F1A7B4 /* CosmosDefaultSettings.swift */; };
+		5C2B56DE1CA44C1700F1A7B4 /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56DD1CA44C1700F1A7B4 /* CosmosLayerHelper.swift */; };
+		5C2B56E01CA44C5400F1A7B4 /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56DF1CA44C5400F1A7B4 /* CosmosLayers.swift */; };
+		5C2B56E21CA44C8B00F1A7B4 /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56E11CA44C8B00F1A7B4 /* CosmosLocalizedRating.swift */; };
+		5C2B56E41CA44CCE00F1A7B4 /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56E31CA44CCE00F1A7B4 /* CosmosRating.swift */; };
+		5C2B56E61CA44D0A00F1A7B4 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56E51CA44D0A00F1A7B4 /* CosmosSettings.swift */; };
+		5C2B56E81CA44D4000F1A7B4 /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56E71CA44D4000F1A7B4 /* CosmosSize.swift */; };
+		5C2B56EA1CA44D6D00F1A7B4 /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56E91CA44D6D00F1A7B4 /* CosmosText.swift */; };
+		5C2B56EC1CA44D9900F1A7B4 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56EB1CA44D9900F1A7B4 /* CosmosTouch.swift */; };
+		5C2B56EE1CA44DC100F1A7B4 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56ED1CA44DC100F1A7B4 /* CosmosView.swift */; };
+		5C2B56F01CA44DFC00F1A7B4 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56EF1CA44DFC00F1A7B4 /* CosmosTouchTarget.swift */; };
+		5C2B56F21CA457E900F1A7B4 /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56F11CA457E900F1A7B4 /* StarFillMode.swift */; };
+		5C2B56F41CA4581A00F1A7B4 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56F31CA4581A00F1A7B4 /* StarLayer.swift */; };
 		5CB253F21C9A0EA300795FC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB253F11C9A0EA300795FC8 /* MapKit.framework */; };
 		5CCFBAC71C9EF36B00D810AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCFBAC61C9EF36B00D810AF /* CoreLocation.framework */; };
 		ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23EE401C8830AA00E2CC70 /* Facade.swift */; };
@@ -85,6 +100,21 @@
 		4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorieTableViewController.swift; sourceTree = "<group>"; };
 		49DF01151C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagePrive+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		49DF01161C9DE9FE002A58FB /* MessagePrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePrive.swift; sourceTree = "<group>"; };
+		5C2B56D51CA43D8900F1A7B4 /* Note_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note_ViewController.swift; sourceTree = "<group>"; };
+		5C2B56D91CA44AF000F1A7B4 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosAccessibility.swift; sourceTree = "<group>"; };
+		5C2B56DB1CA44BAF00F1A7B4 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDefaultSettings.swift; sourceTree = "<group>"; };
+		5C2B56DD1CA44C1700F1A7B4 /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosLayerHelper.swift; sourceTree = "<group>"; };
+		5C2B56DF1CA44C5400F1A7B4 /* CosmosLayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosLayers.swift; sourceTree = "<group>"; };
+		5C2B56E11CA44C8B00F1A7B4 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosLocalizedRating.swift; sourceTree = "<group>"; };
+		5C2B56E31CA44CCE00F1A7B4 /* CosmosRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosRating.swift; sourceTree = "<group>"; };
+		5C2B56E51CA44D0A00F1A7B4 /* CosmosSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosSettings.swift; sourceTree = "<group>"; };
+		5C2B56E71CA44D4000F1A7B4 /* CosmosSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosSize.swift; sourceTree = "<group>"; };
+		5C2B56E91CA44D6D00F1A7B4 /* CosmosText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosText.swift; sourceTree = "<group>"; };
+		5C2B56EB1CA44D9900F1A7B4 /* CosmosTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosTouch.swift; sourceTree = "<group>"; };
+		5C2B56ED1CA44DC100F1A7B4 /* CosmosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosView.swift; sourceTree = "<group>"; };
+		5C2B56EF1CA44DFC00F1A7B4 /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosTouchTarget.swift; sourceTree = "<group>"; };
+		5C2B56F11CA457E900F1A7B4 /* StarFillMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarFillMode.swift; sourceTree = "<group>"; };
+		5C2B56F31CA4581A00F1A7B4 /* StarLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarLayer.swift; sourceTree = "<group>"; };
 		5CB253F11C9A0EA300795FC8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5CCFBAC61C9EF36B00D810AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		ED23EE401C8830AA00E2CC70 /* Facade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
@@ -161,6 +191,7 @@
 				252C98B41CA02EC000D11A2D /* Messagerie_ViewController.swift */,
 				252C98B61CA0343500D11A2D /* MP_ViewController.swift */,
 				EDDC88111CA052B900C313D3 /* DemandeServiceViewController.swift */,
+				5C2B56D51CA43D8900F1A7B4 /* Note_ViewController.swift */,
 			);
 			name = Controleurs;
 			sourceTree = "<group>";
@@ -232,6 +263,20 @@
 				ED395B2C1C86342C00FF6D49 /* Assets.xcassets */,
 				ED395B2E1C86342C00FF6D49 /* LaunchScreen.storyboard */,
 				ED395B311C86342C00FF6D49 /* Info.plist */,
+				5C2B56D91CA44AF000F1A7B4 /* CosmosAccessibility.swift */,
+				5C2B56DB1CA44BAF00F1A7B4 /* CosmosDefaultSettings.swift */,
+				5C2B56DD1CA44C1700F1A7B4 /* CosmosLayerHelper.swift */,
+				5C2B56DF1CA44C5400F1A7B4 /* CosmosLayers.swift */,
+				5C2B56E11CA44C8B00F1A7B4 /* CosmosLocalizedRating.swift */,
+				5C2B56E31CA44CCE00F1A7B4 /* CosmosRating.swift */,
+				5C2B56E51CA44D0A00F1A7B4 /* CosmosSettings.swift */,
+				5C2B56E71CA44D4000F1A7B4 /* CosmosSize.swift */,
+				5C2B56E91CA44D6D00F1A7B4 /* CosmosText.swift */,
+				5C2B56EB1CA44D9900F1A7B4 /* CosmosTouch.swift */,
+				5C2B56ED1CA44DC100F1A7B4 /* CosmosView.swift */,
+				5C2B56EF1CA44DFC00F1A7B4 /* CosmosTouchTarget.swift */,
+				5C2B56F11CA457E900F1A7B4 /* StarFillMode.swift */,
+				5C2B56F31CA4581A00F1A7B4 /* StarLayer.swift */,
 			);
 			path = iHelps;
 			sourceTree = "<group>";
@@ -400,22 +445,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2B56E61CA44D0A00F1A7B4 /* CosmosSettings.swift in Sources */,
 				ED23EE451C883A1F00E2CC70 /* ServiceGlobal.swift in Sources */,
 				4952C1131C9B25C80048B403 /* ServiceGTableViewController.swift in Sources */,
+				5C2B56EC1CA44D9900F1A7B4 /* CosmosTouch.swift in Sources */,
 				EDEEAD221C88A65500BE6EFE /* FUtilisateur.swift in Sources */,
+				5C2B56DE1CA44C1700F1A7B4 /* CosmosLayerHelper.swift in Sources */,
 				25DEDEED1C99D59E00FA17F0 /* Annonce_ViewController.swift in Sources */,
 				EDEEAD2F1C88C3D100BE6EFE /* InstanceService+CoreDataProperties.swift in Sources */,
 				EDEEAD2D1C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift in Sources */,
 				491E7AB31CA3245C0089FFCE /* Map_ViewController.swift in Sources */,
+				5C2B56F21CA457E900F1A7B4 /* StarFillMode.swift in Sources */,
 				494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */,
 				252C98B51CA02EC000D11A2D /* Messagerie_ViewController.swift in Sources */,
+				5C2B56DC1CA44BAF00F1A7B4 /* CosmosDefaultSettings.swift in Sources */,
 				4972FAF91C9EEC8E0074553A /* CategorieTableViewController.swift in Sources */,
 				EDEEAD2C1C88C3D100BE6EFE /* MessageMur.swift in Sources */,
 				4952C1111C9B20C60048B403 /* ServiceGTableViewCell.swift in Sources */,
+				5C2B56EE1CA44DC100F1A7B4 /* CosmosView.swift in Sources */,
 				EDE282D61C874D0500B34565 /* Model.xcdatamodeld in Sources */,
 				49DF01171C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift in Sources */,
 				252C98B71CA0343500D11A2D /* MP_ViewController.swift in Sources */,
 				25DEDEEB1C99C18C00FA17F0 /* Home_ViewController.swift in Sources */,
+				5C2B56D61CA43D8900F1A7B4 /* Note_ViewController.swift in Sources */,
+				5C2B56F41CA4581A00F1A7B4 /* StarLayer.swift in Sources */,
+				5C2B56E21CA44C8B00F1A7B4 /* CosmosLocalizedRating.swift in Sources */,
 				ED7330081CA4275C00C489E3 /* ServicesJeProposeTableViewCell.swift in Sources */,
 				4927A4C81C9AE5D900FFC841 /* JeuDeDonnees.swift in Sources */,
 				4972FAF71C9EEB520074553A /* CategorieTableViewCell.swift in Sources */,
@@ -424,16 +478,22 @@
 				252C791B1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift in Sources */,
 				25547F961C8D72E30044C7AA /* ViewController.swift in Sources */,
 				ED23EE441C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift in Sources */,
+				5C2B56DA1CA44AF000F1A7B4 /* CosmosAccessibility.swift in Sources */,
+				5C2B56F01CA44DFC00F1A7B4 /* CosmosTouchTarget.swift in Sources */,
 				ED7330061CA4254400C489E3 /* ServicesJeProposeTableViewController.swift in Sources */,
+				5C2B56E01CA44C5400F1A7B4 /* CosmosLayers.swift in Sources */,
 				ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */,
 				EDEEAD2B1C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift in Sources */,
 				EDEEAD301C88C3D100BE6EFE /* InstanceService.swift in Sources */,
+				5C2B56E81CA44D4000F1A7B4 /* CosmosSize.swift in Sources */,
 				ED23EE491C883A5000E2CC70 /* Utilisateur.swift in Sources */,
 				EDE282FB1C87568700B34565 /* AppDelegate.swift in Sources */,
 				EDEEAD2E1C88C3D100BE6EFE /* Categorie.swift in Sources */,
 				EDEEAD241C88BA2500BE6EFE /* TestsBdd.swift in Sources */,
 				49DF01181C9DE9FE002A58FB /* MessagePrive.swift in Sources */,
 				EDDC88121CA052B900C313D3 /* DemandeServiceViewController.swift in Sources */,
+				5C2B56EA1CA44D6D00F1A7B4 /* CosmosText.swift in Sources */,
+				5C2B56E41CA44CCE00F1A7B4 /* CosmosRating.swift in Sources */,
 				EDE282D81C8752E200B34565 /* FServiceGlobal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
