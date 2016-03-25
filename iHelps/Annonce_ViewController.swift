@@ -64,7 +64,7 @@ class Annonce_ViewController: UIViewController {
         }else {
             let alertController = UIAlertController(
                 title: "iHelps",
-                message: "Que voulez vous faire ?",
+                message: "Que voulez-vous faire ?",
                 preferredStyle: UIAlertControllerStyle.Alert)
         
         

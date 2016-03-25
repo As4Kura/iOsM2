@@ -16,11 +16,44 @@ class Note_ViewController: UIViewController {
     @IBOutlet weak var textCom: UITextView!
     @IBOutlet weak var validerReview: UIButton!
     
+    let facade = Facade()
+    
+    @IBAction func enregistrerNoteEtCom(sender: AnyObject) {
+        if ( textCom.text == "")
+        {
+            let alertController = facade.alerte("Merci d'ajouter un commentaire ! :-)")
+            self.presentViewController(alertController, animated: true, completion: nil)
+        } else
+        {
+            let instances = facade.getAllInstanceS()
+            let instance = instances[0]
+            let note = Int(noteEtoiles.rating)
+            let commentaire = textCom.text
+            let currentuser = facade.estConnecte()
+            if instance.consommateur == currentuser//consomateur qui note
+            {
+                facade.consoNoteCommenteProposeur(instance, note: note, commentaire: commentaire)
+            } /* else//proposeur qui note : on verra après, déjà que le consommateur note le service c'est bien
+            {
+                facade.proposeurNoteCommenteConso(instance, note,commentaire)
+            } */
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Changer la note
-        noteEtoiles.rating = 4
+        
+        // Récupérer le prénom du proposeur du service
+        /*
+        let prenom = facade.???
+        prenomPropo.text = prenom
+        */
+        
+        // Récupérer le nom du service
+        /*
+        let nom = facade.fServiceG.getService(<#T##login: String##String#>, titre: <#T##String#>) ???
+        nomService.text = nom
+        */
         
         // Called when user finishes changing the rating by lifting the finger from the view.
         // This may be a good place to save the rating in the database or send to the server.
@@ -29,6 +62,9 @@ class Note_ViewController: UIViewController {
         // A closure that is called when user changes the rating by touching the view.
         // This can be used to update UI as the rating is being changed by moving a finger.
         noteEtoiles.didTouchCosmos = { rating in }
+        
+        // Changer la note
+        // noteEtoiles.rating = 4
     }
 
     override func didReceiveMemoryWarning() {

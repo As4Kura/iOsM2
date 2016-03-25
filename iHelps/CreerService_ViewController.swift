@@ -85,7 +85,7 @@ class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
             
             let alertController = UIAlertController(
                 title: "iHelps",
-                message: "Annonce créée !",
+                message: "Annonce crée !",
                 preferredStyle: UIAlertControllerStyle.Alert)
             
             
@@ -102,7 +102,7 @@ class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
         
         
         }else {
-            var msgAlerte = "Merci de donner tout les renseignements ! :-)"
+            var msgAlerte = "Merci de renseigner tous les champs ! :-)"
             if(boolSwitch == false)
             {
                 msgAlerte = "Veuillez selectionner au moins une catégorie"
