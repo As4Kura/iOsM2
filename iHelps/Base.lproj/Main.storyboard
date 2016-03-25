@@ -168,12 +168,13 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Effectuer une recherche par :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJV-Jy-r1K">
                                 <rect key="frame" x="48" y="191" width="224" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhO-ug-mDj">
                                 <rect key="frame" x="108" y="269" width="105" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <state key="normal" title="Géolocalisation"/>
                                 <connections>
                                     <segue destination="1T4-j3-Zro" kind="show" id="cvd-MA-Xiw"/>
@@ -181,6 +182,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZz-4n-Vf8">
                                 <rect key="frame" x="127" y="318" width="67" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <state key="normal" title="Catégorie"/>
                                 <connections>
                                     <segue destination="y59-l4-tpg" kind="show" id="2cA-cx-SX4"/>
@@ -188,6 +190,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyV-sR-j6W">
                                 <rect key="frame" x="81" y="518" width="159" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <state key="normal" title="Accéder à mon compte"/>
                                 <connections>
                                     <action selector="goMonCompte:" destination="yi0-eS-xca" eventType="touchUpInside" id="c6n-JX-dSK"/>
@@ -876,16 +879,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbO-gl-l7A">
-                                <rect key="frame" x="20" y="101" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clickProposeur:" destination="p0q-JB-lHo" eventType="touchUpInside" id="nW3-7t-lbS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7S-lQ-TeI">
                                 <rect key="frame" x="20" y="92" width="133" height="30"/>
                                 <state key="normal" title="Demander service !"/>
@@ -896,6 +889,16 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Efo-0P-G6m">
                                 <rect key="frame" x="0.0" y="313" width="305" height="165"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbO-gl-l7A">
+                                <rect key="frame" x="20" y="101" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickProposeur:" destination="p0q-JB-lHo" eventType="touchUpInside" id="nW3-7t-lbS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -941,28 +944,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quand souhaitez vous le service?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xj-25-Ieu">
-                                <rect key="frame" x="0.0" y="49" width="320" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myy-mg-EfS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myy-mg-EfS">
                                 <rect key="frame" x="79" y="411" width="163" height="94"/>
-                                <state key="normal" title="Envoyer demande"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="zNA-bh-DLz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <state key="normal" title="Enregistrer !"/>
                                 <connections>
                                     <action selector="envoyerDemande:" destination="7Tl-zf-cmq" eventType="touchUpInside" id="19U-vm-6Cp"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="iTu-uk-uRl">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="iTu-uk-uRl">
                                 <rect key="frame" x="0.0" y="122" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="480177513.865668">
                                     <!--2016-03-20 14:38:33 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr_FR"/>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date souhaitée" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xj-25-Ieu">
+                                <rect key="frame" x="0.0" y="49" width="320" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="myy-mg-EfS" firstAttribute="leading" secondItem="wG0-2I-a9O" secondAttribute="leadingMargin" constant="63" id="0oW-7P-DY9"/>
+                            <constraint firstItem="myy-mg-EfS" firstAttribute="top" secondItem="iTu-uk-uRl" secondAttribute="bottom" constant="73" id="2ie-1z-H24"/>
+                            <constraint firstItem="myy-mg-EfS" firstAttribute="centerX" secondItem="iTu-uk-uRl" secondAttribute="centerX" id="CSw-me-gKN"/>
+                            <constraint firstItem="zxX-cw-K4P" firstAttribute="top" secondItem="myy-mg-EfS" secondAttribute="bottom" constant="63" id="dmB-z3-cog"/>
+                            <constraint firstItem="myy-mg-EfS" firstAttribute="centerX" secondItem="wG0-2I-a9O" secondAttribute="centerX" id="fe4-Tp-SbT"/>
+                            <constraint firstItem="myy-mg-EfS" firstAttribute="centerX" secondItem="3Xj-25-Ieu" secondAttribute="centerX" id="uhd-J8-HSL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Demande de Service" id="HUz-cc-nBB" userLabel="Service">
                         <barButtonItem key="backBarButtonItem" title=" " id="Ei4-XO-iL5"/>
@@ -1119,11 +1134,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c4R-eJ-khp"/>
+        <segue reference="ZKo-6m-YOf"/>
         <segue reference="YcY-eT-6Qc"/>
-        <segue reference="JlY-c0-if7"/>
-        <segue reference="g1z-Gm-gvI"/>
-        <segue reference="vGi-GX-GiO"/>
+        <segue reference="rdz-SI-Kb8"/>
         <segue reference="Fz7-jR-6So"/>
+        <segue reference="2Pa-JK-Wco"/>
+        <segue reference="bfe-2R-g8F"/>
     </inferredMetricsTieBreakers>
 </document>

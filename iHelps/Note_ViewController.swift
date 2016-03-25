@@ -33,27 +33,26 @@ class Note_ViewController: UIViewController {
             if instance.consommateur == currentuser//consomateur qui note
             {
                 facade.consoNoteCommenteProposeur(instance, note: note, commentaire: commentaire)
-            } /* else//proposeur qui note : on verra après, déjà que le consommateur note le service c'est bien
-            {
-                facade.proposeurNoteCommenteConso(instance, note,commentaire)
-            } */
+            } else {
+                facade.proposeurNoteCommenteConso(instance, note: note,commentaire: commentaire)
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let instances = facade.getAllInstanceS()
+        let instance = instances[0]
+        
         // Récupérer le prénom du proposeur du service
-        /*
-        let prenom = facade.???
+        let prenom = instance.serviceGlobal?.proposeur?.loginUtilisateur
         prenomPropo.text = prenom
-        */
         
         // Récupérer le nom du service
-        /*
-        let nom = facade.fServiceG.getService(<#T##login: String##String#>, titre: <#T##String#>) ???
+        let nom = instance.serviceGlobal?.titre
         nomService.text = nom
-        */
+        
         
         // Called when user finishes changing the rating by lifting the finger from the view.
         // This may be a good place to save the rating in the database or send to the server.
