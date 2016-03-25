@@ -213,9 +213,9 @@ class Facade
         fInstanceS.delete(service)
     }
     
-    func accepterDemande(service : InstanceService)
+    func modifierDemande(service : InstanceService, statut : String)
     {
-        fInstanceS.accepterDemande(service)
+        fInstanceS.modifierDemande(service, statut : statut)
     }
     ////
     

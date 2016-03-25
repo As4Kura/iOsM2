@@ -11,47 +11,85 @@ import UIKit
 class Note_ViewController: UIViewController {
 
     @IBOutlet weak var nomService: UILabel!
-    @IBOutlet weak var prenomPropo: UILabel!
+   
     @IBOutlet weak var noteEtoiles: CosmosView!
     @IBOutlet weak var textCom: UITextView!
     @IBOutlet weak var validerReview: UIButton!
+    @IBOutlet weak var proposeRecu: UILabel!
     
     let facade = Facade()
+    var instance = InstanceService? ()
+    var login = ""
+    var conso = false
+    var proposeRecuString = " proposé par: "
     
     @IBAction func enregistrerNoteEtCom(sender: AnyObject) {
         if ( textCom.text == "")
         {
             let alertController = facade.alerte("Merci d'ajouter un commentaire ! :-)")
             self.presentViewController(alertController, animated: true, completion: nil)
-        } else
+        }
+        
+        else
         {
-            let instances = facade.getAllInstanceS()
-            let instance = instances[0]
             let note = Int(noteEtoiles.rating)
             let commentaire = textCom.text
-            let currentuser = facade.estConnecte()
-            if instance.consommateur == currentuser//consomateur qui note
+            
+            if conso
             {
-                facade.consoNoteCommenteProposeur(instance, note: note, commentaire: commentaire)
-            } else {
-                facade.proposeurNoteCommenteConso(instance, note: note,commentaire: commentaire)
+            facade.consoNoteCommenteProposeur(instance!, note: note, commentaire: commentaire)
             }
+            else
+            {
+            facade.proposeurNoteCommenteConso(instance!, note: note,commentaire: commentaire)
+                
+            
+            
+            facade.modifierDemande(instance!, statut : "noté")
+            let alertController = UIAlertController(
+                title: "iHelps",
+                message:"Note attribuée! :-)",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            
+            
+            
+            let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                UIAlertAction in self.navigationController?.popViewControllerAnimated(true)///self.performSegueWithIdentifier("goMonCompte", sender: self)
+            }
+            
+              
+            // Add the actions
+            alertController.addAction(ok)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            }
+            
+            // Add the actions
+        
+            
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let instances = facade.getAllInstanceS()
-        let instance = instances[0]
-        
+        let currentuser = facade.estConnecte()
+        var login = ""
+        if instance!.consommateur == currentuser//consomateur qui note
+        {
+            conso = true
+            login =  (instance!.serviceGlobal?.proposeur?.loginUtilisateur)!
+        }
         // Récupérer le prénom du proposeur du service
-        let prenom = instance.serviceGlobal?.proposeur?.loginUtilisateur
-        prenomPropo.text = prenom
+        else
+        {
+            login = (instance?.consommateur?.loginUtilisateur)!
+            proposeRecuString = " reçu par: "
+        }
         
-        // Récupérer le nom du service
-        let nom = instance.serviceGlobal?.titre
-        nomService.text = nom
+       
+        validerReview.setTitle((validerReview.titleLabel?.text)! + login, forState: .Normal)        // Récupérer le nom du service
+        proposeRecu.text = proposeRecu.text! + proposeRecuString + login
+        nomService.text = instance!.serviceGlobal?.titre
         
         
         // Called when user finishes changing the rating by lifting the finger from the view.

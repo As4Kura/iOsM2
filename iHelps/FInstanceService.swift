@@ -93,7 +93,7 @@ class FInstanceService
     }
     
     
-    func accepterDemande(service : InstanceService)
+    func modifierDemande(service : InstanceService, statut : String)
         
     {
         
@@ -103,7 +103,7 @@ class FInstanceService
         //  requete.returnsObjectsAsFaults = false
         let s = service as NSManagedObject
         
-        s.setValue("accepted", forKey: "statut")
+        s.setValue(statut, forKey: "statut")
         
         
         
@@ -192,12 +192,13 @@ class FInstanceService
         do
         {
             try contexte.save()
-            //print ("consoNoteComment Ajouté")
+            print ("consoNoteComment Ajouté")
             
         }
         catch
         {
             print("Problème lors de la modification !")
+             print(String(note) + "/com:" + commentaire)
         }
         
     }
@@ -212,7 +213,8 @@ class FInstanceService
         do
         {
             try contexte.save()
-            //  print ("proposeurNoteComment Ajouté")
+              print ("proposeurNoteComment Ajouté")
+            print(String(note) + "/com:" + commentaire)
             
         }
         catch

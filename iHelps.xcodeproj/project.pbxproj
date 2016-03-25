@@ -203,6 +203,27 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		49DF900B1CA5B7CB008101C8 /* Cosmos */ = {
+			isa = PBXGroup;
+			children = (
+				5C2B56D91CA44AF000F1A7B4 /* CosmosAccessibility.swift */,
+				5C2B56DB1CA44BAF00F1A7B4 /* CosmosDefaultSettings.swift */,
+				5C2B56DD1CA44C1700F1A7B4 /* CosmosLayerHelper.swift */,
+				5C2B56DF1CA44C5400F1A7B4 /* CosmosLayers.swift */,
+				5C2B56E11CA44C8B00F1A7B4 /* CosmosLocalizedRating.swift */,
+				5C2B56E31CA44CCE00F1A7B4 /* CosmosRating.swift */,
+				5C2B56E51CA44D0A00F1A7B4 /* CosmosSettings.swift */,
+				5C2B56E71CA44D4000F1A7B4 /* CosmosSize.swift */,
+				5C2B56E91CA44D6D00F1A7B4 /* CosmosText.swift */,
+				5C2B56EB1CA44D9900F1A7B4 /* CosmosTouch.swift */,
+				5C2B56ED1CA44DC100F1A7B4 /* CosmosView.swift */,
+				5C2B56EF1CA44DFC00F1A7B4 /* CosmosTouchTarget.swift */,
+				5C2B56F11CA457E900F1A7B4 /* StarFillMode.swift */,
+				5C2B56F31CA4581A00F1A7B4 /* StarLayer.swift */,
+			);
+			name = Cosmos;
+			sourceTree = "<group>";
+		};
 		ED23EE4A1C88457000E2CC70 /* Modele */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,20 +281,7 @@
 				ED395B2C1C86342C00FF6D49 /* Assets.xcassets */,
 				ED395B2E1C86342C00FF6D49 /* LaunchScreen.storyboard */,
 				ED395B311C86342C00FF6D49 /* Info.plist */,
-				5C2B56D91CA44AF000F1A7B4 /* CosmosAccessibility.swift */,
-				5C2B56DB1CA44BAF00F1A7B4 /* CosmosDefaultSettings.swift */,
-				5C2B56DD1CA44C1700F1A7B4 /* CosmosLayerHelper.swift */,
-				5C2B56DF1CA44C5400F1A7B4 /* CosmosLayers.swift */,
-				5C2B56E11CA44C8B00F1A7B4 /* CosmosLocalizedRating.swift */,
-				5C2B56E31CA44CCE00F1A7B4 /* CosmosRating.swift */,
-				5C2B56E51CA44D0A00F1A7B4 /* CosmosSettings.swift */,
-				5C2B56E71CA44D4000F1A7B4 /* CosmosSize.swift */,
-				5C2B56E91CA44D6D00F1A7B4 /* CosmosText.swift */,
-				5C2B56EB1CA44D9900F1A7B4 /* CosmosTouch.swift */,
-				5C2B56ED1CA44DC100F1A7B4 /* CosmosView.swift */,
-				5C2B56EF1CA44DFC00F1A7B4 /* CosmosTouchTarget.swift */,
-				5C2B56F11CA457E900F1A7B4 /* StarFillMode.swift */,
-				5C2B56F31CA4581A00F1A7B4 /* StarLayer.swift */,
+				49DF900B1CA5B7CB008101C8 /* Cosmos */,
 			);
 			path = iHelps;
 			sourceTree = "<group>";

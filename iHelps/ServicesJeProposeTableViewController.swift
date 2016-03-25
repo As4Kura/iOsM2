@@ -12,14 +12,22 @@ class ServicesJeProposeTableViewController: UITableViewController {
 
     let servicesWaiting = Facade().getInstancesByStatutAndProposeur("waiting", util: Facade().estConnecte()!)
     let servicesAccepted = Facade().getInstancesByStatutAndProposeur("accepted", util: Facade().estConnecte()!)
+    let servicesNotes = Facade().getInstancesByStatutAndProposeur("noté", util: Facade().estConnecte()!)
     var services : [InstanceService] = []
     let facade = Facade()
  //   var lastCell =
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         services = servicesWaiting
         services.appendContentsOf(servicesAccepted)
+         services.appendContentsOf(servicesNotes)
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -61,7 +69,12 @@ class ServicesJeProposeTableViewController: UITableViewController {
         {
             cell.backgroundColor = UIColor.blueColor()
         }
-        
+
+        else if service.statut == "noté"
+        {
+            cell.backgroundColor = UIColor.greenColor()
+        }
+
        // cell.backgroundColor?.CGColor = [UIColor : redColor];
         return cell
         
@@ -113,7 +126,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
             
             
             let noter = UIAlertAction(title: "Noter " + login!, style: UIAlertActionStyle.Default) {
-                UIAlertAction in self.performSegueWithIdentifier("goNote", sender: self)
+                UIAlertAction in self.performSegueWithIdentifier("goNoter", sender: indexPath.row)
             }
             
             
@@ -130,6 +143,25 @@ class ServicesJeProposeTableViewController: UITableViewController {
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         
+        else {
+            let alertController = UIAlertController(
+                title: "Service terminé et noté",
+                message: "" ,
+                preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let contacter = UIAlertAction(title: "Contacter " + login!, style: UIAlertActionStyle.Default) {
+                UIAlertAction in self.performSegueWithIdentifier("goMP", sender: indexPath.row)}
+            
+            
+            let annuler = UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Default) {
+                UIAlertAction in }
+            
+            alertController.addAction(contacter)
+            alertController.addAction(annuler)
+            
+             self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -138,6 +170,13 @@ class ServicesJeProposeTableViewController: UITableViewController {
             let s = services[sender as! Int]
             dvc.contact = s.consommateur
         }
+       else if segue.identifier == "goNoter" {
+            //            if let indexpath = table.indexPathForSelectedRow {
+            let dvc = segue.destinationViewController as! Note_ViewController
+            dvc.instance = services[sender as! Int]
+            //           }
+        }
+
        
         
     }
@@ -154,7 +193,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
     func accepter(serv :InstanceService, index :Int)
     {
         
-        self.facade.accepterDemande(serv)
+        self.facade.modifierDemande(serv,statut: "accepted")
         self.performSegueWithIdentifier("goMP", sender: index)
         self.tableView.reloadData()
         
