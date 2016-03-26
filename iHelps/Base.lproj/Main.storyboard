@@ -1028,15 +1028,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3vK-YR-sTd">
-                                <rect key="frame" x="0.0" y="130" width="320" height="438"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3vK-YR-sTd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3vK-YR-sTd" firstAttribute="leading" secondItem="qf1-0M-vFO" secondAttribute="leadingMargin" constant="-20" id="K3y-nu-iLh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3vK-YR-sTd" secondAttribute="trailing" constant="-20" id="bOA-99-LG3"/>
-                            <constraint firstItem="4V2-ZB-gRa" firstAttribute="top" secondItem="3vK-YR-sTd" secondAttribute="bottom" id="guY-JI-GGC"/>
+                            <constraint firstItem="3vK-YR-sTd" firstAttribute="top" secondItem="qf1-0M-vFO" secondAttribute="top" id="9PP-js-fZb"/>
+                            <constraint firstItem="3vK-YR-sTd" firstAttribute="leading" secondItem="qf1-0M-vFO" secondAttribute="leading" id="Bz8-lc-svY"/>
+                            <constraint firstAttribute="trailing" secondItem="3vK-YR-sTd" secondAttribute="trailing" id="dAf-m7-qOE"/>
+                            <constraint firstItem="3vK-YR-sTd" firstAttribute="bottom" secondItem="4V2-ZB-gRa" secondAttribute="top" id="x8o-SS-An3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Recherche" id="bKv-yP-pf6">
@@ -1128,9 +1129,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZo-me-G4Z">
-                                <rect key="frame" x="133" y="518" width="55" height="30"/>
-                                <state key="normal" title="Envoyer"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="neutral" translatesAutoresizingMaskIntoConstraints="NO" id="zuq-5F-fEd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZo-me-G4Z">
+                                <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.46987457069999999" green="0.9267220223" blue="0.46803026310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <state key="normal" title="Envoyer">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="envoyerMsg:" destination="9MY-V6-e3i" eventType="touchUpInside" id="0SI-34-yXk"/>
                                 </connections>
@@ -1138,9 +1146,10 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzv-ny-PfQ">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="472"/>
                             </scrollView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJo-L2-1WC">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJo-L2-1WC">
                                 <rect key="frame" x="20" y="480" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
