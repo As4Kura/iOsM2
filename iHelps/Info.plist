@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Je peux suivre ta trace genre TOUT LE TEMPS ? </string>
+	<string>Pour faciliter la recherche de services à proximité</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Je peux suivre ta trace quand tu m&apos;utilise ?</string>
+	<string>Pour faciliter la recherche de services à proximité</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDocumentTypes</key>

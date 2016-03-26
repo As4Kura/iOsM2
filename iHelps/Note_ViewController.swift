@@ -21,7 +21,7 @@ class Note_ViewController: UIViewController {
     var instance = InstanceService? ()
     var login = ""
     var conso = false
-    var proposeRecuString = " proposé par: "
+    var proposeRecuString = " proposé par : "
     
     @IBAction func enregistrerNoteEtCom(sender: AnyObject) {
         if ( textCom.text == "")
@@ -84,7 +84,7 @@ class Note_ViewController: UIViewController {
         else
         {
             login = (instance?.consommateur?.loginUtilisateur)!
-            proposeRecuString = " reçu par: "
+            proposeRecuString = " reçu par : "
         }
         
        
