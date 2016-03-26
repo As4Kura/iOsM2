@@ -74,7 +74,7 @@ class JeuDeDonnee
         }
         
         
-        let instancesS = facade.getAllInstanceS()
+        /*let instancesS = facade.getAllInstanceS()
         
         
         if instancesS.count > 0
@@ -83,7 +83,7 @@ class JeuDeDonnee
             facade.proposeurNoteCommenteConso(instancesS[0], note:5, commentaire: "R.A.S.")
             facade.consoNoteCommenteProposeur(instancesS[0], note:4, commentaire: "S'est très bien passé")
                         
-        }
+        }*/
      }
 
 }

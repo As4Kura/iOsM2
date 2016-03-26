@@ -176,12 +176,12 @@ class Facade
     
     func consoNoteCommenteProposeur(instanceS : InstanceService , note : Int, commentaire : String)
     {
-        fInstanceS.consoNoteCommenteProposeur(instanceS as NSManagedObject, note: note, commentaire: commentaire)
+        fInstanceS.consoNoteCommenteProposeur(instanceS , note: note, commentaire: commentaire)
     }
     
     func proposeurNoteCommenteConso(instanceS : InstanceService , note : Int, commentaire : String)
     {
-        fInstanceS.proposeurNoteCommenteConso(instanceS as NSManagedObject, note: note, commentaire: commentaire)
+        fInstanceS.proposeurNoteCommenteConso(instanceS , note: note, commentaire: commentaire)
     }
     ////
     

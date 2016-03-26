@@ -46,7 +46,8 @@ class Note_ViewController: UIViewController {
             
             
             
-            facade.modifierDemande(instance!, statut : "noté")
+            //facade.modifierDemande(instance!, statut : "noté")
+            
             let alertController = UIAlertController(
                 title: "iHelps",
                 message:"Note attribuée! :-)",

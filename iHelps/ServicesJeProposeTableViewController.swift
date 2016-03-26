@@ -19,12 +19,6 @@ class ServicesJeProposeTableViewController: UITableViewController {
     
     
     override func viewWillAppear(animated: Bool) {
-        self.tableView.reloadData()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
         servicesWaiting = facade.getInstancesByStatut("waiting", util: Facade().estConnecte()!, proposeur: proposeur)
         servicesAccepted = facade.getInstancesByStatut("accepted", util: Facade().estConnecte()!, proposeur: proposeur)
         servicesNotes = facade.getInstancesByStatut("noté", util: Facade().estConnecte()!, proposeur: proposeur)
@@ -32,6 +26,13 @@ class ServicesJeProposeTableViewController: UITableViewController {
         services = servicesWaiting
         services.appendContentsOf(servicesAccepted)
         services.appendContentsOf(servicesNotes)
+
+        self.tableView.reloadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -80,17 +81,20 @@ class ServicesJeProposeTableViewController: UITableViewController {
         
         cell.consommateur.text = mess + login
         // Configure the cell...
-        if service.statut == "waiting"
+        
+        if servicesWaiting.contains(service)
         {
             cell.backgroundColor = UIColor.redColor()
         }
             
-        else if service.statut == "accepted"
+        
+        else if servicesAccepted.contains(service)
         {
             cell.backgroundColor = UIColor.blueColor()
         }
-
-        else if service.statut == "noté"
+            
+            
+        else if servicesNotes.contains(service)
         {
             cell.backgroundColor = UIColor.greenColor()
         }
@@ -126,7 +130,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
         
         
         
-        if service.statut == "waiting"
+        if servicesWaiting.contains(service)
         {
             let alertController = UIAlertController(
                 title: titre,
@@ -169,7 +173,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
         }
         
         
-        else if service.statut == "accepted"
+        else if servicesAccepted.contains(service)
         {
             let alertController = UIAlertController(
                 title: "Service accepté",
@@ -254,7 +258,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
         
         self.facade.modifierDemande(serv,statut: "accepted")
         self.performSegueWithIdentifier("goMP", sender: index)
-        self.tableView.reloadData()
+       // self.tableView.reloadData()
         
     }
     
