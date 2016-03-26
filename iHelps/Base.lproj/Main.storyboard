@@ -368,6 +368,7 @@
                         <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="rdz-SI-Kb8"/>
                         <segue destination="YTj-HI-3qO" kind="show" identifier="goMonCompte" id="EGD-1g-USY"/>
                         <segue destination="H7K-E1-YDJ" kind="show" identifier="goConnexion" id="ZKo-6m-YOf"/>
+                        <segue destination="ixL-Ag-8tv" kind="show" identifier="goMesServices" id="bB5-gD-Hm8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWE-f5-aXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1629,13 +1630,13 @@
         <image name="neutral" width="1024" height="1004"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1pj-HR-uFR"/>
         <segue reference="YcY-eT-6Qc"/>
         <segue reference="ZKo-6m-YOf"/>
-        <segue reference="bfe-2R-g8F"/>
+        <segue reference="bB5-gD-Hm8"/>
+        <segue reference="1pj-HR-uFR"/>
         <segue reference="2Pa-JK-Wco"/>
+        <segue reference="bfe-2R-g8F"/>
         <segue reference="Ms5-sb-ZpF"/>
-        <segue reference="y2f-Dd-JOe"/>
         <segue reference="lD8-gO-hpo"/>
     </inferredMetricsTieBreakers>
 </document>

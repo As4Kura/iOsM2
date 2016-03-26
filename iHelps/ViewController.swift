@@ -33,20 +33,8 @@ class ViewController: UIViewController {
             NSUserDefaults.standardUserDefaults().setObject(currentUser.mdpUtilisateur, forKey: "userMDP")
             NSUserDefaults.standardUserDefaults().synchronize()
             
-            let instances = facade.getInstancesByStatut("waiting",util: currentUser, proposeur: true)
-            if instances.count>0
-            {
-                print("afficher une alerte pour rediriger vers les instances")
-            }
-            
-            for i in instances
-            {
-                let conso = i.consommateur
-                let titre = i.serviceGlobal?.titre
-                print("services en attente " + conso!.loginUtilisateur! + " pour " + titre!)
-                
-            }
-            
+                       
+                        
             
 //            label_error.text = "Connexion effectuée :-)"
             performSegueWithIdentifier("connexionOK", sender: self)
