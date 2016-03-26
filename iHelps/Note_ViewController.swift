@@ -42,7 +42,8 @@ class Note_ViewController: UIViewController {
             else
             {
             facade.proposeurNoteCommenteConso(instance!, note: note,commentaire: commentaire)
-                
+            }
+            
             
             
             facade.modifierDemande(instance!, statut : "noté")
@@ -67,7 +68,7 @@ class Note_ViewController: UIViewController {
             // Add the actions
         
             
-        }
+        
     }
     
     override func viewDidLoad() {

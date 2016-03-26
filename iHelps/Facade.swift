@@ -198,15 +198,11 @@ class Facade
         fInstanceS.creerInstanceS(consommateur ,serviceGlobal : serviceGlobal, dateRealisation: dateRealisation,statut: statut)
     }
     
-    func getInstancesByStatutAndProposeur(statut : String, util : Utilisateur)->Array<InstanceService>
+    func getInstancesByStatut(statut : String, util : Utilisateur, proposeur : Bool)->Array<InstanceService>
     {
-        return fInstanceS.getInstancesByStatutAndProposeur(statut, util : util)
+        return fInstanceS.getInstancesByStatut(statut, util : util, proposeur : proposeur)
     }
     
-    func getInstancesByStatutAndConsommateur(statut : String, util : Utilisateur)->Array<InstanceService>
-    {
-        return fInstanceS.getInstancesByStatutAndConsommateur(statut, util : util)
-    }
     
     func deleteInstance(service : InstanceService)
     {

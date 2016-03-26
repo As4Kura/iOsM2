@@ -124,49 +124,23 @@ class FInstanceService
 
     
     
-    
-    func getInstancesByStatutAndProposeur(statut : String, util: Utilisateur)->Array<InstanceService>
+    func getInstancesByStatut(statut : String, util: Utilisateur, proposeur : Bool)->Array<InstanceService>
         
     {
         
         
         let requete = NSFetchRequest(entityName: "InstanceService")
         
-        requete.predicate = NSPredicate(format: "(statut like %@) AND (serviceGlobal.proposeur = %@)", statut,util)
-        requete.returnsObjectsAsFaults = false
-        
-        
-        
-        
-        do
+        if proposeur
         {
-            return try contexte.executeFetchRequest(requete)as! [InstanceService]
-            // print("titreS:" + services[0].titre!)
-            
+            requete.predicate = NSPredicate(format: "(statut like %@) AND (serviceGlobal.proposeur = %@)", statut,util)
         }
-            
-        catch
+        else
         {
-            print("Echec de la requête Fetch !")
-            return [InstanceService] ()
+            requete.predicate = NSPredicate(format: "(statut like %@) AND (consommateur = %@)", statut,util)
         }
-        
-    }
 
-    
-    func getInstancesByStatutAndConsommateur(statut : String, util: Utilisateur)->Array<InstanceService>
-        
-    {
-        
-        
-        let requete = NSFetchRequest(entityName: "InstanceService")
-        
-        requete.predicate = NSPredicate(format: "(statut like %@) AND (consommateur = %@)", statut,util)
-        requete.returnsObjectsAsFaults = false
-        
-        
-        
-        
+         
         do
         {
             return try contexte.executeFetchRequest(requete)as! [InstanceService]

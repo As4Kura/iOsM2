@@ -33,7 +33,7 @@ class ViewController: UIViewController {
             NSUserDefaults.standardUserDefaults().setObject(currentUser.mdpUtilisateur, forKey: "userMDP")
             NSUserDefaults.standardUserDefaults().synchronize()
             
-            let instances = facade.getInstancesByStatutAndProposeur("waiting",util: currentUser)
+            let instances = facade.getInstancesByStatut("waiting",util: currentUser, proposeur: true)
             if instances.count>0
             {
                 print("afficher une alerte pour rediriger vers les instances")

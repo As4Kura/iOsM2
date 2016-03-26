@@ -16,6 +16,7 @@
 		25DEDEED1C99D59E00FA17F0 /* Annonce_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */; };
 		491E7AB31CA3245C0089FFCE /* Map_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E7AB21CA3245C0089FFCE /* Map_ViewController.swift */; };
 		4927A4C81C9AE5D900FFC841 /* JeuDeDonnees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4927A4C71C9AE5D900FFC841 /* JeuDeDonnees.swift */; };
+		492CCB381CA680E3005B6F77 /* MonCompteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492CCB371CA680E3005B6F77 /* MonCompteViewController.swift */; };
 		494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A24D01C8C89CB0059DE7C /* FInstanceService.swift */; };
 		4952C1111C9B20C60048B403 /* ServiceGTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952C1101C9B20C60048B403 /* ServiceGTableViewCell.swift */; };
 		4952C1131C9B25C80048B403 /* ServiceGTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */; };
@@ -93,6 +94,7 @@
 		25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annonce_ViewController.swift; sourceTree = "<group>"; };
 		491E7AB21CA3245C0089FFCE /* Map_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map_ViewController.swift; sourceTree = "<group>"; };
 		4927A4C71C9AE5D900FFC841 /* JeuDeDonnees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JeuDeDonnees.swift; sourceTree = "<group>"; };
+		492CCB371CA680E3005B6F77 /* MonCompteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonCompteViewController.swift; sourceTree = "<group>"; };
 		494A24D01C8C89CB0059DE7C /* FInstanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FInstanceService.swift; sourceTree = "<group>"; };
 		4952C1101C9B20C60048B403 /* ServiceGTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceGTableViewCell.swift; path = ../ServiceGTableViewCell.swift; sourceTree = "<group>"; };
 		4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceGTableViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		252C79191C96F15E00B1DBCF /* Controleurs */ = {
 			isa = PBXGroup;
 			children = (
+				492CCB371CA680E3005B6F77 /* MonCompteViewController.swift */,
 				ED7330091CA42FE200C489E3 /* TableControleurs */,
 				252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */,
 				25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */,
@@ -498,6 +501,7 @@
 				5C2B56F01CA44DFC00F1A7B4 /* CosmosTouchTarget.swift in Sources */,
 				ED7330061CA4254400C489E3 /* ServicesJeProposeTableViewController.swift in Sources */,
 				5C2B56E01CA44C5400F1A7B4 /* CosmosLayers.swift in Sources */,
+				492CCB381CA680E3005B6F77 /* MonCompteViewController.swift in Sources */,
 				ED23EE411C8830AA00E2CC70 /* Facade.swift in Sources */,
 				EDEEAD2B1C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift in Sources */,
 				EDEEAD301C88C3D100BE6EFE /* InstanceService.swift in Sources */,

@@ -213,7 +213,7 @@
         <!--Mon Compte-->
         <scene sceneID="Ice-Xk-eou">
             <objects>
-                <viewController id="YTj-HI-3qO" sceneMemberID="viewController">
+                <viewController id="YTj-HI-3qO" customClass="MonCompteViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hX0-El-1Hu"/>
                         <viewControllerLayoutGuide type="bottom" id="ji4-yW-b1J"/>
@@ -229,16 +229,19 @@
                                     <segue destination="vOn-yH-tI1" kind="show" id="JlY-c0-if7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwG-4T-ImL">
+                                <rect key="frame" x="27" y="302" width="280" height="30"/>
+                                <state key="normal" title="Services que je demande"/>
+                                <connections>
+                                    <action selector="goDemande:" destination="YTj-HI-3qO" eventType="touchUpInside" id="Ijp-8I-QQd"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7PA-dC-PgP">
                                 <rect key="frame" x="27" y="231" width="280" height="30"/>
                                 <state key="normal" title="Services que je propose"/>
                                 <connections>
-                                    <segue destination="ixL-Ag-8tv" kind="show" id="m0Y-6X-yAw"/>
+                                    <action selector="goPropose:" destination="YTj-HI-3qO" eventType="touchUpInside" id="AS3-XA-qBg"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwG-4T-ImL">
-                                <rect key="frame" x="27" y="302" width="280" height="30"/>
-                                <state key="normal" title="Services que je demande"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -252,6 +255,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="ixL-Ag-8tv" kind="show" identifier="goPropose" id="dr0-mi-1Nw"/>
+                        <segue destination="ixL-Ag-8tv" kind="show" identifier="goDemande" id="y2f-Dd-JOe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWr-gd-uaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1127,9 +1134,10 @@
         <segue reference="YcY-eT-6Qc"/>
         <segue reference="HW3-sJ-1sW"/>
         <segue reference="1pj-HR-uFR"/>
-        <segue reference="qY9-De-1e3"/>
+        <segue reference="hUu-na-X3t"/>
         <segue reference="lD8-gO-hpo"/>
-        <segue reference="JlY-c0-if7"/>
+        <segue reference="y2f-Dd-JOe"/>
         <segue reference="g1z-Gm-gvI"/>
+        <segue reference="JlY-c0-if7"/>
     </inferredMetricsTieBreakers>
 </document>
