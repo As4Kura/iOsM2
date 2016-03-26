@@ -55,7 +55,7 @@ class Note_ViewController: UIViewController {
             
             
             let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
-                UIAlertAction in self.navigationController?.popViewControllerAnimated(true)///self.performSegueWithIdentifier("goMonCompte", sender: self)
+                UIAlertAction in self.navigationController?.popViewControllerAnimated(true)
             }
             
               

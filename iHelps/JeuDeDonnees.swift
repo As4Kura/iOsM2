@@ -80,8 +80,8 @@ class JeuDeDonnee
         if instancesS.count > 0
         {
             
-            facade.proposeurNoteCommenteConso(instancesS[0], note:7, commentaire: "R.A.S.")
-            facade.consoNoteCommenteProposeur(instancesS[0], note: 6, commentaire: "S'est très bien passé")
+            facade.proposeurNoteCommenteConso(instancesS[0], note:5, commentaire: "R.A.S.")
+            facade.consoNoteCommenteProposeur(instancesS[0], note:4, commentaire: "S'est très bien passé")
                         
         }
      }

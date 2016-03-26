@@ -35,9 +35,35 @@ class Annonce_ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         if ( service != nil ){
-            titre.text = service?.titre
+            var moyenneString = ""
+            var moyenne  = 0
+            var i = 0
+            for instance in (service?.getInstancesServiceAsAnArray())!
+            {
+                if let noteConso = instance.noteConso
+                {
+                   if Int(noteConso) > 0
+                   {
+                    i++
+                    moyenne += Int(noteConso)
+                   }
+                    
+                }
+            }
+            
+            if i > 0
+            {
+                moyenne = moyenne / i
+                moyenneString = "(" + String(moyenne) + "/5)"
+            }
+            
+            titre.text = (service?.titre)! + moyenneString
+            
+            
             let propName = "Proposé par " + (service?.proposeur?.loginUtilisateur)!
             proposeur.setTitle(propName, forState: .Normal)
             temps.text = service?.temps
