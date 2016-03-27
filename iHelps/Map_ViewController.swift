@@ -36,7 +36,7 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         super.viewDidLoad()
         
         // Demande d'autorisation de l'utilisateur
-        self.locationManager.requestAlwaysAuthorization()
+        //self.locationManager.requestAlwaysAuthorization()
         
         // Pour l'utilisation en premier plan
         self.locationManager.requestWhenInUseAuthorization()
@@ -44,7 +44,8 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         // Centrage de la carte
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
         }
         
@@ -60,6 +61,10 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
         let coords:CLLocationCoordinate2D = manager.location!.coordinate
         let span = MKCoordinateSpanMake(0.1, 0.1)
         let center = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
