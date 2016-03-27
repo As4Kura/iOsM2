@@ -14,18 +14,32 @@ class ProfilUtilisateurViewController: UIViewController {
     @IBOutlet weak var login: UILabel!
     @IBOutlet weak var noteEtoiles: CosmosView!
     
+    @IBOutlet weak var noteLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         login.text = utilisateur?.loginUtilisateur
+        let note = utilisateur?.getNote()
         
-        noteEtoiles.rating = Double((utilisateur?.getNote())!)
+        if  note > 0
+        {
+            noteEtoiles.rating =  Double(note!)
+            noteLabel.removeFromSuperview()
+        }
+            
+        else
+        {
+            noteEtoiles.removeFromSuperview()
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

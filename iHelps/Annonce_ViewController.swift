@@ -27,6 +27,7 @@ class Annonce_ViewController: UIViewController {
     @IBOutlet weak var goDemanderService: UIButton!
    
 
+    @IBOutlet weak var noteEtoile: CosmosView!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var messageMur: UITextField!
     
@@ -39,7 +40,7 @@ class Annonce_ViewController: UIViewController {
         
 
         if ( service != nil ){
-            var moyenneString = ""
+            //var moyenneString = ""
             var moyenne  = 0
             var i = 0
             for instance in (service?.getInstancesServiceAsAnArray())!
@@ -58,12 +59,15 @@ class Annonce_ViewController: UIViewController {
             if i > 0
             {
                 moyenne = moyenne / i
-                moyenneString = "(" + String(moyenne) + "/5)"
+                noteEtoile.rating =  Double(moyenne)
             }
             
-            titre.text = (service?.titre)! + moyenneString
+           else
+            {
+                noteEtoile.removeFromSuperview()
+            }
             
-            
+            titre.text = service?.titre
             let propName = "Proposé par " + (service?.proposeur?.loginUtilisateur)!
             proposeur.setTitle(propName, forState: .Normal)
             temps.text = service?.temps
