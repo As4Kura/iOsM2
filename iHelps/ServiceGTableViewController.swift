@@ -14,6 +14,9 @@ class ServiceGTableViewController: UITableViewController {
     var servicesG = [ServiceGlobal]()
     var categorie : Categorie?
 
+    @IBAction func goMonCompte(sender: AnyObject) {
+        facade.needConnection(self, segueName: "goMonCompte")
+    }
     @IBAction func creerService(sender: AnyObject) {
         facade.needConnection(self, segueName: "newService")
     }
@@ -21,6 +24,7 @@ class ServiceGTableViewController: UITableViewController {
         super.viewDidLoad()
         loadSampleServiceG()
     }
+
     
     func loadSampleServiceG()
     {

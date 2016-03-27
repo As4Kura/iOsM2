@@ -17,6 +17,9 @@ class CategorieTableViewController: UITableViewController {
         facade.needConnection(self, segueName: "newService")
     }
     
+    @IBAction func goMonCompte(sender: AnyObject) {
+        facade.needConnection(self, segueName: "goMonCompte")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

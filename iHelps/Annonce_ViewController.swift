@@ -31,6 +31,10 @@ class Annonce_ViewController: UIViewController {
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var messageMur: UITextField!
     
+    @IBAction func goMonCompte(sender: AnyObject) {
+        facade.needConnection(self,segueName: "goMonCompte")
+
+    }
     @IBAction func contactPrive(sender: AnyObject) {
         facade.needConnection(self,segueName: "goMessagerie")
     }

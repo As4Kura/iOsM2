@@ -23,6 +23,9 @@ class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var descriptionService: UITextView!
     @IBOutlet weak var tmpAConsacrer: UITextField!
   
+    @IBAction func goMonCompte(sender: AnyObject) {
+        Facade().needConnection(self, segueName: "goMonCompte")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         for s in switchs

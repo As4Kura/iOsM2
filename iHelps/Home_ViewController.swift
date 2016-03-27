@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Home_ViewController: UIViewController {
+class Home_ViewController: UIViewController,UITabBarDelegate {
 
     let facade = Facade()
     
@@ -21,8 +21,15 @@ class Home_ViewController: UIViewController {
         facade.needConnection(self, segueName: "goMonCompte")
     }
     
+    @IBOutlet weak var c: UITabBarItem!
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        print("touché")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
         if let currentUser = facade.estConnecte()
         {
