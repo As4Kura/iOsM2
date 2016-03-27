@@ -97,12 +97,19 @@ class Annonce_ViewController: UIViewController {
             let contactPrive = UIAlertAction(title: "Contacter en privé", style: UIAlertActionStyle.Default) {
                 UIAlertAction in self.performSegueWithIdentifier("goMP", sender: self)
             }
+
+            let voirProfil = UIAlertAction(title: "Voir son profil", style: UIAlertActionStyle.Default) {
+                UIAlertAction in self.performSegueWithIdentifier("goProfil", sender: self)
+            }
+
+            
             let annuler = UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Default) {
                 UIAlertAction in
             }
         
         // Add the actions
             alertController.addAction(contactPrive)
+            alertController.addAction(voirProfil)
             alertController.addAction(annuler)
         
             self.presentViewController(alertController, animated: true, completion: nil)
@@ -155,7 +162,14 @@ class Annonce_ViewController: UIViewController {
         {
             let dvc = segue.destinationViewController as! DemandeServiceViewController
             dvc.serviceG = service
-   
+            
+        }
+        
+        else if segue.identifier == "goProfil"
+        {
+            let dvc = segue.destinationViewController as! ProfilUtilisateurViewController
+            dvc.utilisateur = service?.proposeur!
+            
         }
         
     }

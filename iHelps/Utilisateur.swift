@@ -33,4 +33,34 @@ class Utilisateur: NSManagedObject {
         return mpEnvoyes!.allObjects as! [MessagePrive]
     }
     
+    
+    func getNote() ->Int
+    {
+        var index = 0
+        var note = 0
+        
+        for i in getServicesRecusAsAnArray()
+        {
+            note += Int(i.noteProposeur!)
+            index++
+        }
+        
+        for servicesG in getServicesProposesAsAnArray()
+        {
+            for i in servicesG.getInstancesServiceAsAnArray()
+            {
+                note += Int(i.noteConso!)
+                index++
+            }
+            
+        }
+        
+        if(index != 0)
+        {
+            return note / index
+        }
+        
+        return 0
+    }
+    
 }

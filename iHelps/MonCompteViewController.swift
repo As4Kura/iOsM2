@@ -30,6 +30,9 @@ class MonCompteViewController: UIViewController {
         self.performSegueWithIdentifier("goDemande", sender: self)
     }
     
+    @IBAction func goMesInfos(sender: AnyObject) {
+         self.performSegueWithIdentifier("goMesInfos", sender: self)
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goPropose" {
             let dvc = segue.destinationViewController as! ServicesJeProposeTableViewController
@@ -39,6 +42,13 @@ class MonCompteViewController: UIViewController {
         {
             let dvc = segue.destinationViewController as! ServicesJeProposeTableViewController
             dvc.proposeur = false
+            
+        }
+        
+        else if segue.identifier == "goMesInfos"
+        {
+            let dvc = segue.destinationViewController as! ProfilUtilisateurViewController
+            dvc.utilisateur = Facade().estConnecte()
             
         }
         

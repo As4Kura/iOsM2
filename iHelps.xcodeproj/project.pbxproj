@@ -17,6 +17,7 @@
 		491E7AB31CA3245C0089FFCE /* Map_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E7AB21CA3245C0089FFCE /* Map_ViewController.swift */; };
 		4927A4C81C9AE5D900FFC841 /* JeuDeDonnees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4927A4C71C9AE5D900FFC841 /* JeuDeDonnees.swift */; };
 		492CCB381CA680E3005B6F77 /* MonCompteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492CCB371CA680E3005B6F77 /* MonCompteViewController.swift */; };
+		493032701CA72F1700A40119 /* ProfilUtilisateurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4930326F1CA72F1700A40119 /* ProfilUtilisateurViewController.swift */; };
 		494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A24D01C8C89CB0059DE7C /* FInstanceService.swift */; };
 		4952C1111C9B20C60048B403 /* ServiceGTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952C1101C9B20C60048B403 /* ServiceGTableViewCell.swift */; };
 		4952C1131C9B25C80048B403 /* ServiceGTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */; };
@@ -95,6 +96,7 @@
 		491E7AB21CA3245C0089FFCE /* Map_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map_ViewController.swift; sourceTree = "<group>"; };
 		4927A4C71C9AE5D900FFC841 /* JeuDeDonnees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JeuDeDonnees.swift; sourceTree = "<group>"; };
 		492CCB371CA680E3005B6F77 /* MonCompteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonCompteViewController.swift; sourceTree = "<group>"; };
+		4930326F1CA72F1700A40119 /* ProfilUtilisateurViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilUtilisateurViewController.swift; sourceTree = "<group>"; };
 		494A24D01C8C89CB0059DE7C /* FInstanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FInstanceService.swift; sourceTree = "<group>"; };
 		4952C1101C9B20C60048B403 /* ServiceGTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceGTableViewCell.swift; path = ../ServiceGTableViewCell.swift; sourceTree = "<group>"; };
 		4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceGTableViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				492CCB371CA680E3005B6F77 /* MonCompteViewController.swift */,
+				4930326F1CA72F1700A40119 /* ProfilUtilisateurViewController.swift */,
 				ED7330091CA42FE200C489E3 /* TableControleurs */,
 				252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */,
 				25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */,
@@ -466,6 +469,7 @@
 			files = (
 				5C2B56E61CA44D0A00F1A7B4 /* CosmosSettings.swift in Sources */,
 				ED23EE451C883A1F00E2CC70 /* ServiceGlobal.swift in Sources */,
+				493032701CA72F1700A40119 /* ProfilUtilisateurViewController.swift in Sources */,
 				4952C1131C9B25C80048B403 /* ServiceGTableViewController.swift in Sources */,
 				5C2B56EC1CA44D9900F1A7B4 /* CosmosTouch.swift in Sources */,
 				EDEEAD221C88A65500BE6EFE /* FUtilisateur.swift in Sources */,

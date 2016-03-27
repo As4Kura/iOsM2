@@ -36,7 +36,7 @@ class FUtilisateur{
         }
     }
     
-    
+        
     func connexionUtilisateur (login : String, mdp : String)-> Utilisateur?
     {
         let requete = NSFetchRequest(entityName: "Utilisateur")

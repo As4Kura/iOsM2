@@ -74,6 +74,7 @@ class Note_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        	
         let currentuser = facade.estConnecte()
         var login = ""
         if instance!.consommateur == currentuser//consomateur qui note

@@ -205,76 +205,6 @@ class FInstanceService
     }
     
             
-        
-    /*func getInstancesByStatutNoté(util: Utilisateur, proposeur : Bool)->Array<InstanceService>
-    {
-        let noté = "noté"
-        let accepted = "accepted"
-        var instances = [InstanceService] ()
-        
-        let requete = NSFetchRequest(entityName: "InstanceService")
-        
-        
-        
-        if proposeur
-        {
-            requete.predicate = NSPredicate(format: "(statut like %@) AND (serviceGlobal.proposeur = %@)",noté , util)
-            do
-            {
-                instances = try contexte.executeFetchRequest(requete)as! [InstanceService]
-            }
-            catch
-            {
-                print("Echec de la requête Fetch !")
-                return [InstanceService] ()
-            }
-            
-            requete.predicate = NSPredicate(format: "(statut like %@) AND (serviceGlobal.proposeur = %@) AND (noteProposeur > 0)",accepted, util)
-            
-            do
-            {
-                instances.appendContentsOf(try contexte.executeFetchRequest(requete)as! [InstanceService])
-            }
-            catch
-            {
-                print("Echec de la requête Fetch !")
-                return [InstanceService] ()
-            }
-            
-
-        }
-            
-        else//si conso
-        {
-            requete.predicate = NSPredicate(format: "(statut like %@) AND (consommateur = %@)",noté, util)
-            do
-            {
-                instances = try contexte.executeFetchRequest(requete)as! [InstanceService]
-            }
-            catch
-            {
-                print("Echec de la requête Fetch !")
-                return [InstanceService] ()
-            }
-            
-            requete.predicate = NSPredicate(format: "(statut like %@) AND (consommateur = %@) AND (noteConso > 0)",accepted, util)
-            
-            do
-            {
-                instances.appendContentsOf(try contexte.executeFetchRequest(requete)as! [InstanceService])
-            }
-            catch
-            {
-                print("Echec de la requête Fetch !")
-                return [InstanceService] ()
-            }
-
-        }
-        
-
-        return instances
-    }*/
-
     
     
     func consoNoteCommenteProposeur(instanceS : InstanceService , note : Int, commentaire : String)
@@ -285,10 +215,6 @@ class FInstanceService
         instance.setValue(commentaire, forKey: "commentaireConso")
         instance.setValue(true, forKey: "cAnote")
        
-        /*if Int(instanceS.noteProposeur!) > 0
-        {
-            modifierDemande(instanceS, statut : "noté")
-        }*/
         
         do
         {
@@ -310,17 +236,12 @@ class FInstanceService
     func proposeurNoteCommenteConso(instanceS : InstanceService , note : Int, commentaire : String)
     {
         
-         let instance = instanceS as NSManagedObject
+        let instance = instanceS as NSManagedObject
         
         instance.setValue(note, forKey: "noteProposeur")
         instance.setValue(commentaire, forKey: "commentaireProposeur")
         instance.setValue(true, forKey: "pAnote")
         
-       /* if Int(instanceS.noteConso!) > 0
-        {
-            modifierDemande(instanceS, statut : "noté")
-        }*/
-
         
         do
         {
