@@ -87,13 +87,13 @@ class MP_ViewController: UIViewController {
             {
                 let label_center_x = (scroll.frame.maxX  - label.frame.width/2)
                 label.center = CGPointMake(label_center_x, spacer + label.frame.height/2 )
-                label.backgroundColor = UIColor(red: 0.431, green: 0.900, blue: 0.318, alpha: 1.0)
+                label.backgroundColor = UIColor(red: 0.0, green: 0.600, blue: 0.800, alpha: 0.5)
                 label.textAlignment = .Right
             }else // Je recois
             {
                 let label_center_x = (scroll.frame.minX  + label.frame.width/2)
                 label.center = CGPointMake(label_center_x, spacer + label.frame.height/2)
-                label.backgroundColor = UIColor(red: 0.988, green: 0.431, blue: 0.318, alpha: 1.0)
+                label.backgroundColor = UIColor(red: 0.0, green: 0.900, blue: 0.100, alpha: 0.5)
                 label.textAlignment = .Left
             }
             
