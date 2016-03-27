@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 class ServicesJeProposeTableViewController: UITableViewController {
     var servicesWaiting : [InstanceService] = []
@@ -16,7 +17,6 @@ class ServicesJeProposeTableViewController: UITableViewController {
     
     let facade = Facade()
     var proposeur = Bool()
-    
     
     override func viewWillAppear(animated: Bool) {
         servicesWaiting = facade.getInstancesByStatut("waiting", util: Facade().estConnecte()!, proposeur: proposeur)
@@ -32,9 +32,6 @@ class ServicesJeProposeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -70,39 +67,57 @@ class ServicesJeProposeTableViewController: UITableViewController {
         if proposeur
         {
             login = (service.consommateur?.loginUtilisateur)!
-            
         }
         else
         {
             login = (service.serviceGlobal?.proposeur?.loginUtilisateur)!
             mess = "proposé par "
         }
-
         
         cell.consommateur.text = mess + login
         // Configure the cell...
         
         if servicesWaiting.contains(service)
         {
-            cell.backgroundColor = UIColor.redColor()
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.frame = cell.bounds
+            let color1 = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.0).CGColor as CGColorRef
+            let color2 = UIColor.yellowColor().CGColor as CGColorRef
+            gradientLayer.colors = [color1, color2]
+            gradientLayer.locations = [0.7, 1.0]
+            gradientLayer.startPoint = CGPoint(x: 1, y: 0)
+            gradientLayer.endPoint = CGPoint(x: 0, y: 0)
+            cell.layer.addSublayer(gradientLayer)
         }
             
         
         else if servicesAccepted.contains(service)
         {
-            cell.backgroundColor = UIColor.blueColor()
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.frame = cell.bounds
+            let color1 = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.0).CGColor as CGColorRef
+            let color2 = UIColor.greenColor().CGColor as CGColorRef
+            gradientLayer.colors = [color1, color2]
+            gradientLayer.locations = [0.7, 1.0]
+            gradientLayer.startPoint = CGPoint(x: 1, y: 0)
+            gradientLayer.endPoint = CGPoint(x: 0, y: 0)
+            cell.layer.addSublayer(gradientLayer)
         }
             
             
         else if servicesNotes.contains(service)
         {
-            cell.backgroundColor = UIColor.greenColor()
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.frame = cell.bounds
+            let color1 = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.0).CGColor as CGColorRef
+            let color2 = UIColor.lightGrayColor().CGColor as CGColorRef
+            gradientLayer.colors = [color1, color2]
+            gradientLayer.locations = [0.7, 1.0]
+            gradientLayer.startPoint = CGPoint(x: 1, y: 0)
+            gradientLayer.endPoint = CGPoint(x: 0, y: 0)
+            cell.layer.addSublayer(gradientLayer)
         }
-
-       // cell.backgroundColor?.CGColor = [UIColor : redColor];
         return cell
-        
-       
     }
     
     
@@ -110,16 +125,13 @@ class ServicesJeProposeTableViewController: UITableViewController {
         // pass any object as parameter, i.e. the tapped row
         let service = services[indexPath.row]
         let date = formaterDate(service.dateRealisation!)
-        var titre = "Accepter Demande?"
+        var titre = "Accepter Demande ?"
         var mess = ""
-       
-        
-        
         var login = ""
         if proposeur
         {
             login = (service.consommateur?.loginUtilisateur)!
-            mess = login + " à besoin d'aide à la date du " + date
+            mess = login + " a besoin d'aide à la date du " + date
         }
         else
         {

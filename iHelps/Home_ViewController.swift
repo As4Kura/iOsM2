@@ -38,7 +38,7 @@ class Home_ViewController: UIViewController,UITabBarDelegate {
             if instances.count>0
             {
                 let alertController = UIAlertController(
-                    title: "Nouvelle demande!",
+                    title: "Nouvelle demande !",
                     message: "Quelqu'un a besoin de votre aide ! :)" ,
                     preferredStyle: UIAlertControllerStyle.Alert)
                 
