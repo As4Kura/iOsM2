@@ -15,9 +15,13 @@ class ProfilUtilisateurViewController: UIViewController {
     @IBOutlet weak var noteEtoiles: CosmosView!
     
     @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var maDescription: UITextView!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        self.title = "Profil " + (utilisateur?.loginUtilisateur)!
         login.text = utilisateur?.loginUtilisateur
+        maDescription.text = utilisateur?.maDescription
         let note = utilisateur?.getNote()
         
         if  note > 0

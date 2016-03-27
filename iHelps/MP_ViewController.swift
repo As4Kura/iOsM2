@@ -17,14 +17,16 @@ class MP_ViewController: UIViewController {
     var spacer :CGFloat = 75.0
 
 
+    @IBOutlet weak var buttonContact: UIButton!
     @IBOutlet var myView: UIView!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var messageToSend: UITextField!
 
-    override func viewDidLoad() {
+       override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Contact : " + (contact?.loginUtilisateur)!
+        buttonContact.setTitle(contact?.loginUtilisateur, forState: .Normal)
         updateMessages()
         printMessages()
     }
@@ -104,6 +106,19 @@ class MP_ViewController: UIViewController {
             listLabel.append(label)
         }
 
+    }
+    
+    
+    
+    @IBAction func goProfil(sender: AnyObject) {
+        self.performSegueWithIdentifier("goProfil", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goProfil" {
+            let dvc = segue.destinationViewController as! ProfilUtilisateurViewController
+            dvc.utilisateur = contact
+        }
     }
 
 

@@ -164,9 +164,9 @@ class Facade
         fUtilisateur.envoyerMessagePrive(contenu, emetteur: emetteur, receveur : receveur)
     }
 
-    func creerUtilisateur(login : String , mdp : String, adresse : String )
+    func creerUtilisateur(login : String , mdp : String, adresse : String ,maDescription : String)
     {
-       fUtilisateur.creerUtilisateur(login , mdp: mdp , adresse: adresse )        
+       fUtilisateur.creerUtilisateur(login , mdp: mdp , adresse: adresse,maDescription : maDescription )
     }
     
     func getAllUtilisateur() ->Array<Utilisateur>

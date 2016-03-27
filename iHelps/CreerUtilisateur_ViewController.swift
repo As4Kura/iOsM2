@@ -19,6 +19,7 @@ class CreerUtilisateur_ViewController: UIViewController {
     @IBOutlet weak var motDePasse: UITextField!
     @IBOutlet weak var adresse: UITextField!
     
+    @IBOutlet weak var maDescription: UITextView!
     @IBAction func creerUtilisateur(sender: AnyObject) {
         if ( login.text == "" || motDePasse.text == "" || adresse.text == "")
         {
@@ -26,7 +27,7 @@ class CreerUtilisateur_ViewController: UIViewController {
             self.presentViewController(alertController, animated: true, completion: nil)
         } else
         {
-            facade.creerUtilisateur(login.text!, mdp: motDePasse.text!, adresse: adresse.text!)
+            facade.creerUtilisateur(login.text!, mdp: motDePasse.text!, adresse: adresse.text!, maDescription: maDescription.text)
             label_error.text = "Compte créé !"
         }
     }

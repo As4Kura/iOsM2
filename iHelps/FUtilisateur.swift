@@ -14,7 +14,7 @@ import CoreData
 class FUtilisateur{
     
     
-    func creerUtilisateur(login : String , mdp : String, adresse : String )
+    func creerUtilisateur(login : String , mdp : String, adresse : String ,maDescription : String)
     {
         
         let em = NSEntityDescription.insertNewObjectForEntityForName("Utilisateur", inManagedObjectContext: contexte)
@@ -22,6 +22,7 @@ class FUtilisateur{
         em.setValue(login, forKey: "loginUtilisateur")
         em.setValue(mdp, forKey: "mdpUtilisateur")
         em.setValue(adresse, forKey: "adresseUtilisateur")
+        em.setValue(maDescription, forKey: "maDescription")
         
         
         do
