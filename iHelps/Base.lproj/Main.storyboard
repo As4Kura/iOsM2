@@ -520,7 +520,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellJePropose" rowHeight="117" id="IAk-T6-3U4" customClass="ServicesJeProposeTableViewCell" customModule="iHelps" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="117"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="117"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IAk-T6-3U4" id="o8T-au-VEd">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
@@ -591,19 +591,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jean-Michel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1As-2q-Fqr">
-                                <rect key="frame" x="68" y="71" width="184" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWq-XF-Bdz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="neutral" translatesAutoresizingMaskIntoConstraints="NO" id="NTG-Gq-a79">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWq-XF-Bdz">
                                 <rect key="frame" x="20" y="219" width="97" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7b-Qg-7Ha" customClass="CosmosView" customModule="iHelps" customModuleProvider="target">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h7b-Qg-7Ha" customClass="CosmosView" customModule="iHelps" customModuleProvider="target">
                                 <rect key="frame" x="98" y="126" width="125" height="21"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
@@ -620,7 +617,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkg-zC-Mgn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Profil pas encore noté" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggr-eB-quQ">
+                                <rect key="frame" x="40" y="105" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="liX-6H-aJm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkg-zC-Mgn">
                                 <rect key="frame" x="40" y="248" width="240" height="170"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -631,34 +637,14 @@
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil pas encore noté" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggr-eB-quQ">
-                                <rect key="frame" x="40" y="105" width="240" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="liX-6H-aJm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jean-Michel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1As-2q-Fqr">
+                                <rect key="frame" x="0.0" y="71" width="320" height="31"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jWq-XF-Bdz" firstAttribute="top" secondItem="h7b-Qg-7Ha" secondAttribute="bottom" constant="72" id="6LT-QM-7Di"/>
-                            <constraint firstItem="ggr-eB-quQ" firstAttribute="leading" secondItem="kz1-rZ-7Fq" secondAttribute="leadingMargin" constant="24" id="IV2-je-TMp"/>
-                            <constraint firstItem="Lkg-zC-Mgn" firstAttribute="trailing" secondItem="ggr-eB-quQ" secondAttribute="trailing" id="KPQ-hX-x6s"/>
-                            <constraint firstItem="Lkg-zC-Mgn" firstAttribute="centerX" secondItem="kz1-rZ-7Fq" secondAttribute="centerX" id="QLx-Jr-vnK"/>
-                            <constraint firstItem="Lkg-zC-Mgn" firstAttribute="leading" secondItem="ggr-eB-quQ" secondAttribute="leading" id="Vkt-8y-orT"/>
-                            <constraint firstItem="Lkg-zC-Mgn" firstAttribute="top" secondItem="jWq-XF-Bdz" secondAttribute="bottom" constant="8" symbolic="YES" id="W8k-ZK-KqS"/>
-                            <constraint firstItem="1As-2q-Fqr" firstAttribute="top" secondItem="icJ-dh-Tlc" secondAttribute="bottom" constant="51" id="XIo-p9-WYm"/>
-                            <constraint firstItem="JWa-B4-0Lt" firstAttribute="top" secondItem="Lkg-zC-Mgn" secondAttribute="bottom" constant="150" id="a5g-Sn-3Z2"/>
-                            <constraint firstItem="ggr-eB-quQ" firstAttribute="top" secondItem="1As-2q-Fqr" secondAttribute="bottom" constant="13" id="bDN-Bm-ELC"/>
-                            <constraint firstItem="h7b-Qg-7Ha" firstAttribute="leading" secondItem="kz1-rZ-7Fq" secondAttribute="leadingMargin" constant="82" id="chb-Df-MeG"/>
-                            <constraint firstItem="ggr-eB-quQ" firstAttribute="centerX" secondItem="h7b-Qg-7Ha" secondAttribute="centerX" id="gCT-Mc-Y0M"/>
-                            <constraint firstItem="jWq-XF-Bdz" firstAttribute="leading" secondItem="kz1-rZ-7Fq" secondAttribute="leadingMargin" constant="4" id="jF8-p1-934"/>
-                            <constraint firstItem="1As-2q-Fqr" firstAttribute="leading" secondItem="kz1-rZ-7Fq" secondAttribute="leadingMargin" constant="52" id="kMh-fP-LfH"/>
-                            <constraint firstItem="ggr-eB-quQ" firstAttribute="centerX" secondItem="1As-2q-Fqr" secondAttribute="centerX" id="ubV-v0-z4V"/>
-                            <constraint firstItem="h7b-Qg-7Ha" firstAttribute="top" secondItem="ggr-eB-quQ" secondAttribute="bottom" id="zSW-fR-KbO"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profil" id="P8d-PP-KRI" userLabel="Mes infos">
                         <barButtonItem key="backBarButtonItem" title=" " id="qaW-Gj-D6P"/>
@@ -1680,13 +1666,13 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="y2f-Dd-JOe"/>
-        <segue reference="EGD-1g-USY"/>
+        <segue reference="lD8-gO-hpo"/>
+        <segue reference="Ms5-sb-ZpF"/>
         <segue reference="YcY-eT-6Qc"/>
         <segue reference="8k5-eO-Jpv"/>
         <segue reference="1pj-HR-uFR"/>
         <segue reference="5sO-fJ-Fxz"/>
         <segue reference="bfe-2R-g8F"/>
         <segue reference="2Pa-JK-Wco"/>
-        <segue reference="Kzn-zN-hDV"/>
     </inferredMetricsTieBreakers>
 </document>
