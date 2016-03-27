@@ -427,7 +427,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neutral" translatesAutoresizingMaskIntoConstraints="NO" id="w7t-9c-jS2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="neutral" translatesAutoresizingMaskIntoConstraints="NO" id="w7t-9c-jS2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwG-4T-ImL">
@@ -558,12 +558,15 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDI-Ni-Dwj">
-                                            <rect key="frame" x="13" y="87" width="296" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDI-Ni-Dwj">
+                                            <rect key="frame" x="12" y="87" width="296" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f6T-63-o1B">
+                                            <rect key="frame" x="0.0" y="0.0" width="52" height="116"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="cDI-Ni-Dwj" firstAttribute="leading" secondItem="o8T-au-VEd" secondAttribute="leadingMargin" constant="5" id="6j1-Iv-Fn7"/>
@@ -578,6 +581,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="consommateur" destination="cDI-Ni-Dwj" id="QCC-1R-nan"/>
+                                    <outlet property="monimage" destination="f6T-63-o1B" id="HNX-EW-jdP"/>
                                     <outlet property="titre" destination="5Wb-Yy-dK8" id="fCN-i4-XKi"/>
                                 </connections>
                             </tableViewCell>
@@ -1770,9 +1774,9 @@
         <segue reference="YcY-eT-6Qc"/>
         <segue reference="ZKo-6m-YOf"/>
         <segue reference="bB5-gD-Hm8"/>
-        <segue reference="2Pa-JK-Wco"/>
-        <segue reference="bfe-2R-g8F"/>
-        <segue reference="Kzn-zN-hDV"/>
+        <segue reference="qY9-De-1e3"/>
+        <segue reference="g1z-Gm-gvI"/>
         <segue reference="0GO-y4-d6o"/>
+        <segue reference="bfe-2R-g8F"/>
     </inferredMetricsTieBreakers>
 </document>

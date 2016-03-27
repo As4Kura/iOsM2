@@ -12,6 +12,8 @@ class ServicesJeProposeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var consommateur: UILabel!
     @IBOutlet weak var titre: UILabel!
+    @IBOutlet weak var monimage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

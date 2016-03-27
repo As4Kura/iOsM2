@@ -79,20 +79,24 @@ class ServicesJeProposeTableViewController: UITableViewController {
         
         if servicesWaiting.contains(service)
         {
+            /*
             let gradientLayer = CAGradientLayer()
             gradientLayer.frame = cell.bounds
-            let color1 = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.0).CGColor as CGColorRef
+            let color1 = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.5).CGColor as CGColorRef
             let color2 = UIColor.yellowColor().CGColor as CGColorRef
             gradientLayer.colors = [color1, color2]
             gradientLayer.locations = [0.7, 1.0]
             gradientLayer.startPoint = CGPoint(x: 1, y: 0)
             gradientLayer.endPoint = CGPoint(x: 0, y: 0)
-            cell.layer.addSublayer(gradientLayer)
+            cell.layer.addSublayer(gradientLayer)*/
+            cell.monimage.backgroundColor = UIColor.yellowColor()
+            cell.monimage.image = UIImage(named: "clock.png")
         }
             
         
         else if servicesAccepted.contains(service)
         {
+            /*
             let gradientLayer = CAGradientLayer()
             gradientLayer.frame = cell.bounds
             let color1 = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.0).CGColor as CGColorRef
@@ -102,11 +106,15 @@ class ServicesJeProposeTableViewController: UITableViewController {
             gradientLayer.startPoint = CGPoint(x: 1, y: 0)
             gradientLayer.endPoint = CGPoint(x: 0, y: 0)
             cell.layer.addSublayer(gradientLayer)
+            */
+            cell.monimage.backgroundColor = UIColor.greenColor()
+            cell.monimage.image = UIImage(named: "basket.png")
         }
             
             
         else if servicesNotes.contains(service)
         {
+            /*
             let gradientLayer = CAGradientLayer()
             gradientLayer.frame = cell.bounds
             let color1 = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.0).CGColor as CGColorRef
@@ -116,6 +124,9 @@ class ServicesJeProposeTableViewController: UITableViewController {
             gradientLayer.startPoint = CGPoint(x: 1, y: 0)
             gradientLayer.endPoint = CGPoint(x: 0, y: 0)
             cell.layer.addSublayer(gradientLayer)
+            */
+            cell.monimage.backgroundColor = UIColor.lightGrayColor()
+            cell.monimage.image = UIImage(named: "paper.png")
         }
         return cell
     }
