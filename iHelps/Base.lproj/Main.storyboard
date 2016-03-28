@@ -1185,6 +1185,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="leo-mg-JsH">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neutral" id="hrj-kk-FXt">
+                                    <rect key="frame" x="0.0" y="72" width="320" height="568"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messagerieCell" textLabel="Wc5-wI-gub" style="IBUITableViewCellStyleDefault" id="tVw-3w-KwK">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
@@ -1196,7 +1200,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wc5-wI-gub">
                                                     <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1205,6 +1209,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="O0M-CA-g8l">
+                                <rect key="frame" x="0.0" y="337" width="320" height="179"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1807,6 +1814,7 @@
     </scenes>
     <resources>
         <image name="asbtract" width="1024" height="1000"/>
+        <image name="message" width="128" height="128"/>
         <image name="nation" width="128" height="128"/>
         <image name="neutral" width="1024" height="1004"/>
     </resources>
@@ -1816,9 +1824,9 @@
         <segue reference="Fz7-jR-6So"/>
         <segue reference="5sO-fJ-Fxz"/>
         <segue reference="bfe-2R-g8F"/>
+        <segue reference="mzw-Fe-WOF"/>
+        <segue reference="Ygf-r1-kIR"/>
         <segue reference="bB5-gD-Hm8"/>
         <segue reference="mb9-XK-OBo"/>
-        <segue reference="qY9-De-1e3"/>
-        <segue reference="g1z-Gm-gvI"/>
     </inferredMetricsTieBreakers>
 </document>
