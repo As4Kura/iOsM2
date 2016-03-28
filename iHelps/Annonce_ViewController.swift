@@ -224,19 +224,19 @@ class Annonce_ViewController: UIViewController {
             {
                 let label_center_x = (scroll.frame.maxX  - label.frame.width/2)
                 label.center = CGPointMake(label_center_x, spacer + label.frame.height/2 )
-                label.backgroundColor = UIColor(red: 0.431, green: 0.900, blue: 0.318, alpha: 1.0)
+                label.backgroundColor = UIColor(red: 0.0, green: 0.6, blue: 0.8, alpha: 0.5)
                 label.textAlignment = .Right
             } else // Je recois
             {
                 let label_center_x = (scroll.frame.minX  + label.frame.width/2)
                 label.center = CGPointMake(label_center_x, spacer + label.frame.height/2)
-                label.backgroundColor = UIColor(red: 0.988, green: 0.431, blue: 0.318, alpha: 1.0)
+                label.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.5)
                 label.textAlignment = .Left
             }
             
             if ( msg.emetteur == service?.proposeur)
             {
-                label.backgroundColor = UIColor(red: 0.388, green: 0.431, blue: 0.918, alpha: 1.0)
+                label.backgroundColor = UIColor(red: 0.0, green: 0.9, blue: 0.1, alpha: 0.5)
             }
             spacer = spacer + label.frame.height + 8
             
