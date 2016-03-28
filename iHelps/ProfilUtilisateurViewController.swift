@@ -14,6 +14,9 @@ class ProfilUtilisateurViewController: UIViewController {
     @IBOutlet weak var login: UILabel!
     @IBOutlet weak var noteEtoiles: CosmosView!
     
+    @IBAction func newService(sender: AnyObject) {
+        Facade().needConnection(self, segueName: "newService")
+    }
     @IBAction func contacterPrive(sender: AnyObject) {
         Facade().needConnection(self,segueName: "goContactPrive")
     }

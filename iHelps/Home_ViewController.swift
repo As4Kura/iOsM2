@@ -21,8 +21,18 @@ class Home_ViewController: UIViewController,UITabBarDelegate {
         facade.needConnection(self, segueName: "goMonCompte")
     }
     
-    @IBOutlet weak var c: UITabBarItem!
     
+    @IBAction func deconnexion(sender: AnyObject) {
+        for view in self.view.subviews
+        
+        {
+            view.removeFromSuperview()
+            
+        }
+        self.performSegueWithIdentifier("goDeconnexion", sender: self)
+        }
+    
+   
        
     override func viewDidLoad() {
         super.viewDidLoad()

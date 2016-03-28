@@ -380,8 +380,15 @@
                             <constraint firstItem="pc2-WZ-bbe" firstAttribute="top" secondItem="G7N-8h-M5y" secondAttribute="bottom" constant="8" symbolic="YES" id="z8D-Vp-qYZ"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Recherche" id="xx9-gJ-OWm">
                         <barButtonItem key="backBarButtonItem" title=" " id="PTz-M3-D2r"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="lbI-XF-fxW">
+                            <connections>
+                                <action selector="deconnexion:" destination="yi0-eS-xca" id="Lke-Wg-Zvg"/>
+                                <segue destination="H7K-E1-YDJ" kind="show" identifier="goDeconnexion" id="ZR3-Aq-ukf"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="PtJ-zz-8Gg">
                                 <connections>
@@ -401,6 +408,7 @@
                         <segue destination="YTj-HI-3qO" kind="show" identifier="goMonCompte" id="EGD-1g-USY"/>
                         <segue destination="H7K-E1-YDJ" kind="show" identifier="goConnexion" id="ZKo-6m-YOf"/>
                         <segue destination="ixL-Ag-8tv" kind="show" identifier="goMesServices" id="bB5-gD-Hm8"/>
+                        <segue destination="H7K-E1-YDJ" kind="show" id="WXb-CO-YRU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWE-f5-aXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -419,7 +427,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neutral" translatesAutoresizingMaskIntoConstraints="NO" id="w7t-9c-jS2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="neutral" translatesAutoresizingMaskIntoConstraints="NO" id="w7t-9c-jS2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwG-4T-ImL">
@@ -509,13 +517,21 @@
                             <constraint firstItem="7PA-dC-PgP" firstAttribute="centerX" secondItem="rLA-MQ-GMk" secondAttribute="centerX" id="yG2-s7-Bu8"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Mon Compte" id="vYE-91-6Jq" userLabel="Mon compte">
-                        <barButtonItem key="backBarButtonItem" title=" " id="rAT-KE-JJM"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Y1Z-z6-iTK">
-                            <connections>
-                                <segue destination="bw7-aq-yhY" kind="show" id="hUu-na-X3t"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title=" " id="kbz-LH-Mm9"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="Y1Z-z6-iTK">
+                                <connections>
+                                    <segue destination="bw7-aq-yhY" kind="show" id="hUu-na-X3t"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="A9F-V5-736">
+                                <connections>
+                                    <segue destination="yi0-eS-xca" kind="show" id="OcI-yV-btB"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -611,14 +627,23 @@
                             <outlet property="delegate" destination="ixL-Ag-8tv" id="19X-AE-KO8"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Mes services" id="Dfz-X0-GTZ" userLabel="Service">
-                        <barButtonItem key="backBarButtonItem" title=" " id="cdv-tN-DqW"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="F9X-FU-cZg">
-                            <connections>
-                                <segue destination="bw7-aq-yhY" kind="show" id="qY9-De-1e3"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title=" " id="Vya-cM-YIC"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="F9X-FU-cZg">
+                                <connections>
+                                    <segue destination="bw7-aq-yhY" kind="show" id="qY9-De-1e3"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="ZEf-oP-dxR">
+                                <connections>
+                                    <segue destination="yi0-eS-xca" kind="show" id="Xt2-3m-b49"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="9MY-V6-e3i" kind="show" identifier="goMP" id="g1z-Gm-gvI"/>
@@ -708,14 +733,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Profil" id="P8d-PP-KRI" userLabel="Mes infos">
-                        <barButtonItem key="backBarButtonItem" title=" " id="qaW-Gj-D6P"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aem-2H-BNz">
-                            <connections>
-                                <segue destination="bw7-aq-yhY" kind="show" id="Kzn-zN-hDV"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title=" " id="txO-ER-7CC"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="aem-2H-BNz">
+                                <connections>
+                                    <action selector="newService:" destination="s23-Ma-cyp" id="tAa-59-9b0"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="LeN-s2-dNV">
+                                <connections>
+                                    <segue destination="yi0-eS-xca" kind="show" id="Sej-Te-XUt"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="contacter" destination="WBf-ul-0l0" id="emI-fL-i1V"/>
@@ -724,6 +758,7 @@
                         <outlet property="noteEtoiles" destination="h7b-Qg-7Ha" id="VMD-Xd-AMi"/>
                         <outlet property="noteLabel" destination="ggr-eB-quQ" id="KGo-lO-en8"/>
                         <segue destination="9MY-V6-e3i" kind="show" identifier="goContactPrive" id="lq2-Ze-r6d"/>
+                        <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="37d-ec-FgY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4a0-Yj-Z3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -852,67 +887,67 @@
                                     <action selector="validerService:" destination="bw7-aq-yhY" eventType="touchUpInside" id="3L7-VF-H5B"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="haS-h3-jGy">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="haS-h3-jGy">
                                 <rect key="frame" x="235" y="76" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" selected="YES" playsSound="YES" staticText="YES" adjustable="YES"/>
                                 </accessibility>
                             </switch>
-                            <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f8T-J7-BRI">
+                            <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f8T-J7-BRI">
                                 <rect key="frame" x="235" y="108" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" selected="YES" playsSound="YES" staticText="YES" adjustable="YES"/>
                                 </accessibility>
                             </switch>
-                            <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WEi-a6-p1X">
+                            <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WEi-a6-p1X">
                                 <rect key="frame" x="235" y="140" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" selected="YES" playsSound="YES" staticText="YES" adjustable="YES"/>
                                 </accessibility>
                             </switch>
-                            <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q9W-jQ-rTU">
+                            <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q9W-jQ-rTU">
                                 <rect key="frame" x="235" y="172" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" selected="YES" playsSound="YES" staticText="YES" adjustable="YES"/>
                                 </accessibility>
                             </switch>
-                            <switch opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6sH-fo-XDJ">
+                            <switch opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6sH-fo-XDJ">
                                 <rect key="frame" x="235" y="203" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" selected="YES" playsSound="YES" staticText="YES" adjustable="YES"/>
                                 </accessibility>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service maison" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCL-3I-ADJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Service maison" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCL-3I-ADJ">
                                 <rect key="frame" x="20" y="76" width="143" height="31"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cours particuliers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSC-uc-iI9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Cours particuliers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSC-uc-iI9">
                                 <rect key="frame" x="20" y="108" width="143" height="31"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animaux" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ni3-VA-hgU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Animaux" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ni3-VA-hgU">
                                 <rect key="frame" x="20" y="140" width="143" height="31"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dépannage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3i5-nt-y4z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Dépannage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3i5-nt-y4z">
                                 <rect key="frame" x="20" y="172" width="143" height="31"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDA-V6-wsy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Autre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDA-V6-wsy">
                                 <rect key="frame" x="20" y="203" width="143" height="31"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Titre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcV-YQ-xyi">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Titre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcV-YQ-xyi">
                                 <rect key="frame" x="61" y="38" width="199" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -927,7 +962,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJ4-gJ-3qv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJ4-gJ-3qv">
                                 <rect key="frame" x="20" y="242" width="126" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="126" id="kN4-gW-LyH"/>
@@ -1019,14 +1054,18 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Proposer mon aide" id="f6B-nc-rHC" userLabel="Proposer mon aide">
-                        <barButtonItem key="backBarButtonItem" title=" " id="D4H-CI-qiN"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="y2B-OR-PZd"/>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="compose" id="FO5-2Y-KoQ">
+                            <barButtonItem systemItem="search" id="FO5-2Y-KoQ">
                                 <connections>
-                                    <action selector="goMonCompte:" destination="bw7-aq-yhY" id="jzz-U7-VXs"/>
+                                    <segue destination="yi0-eS-xca" kind="show" id="sDu-cr-CH7"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title=" " id="3w2-Jw-Kmr"/>
+                            <barButtonItem systemItem="compose" id="YTU-yI-yf6">
+                                <connections>
+                                    <action selector="goMonCompte:" destination="bw7-aq-yhY" id="LO5-sL-USr"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -1224,12 +1263,19 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Messagerie" id="JzS-xC-Kap" userLabel="Messagerie">
-                        <barButtonItem key="backBarButtonItem" title=" " id="nZn-2c-uFB"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kK0-KW-hoO">
-                            <connections>
-                                <segue destination="bw7-aq-yhY" kind="show" id="mzw-Fe-WOF"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title=" " id="vw7-nB-Lo6"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="kK0-KW-hoO">
+                                <connections>
+                                    <segue destination="bw7-aq-yhY" kind="show" id="mzw-Fe-WOF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="Lkb-dJ-Pos">
+                                <connections>
+                                    <segue destination="yi0-eS-xca" kind="show" id="ZNt-ff-Af5"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -1314,6 +1360,21 @@
                             <constraint firstItem="nzv-ny-PfQ" firstAttribute="top" secondItem="UIf-SO-D2E" secondAttribute="bottom" constant="8" symbolic="YES" id="omw-yk-sZ2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Messagerie" id="ttp-58-HAH" userLabel="Messagerie">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gVB-Uf-smM"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="Ncp-1t-6cO">
+                                <connections>
+                                    <segue destination="bw7-aq-yhY" kind="show" id="SAp-gB-Qww"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="QL4-6D-d3d">
+                                <connections>
+                                    <segue destination="yi0-eS-xca" kind="show" id="lHO-CM-0MX"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="buttonContact" destination="UIf-SO-D2E" id="Da8-H2-4uA"/>
@@ -1589,10 +1650,10 @@
             </objects>
             <point key="canvasLocation" x="1192" y="1360"/>
         </scene>
-        <!--Demande de Service-->
+        <!--Demande-->
         <scene sceneID="KZn-q5-VCA">
             <objects>
-                <viewController id="7Tl-zf-cmq" customClass="DemandeServiceViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Demande" id="7Tl-zf-cmq" userLabel="Demande" customClass="DemandeServiceViewController" customModule="iHelps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IFF-hk-fKE"/>
                         <viewControllerLayoutGuide type="bottom" id="zxX-cw-K4P"/>
@@ -1648,13 +1709,21 @@
                             <constraint firstItem="iTu-uk-uRl" firstAttribute="top" secondItem="3Xj-25-Ieu" secondAttribute="bottom" constant="8" symbolic="YES" id="yiM-EI-uzq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Demande de Service" id="HUz-cc-nBB" userLabel="Service">
-                        <barButtonItem key="backBarButtonItem" title=" " id="Ei4-XO-iL5"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wEW-2B-ElW">
-                            <connections>
-                                <segue destination="bw7-aq-yhY" kind="show" id="o1S-BK-JgH"/>
-                            </connections>
-                        </barButtonItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Demande" id="HUz-cc-nBB" userLabel="Service">
+                        <barButtonItem key="backBarButtonItem" title=" " id="hxB-Mr-LdL"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="wEW-2B-ElW">
+                                <connections>
+                                    <segue destination="bw7-aq-yhY" kind="show" id="o1S-BK-JgH"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="compose" id="EwZ-Nj-pkt">
+                                <connections>
+                                    <action selector="goMonCompte:" destination="bw7-aq-yhY" id="1gF-rZ-K9Y"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -1705,7 +1774,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="19h-Zf-gnK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="19h-Zf-gnK">
                                 <rect key="frame" x="20" y="234" width="280" height="134"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
@@ -1737,7 +1806,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX5-0l-JRr">
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX5-0l-JRr">
                                 <rect key="frame" x="20" y="396" width="280" height="30"/>
                                 <color key="backgroundColor" red="0.46987457069999999" green="0.9267220223" blue="0.46803026310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
@@ -1775,14 +1844,23 @@
                             <constraint firstItem="WR3-gy-Kki" firstAttribute="leading" secondItem="19h-Zf-gnK" secondAttribute="leading" id="xEE-EN-MTO"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Noter" id="Ese-Zd-U58">
-                        <barButtonItem key="backBarButtonItem" title=" " id="PA5-ii-xNe"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fpi-Rx-3s3">
-                            <connections>
-                                <segue destination="bw7-aq-yhY" kind="show" id="Ms5-sb-ZpF"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title=" " id="BWF-u2-VyH"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="fpi-Rx-3s3">
+                                <connections>
+                                    <segue destination="bw7-aq-yhY" kind="show" identifier="newService" id="Ms5-sb-ZpF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="lnl-WT-UVG">
+                                <connections>
+                                    <segue destination="yi0-eS-xca" kind="show" id="wMK-ED-uII"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="nomService" destination="L0X-9G-IhY" id="7pp-S8-sp0"/>
@@ -1924,10 +2002,19 @@
                             <constraint firstAttribute="trailingMargin" secondItem="73g-h7-ZF9" secondAttribute="trailing" constant="81" id="z3a-Eb-xtf"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Note reçue" id="Ehy-jF-cd1">
                         <barButtonItem key="backBarButtonItem" title=" " id="DdJ-Mj-bEp"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tqT-ZQ-AqU"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="tqT-ZQ-AqU"/>
+                            <barButtonItem systemItem="search" id="JMV-hw-AQD">
+                                <connections>
+                                    <segue destination="yi0-eS-xca" kind="show" id="JEG-DM-Ujn"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="boutonProfil" destination="1MZ-la-3d8" id="cfY-Qt-i62"/>
@@ -1950,14 +2037,14 @@
         <image name="neutral" width="1024" height="1004"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YcY-eT-6Qc"/>
-        <segue reference="ZKo-6m-YOf"/>
-        <segue reference="bB5-gD-Hm8"/>
-        <segue reference="rdz-SI-Kb8"/>
-        <segue reference="EGD-1g-USY"/>
+        <segue reference="Sej-Te-XUt"/>
         <segue reference="Pnh-VW-owM"/>
+        <segue reference="y2f-Dd-JOe"/>
+        <segue reference="lD8-gO-hpo"/>
+        <segue reference="JlY-c0-if7"/>
         <segue reference="lq2-Ze-r6d"/>
+        <segue reference="37d-ec-FgY"/>
+        <segue reference="ZR3-Aq-ukf"/>
         <segue reference="Fz7-jR-6So"/>
-        <segue reference="bfe-2R-g8F"/>
     </inferredMetricsTieBreakers>
 </document>
