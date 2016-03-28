@@ -211,10 +211,12 @@ class Annonce_ViewController: UIViewController {
             let label = UILabel(frame: CGRectMake(scroll.frame.minX, 0, scroll.frame.width, 0))
             label.textColor = UIColor.whiteColor()
             label.font = UIFont(name: label.font.fontName, size: 12)
+            
+            
             var texte = msg.emetteur!.loginUtilisateur!
-            texte += " ("
-            texte += dateFormater.stringFromDate(msg.dateMM!)
-            texte += ") --> "
+            texte += ": "
+           // texte += dateFormater.stringFromDate(msg.dateMM!)
+            //texte += ") --> "
             texte += msg.contenu!
             label.text = texte
             label.numberOfLines = 0

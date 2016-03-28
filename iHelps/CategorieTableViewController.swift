@@ -48,28 +48,29 @@ class CategorieTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("CategorieTableViewCell", forIndexPath: indexPath) as! CategorieTableViewCell
         let categorie = categories[indexPath.row]
 
-        cell.titreCategorie.text = categorie.nomCategorie
-        if categorie.nomCategorie == "Service maison"
+        let nomCategorie = categorie.nomCategorie
+        cell.titreCategorie.text = nomCategorie
+        var image = "notebook.png"
+        
+        if nomCategorie == "Service maison"
         {
-            cell.imageCategorie.image = UIImage(named: "home.png")
+            image = "home.png"
         }
-        else if categorie.nomCategorie == "Cours particuliers"
+        else if nomCategorie == "Cours particuliers"
         {
-            cell.imageCategorie.image = UIImage(named: "work.png")
+            image = "work.png"
         }
-        else if categorie.nomCategorie == "Animaux"
+        else if nomCategorie == "Animaux"
         {
-            cell.imageCategorie.image = UIImage(named: "animal.png")
+            image = "animal.png"
         }
-        else if categorie.nomCategorie == "Dépannage"
+        else if nomCategorie == "Dépannage"
         {
-            cell.imageCategorie.image = UIImage(named: "settings.png")
+            image = "settings.png"
         }
-        else
-        {
-            cell.imageCategorie.image = UIImage(named: "notebook.png")
-        }
+        
 
+        cell.imageCategorie.image = UIImage(named: image)
         return cell
     }
     
