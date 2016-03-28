@@ -23,10 +23,7 @@ class Home_ViewController: UIViewController,UITabBarDelegate {
     
     @IBOutlet weak var c: UITabBarItem!
     
-    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
-        print("touché")
-    }
-    
+       
     override func viewDidLoad() {
         super.viewDidLoad()
        

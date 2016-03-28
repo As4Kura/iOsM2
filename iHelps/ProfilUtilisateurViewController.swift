@@ -14,6 +14,10 @@ class ProfilUtilisateurViewController: UIViewController {
     @IBOutlet weak var login: UILabel!
     @IBOutlet weak var noteEtoiles: CosmosView!
     
+    @IBAction func contacterPrive(sender: AnyObject) {
+        Facade().needConnection(self,segueName: "goContactPrive")
+    }
+    @IBOutlet weak var contacter: UIButton!
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var maDescription: UITextView!
     override func viewDidLoad() {
@@ -23,6 +27,14 @@ class ProfilUtilisateurViewController: UIViewController {
         login.text = utilisateur?.loginUtilisateur
         maDescription.text = utilisateur?.maDescription
         let note = utilisateur?.getNote()
+        
+        if let currentUser = Facade().estConnecte()
+        {
+            if currentUser == utilisateur
+            {
+                contacter.removeFromSuperview()
+            }
+        }
         
         if  note > 0
         {
@@ -44,7 +56,12 @@ class ProfilUtilisateurViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goContactPrive" {
+            let dvc = segue.destinationViewController as! MP_ViewController
+            dvc.contact = utilisateur
+        }
+    }
 
     /*
     // MARK: - Navigation

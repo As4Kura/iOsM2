@@ -23,6 +23,7 @@
 		4952C1131C9B25C80048B403 /* ServiceGTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */; };
 		4972FAF71C9EEB520074553A /* CategorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972FAF61C9EEB520074553A /* CategorieTableViewCell.swift */; };
 		4972FAF91C9EEC8E0074553A /* CategorieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */; };
+		49DDCA321CA9735200BE3298 /* VoirNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DDCA311CA9735200BE3298 /* VoirNoteViewController.swift */; };
 		49DF01171C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF01151C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift */; };
 		49DF01181C9DE9FE002A58FB /* MessagePrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF01161C9DE9FE002A58FB /* MessagePrive.swift */; };
 		5C2B56D61CA43D8900F1A7B4 /* Note_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56D51CA43D8900F1A7B4 /* Note_ViewController.swift */; };
@@ -102,6 +103,7 @@
 		4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceGTableViewController.swift; sourceTree = "<group>"; };
 		4972FAF61C9EEB520074553A /* CategorieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorieTableViewCell.swift; sourceTree = "<group>"; };
 		4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorieTableViewController.swift; sourceTree = "<group>"; };
+		49DDCA311CA9735200BE3298 /* VoirNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoirNoteViewController.swift; sourceTree = "<group>"; };
 		49DF01151C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagePrive+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		49DF01161C9DE9FE002A58FB /* MessagePrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePrive.swift; sourceTree = "<group>"; };
 		5C2B56D51CA43D8900F1A7B4 /* Note_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note_ViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		252C79191C96F15E00B1DBCF /* Controleurs */ = {
 			isa = PBXGroup;
 			children = (
+				49DDCA311CA9735200BE3298 /* VoirNoteViewController.swift */,
 				492CCB371CA680E3005B6F77 /* MonCompteViewController.swift */,
 				4930326F1CA72F1700A40119 /* ProfilUtilisateurViewController.swift */,
 				ED7330091CA42FE200C489E3 /* TableControleurs */,
@@ -472,6 +475,7 @@
 				493032701CA72F1700A40119 /* ProfilUtilisateurViewController.swift in Sources */,
 				4952C1131C9B25C80048B403 /* ServiceGTableViewController.swift in Sources */,
 				5C2B56EC1CA44D9900F1A7B4 /* CosmosTouch.swift in Sources */,
+				49DDCA321CA9735200BE3298 /* VoirNoteViewController.swift in Sources */,
 				EDEEAD221C88A65500BE6EFE /* FUtilisateur.swift in Sources */,
 				5C2B56DE1CA44C1700F1A7B4 /* CosmosLayerHelper.swift in Sources */,
 				25DEDEED1C99D59E00FA17F0 /* Annonce_ViewController.swift in Sources */,

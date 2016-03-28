@@ -65,6 +65,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
         var login = ""
         var mess = "Demandé par "
         let noteString = "Note reçue de "
+        //let nonNote = "Note pas encore reçue"
         
         if proposeur
         {
@@ -148,6 +149,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
         var titre = "Accepter la demande ?"
         var mess = ""
         var login = ""
+        var titreAnnulerOk = "Ok"
         if proposeur
         {
             login = (service.consommateur?.loginUtilisateur)!
@@ -181,23 +183,23 @@ class ServicesJeProposeTableViewController: UITableViewController {
                     UIAlertAction in self.deleteCell(service ,index: indexPath.row)
                 }
                 
+                
+                titreAnnulerOk = "Annuler"
+               
+                
                 // Add the actions
                 alertController.addAction(accept)
                 alertController.addAction(refus)
-            }
                 
-            else
+            }
+            
+            let annuler = UIAlertAction(title: titreAnnulerOk, style: UIAlertActionStyle.Default) {
+                UIAlertAction in }
+            alertController.addAction(annuler)
+         /*   else
             {
-                let contacter = UIAlertAction(title: "Contacter " + login, style: UIAlertActionStyle.Default) {
-                    UIAlertAction in self.performSegueWithIdentifier("goMP", sender: indexPath.row)}
-                
-                
-                let annuler = UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Default) {
-                    UIAlertAction in }
-                
-                alertController.addAction(contacter)
-                alertController.addAction(annuler)
-            }
+              self.performSegueWithIdentifier("goProfil", sender: indexPath.row)
+            }*/
         
         
         
@@ -218,22 +220,32 @@ class ServicesJeProposeTableViewController: UITableViewController {
                 UIAlertAction in self.performSegueWithIdentifier("goNoter", sender: indexPath.row)
             }
             
-            
-            let contacter = UIAlertAction(title: "Contacter " + login, style: UIAlertActionStyle.Default) {
-                UIAlertAction in self.performSegueWithIdentifier("goMP", sender: indexPath.row)
+            if ( (proposeur && service.cAnote == true) || (!proposeur && service.pAnote == true) )
+            {
+                
+            let voirNote = UIAlertAction(title: "Voir note laissée par " + login, style: UIAlertActionStyle.Default)
+                {
+                UIAlertAction in self.performSegueWithIdentifier("goVoirNote", sender: indexPath.row)
+                }
+                alertController.addAction(voirNote)
             }
             
-            // Add the actions
-            alertController.addAction(noter)
-            alertController.addAction(contacter)
+            let annuler = UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Default) {
+                UIAlertAction in }
             
+            alertController.addAction(noter)
+            alertController.addAction(annuler)
+
             
             
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         
-        else {
-            let alertController = UIAlertController(
+        else {//services notés
+            
+            self.performSegueWithIdentifier("goVoirNote", sender: indexPath.row)
+            
+           /* let alertController = UIAlertController(
                 title: "Service terminé et noté",
                 message: "" ,
                 preferredStyle: UIAlertControllerStyle.Alert)
@@ -242,13 +254,15 @@ class ServicesJeProposeTableViewController: UITableViewController {
                 UIAlertAction in self.performSegueWithIdentifier("goMP", sender: indexPath.row)}
             
             
+            
+            
             let annuler = UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Default) {
                 UIAlertAction in }
             
             alertController.addAction(contacter)
             alertController.addAction(annuler)
             
-             self.presentViewController(alertController, animated: true, completion: nil)
+             self.presentViewController(alertController, animated: true, completion: nil)*/
         }
         
     }
@@ -265,10 +279,32 @@ class ServicesJeProposeTableViewController: UITableViewController {
                 dvc.contact = s.serviceGlobal?.proposeur
             }
         }
-       else if segue.identifier == "goNoter" {
+        else if segue.identifier == "goNoter" {
             //            if let indexpath = table.indexPathForSelectedRow {
             let dvc = segue.destinationViewController as! Note_ViewController
             dvc.instance = services[sender as! Int]
+            //           }
+        }
+
+        else if segue.identifier == "goVoirNote" {
+            //            if let indexpath = table.indexPathForSelectedRow {
+            let dvc = segue.destinationViewController as! VoirNoteViewController
+            dvc.instance = services[sender as! Int]
+            //           }
+        }
+        
+        else if segue.identifier == "goProfil" {
+            //            if let indexpath = table.indexPathForSelectedRow {
+            let dvc = segue.destinationViewController as! ProfilUtilisateurViewController
+            if proposeur
+            {
+                dvc.utilisateur = services[sender as! Int].consommateur
+            }
+            else
+            {
+                dvc.utilisateur = services[sender as! Int].serviceGlobal?.proposeur
+            }
+            
             //           }
         }
 

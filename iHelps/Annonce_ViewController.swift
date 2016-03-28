@@ -93,35 +93,7 @@ class Annonce_ViewController: UIViewController {
     }
     
     @IBAction func clickProposeur(sender: AnyObject) {
-        if ( facade.estConnecte() == nil ){
-            facade.needConnection(self)
-        }else {
-            let alertController = UIAlertController(
-                title: "iHelps",
-                message: "Que voulez-vous faire ?",
-                preferredStyle: UIAlertControllerStyle.Alert)
-        
-        
-            let contactPrive = UIAlertAction(title: "Contacter en privé", style: UIAlertActionStyle.Default) {
-                UIAlertAction in self.performSegueWithIdentifier("goMP", sender: self)
-            }
-
-            let voirProfil = UIAlertAction(title: "Voir son profil", style: UIAlertActionStyle.Default) {
-                UIAlertAction in self.performSegueWithIdentifier("goProfil", sender: self)
-            }
-
-            
-            let annuler = UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Default) {
-                UIAlertAction in
-            }
-        
-        // Add the actions
-            alertController.addAction(contactPrive)
-            alertController.addAction(voirProfil)
-            alertController.addAction(annuler)
-        
-            self.presentViewController(alertController, animated: true, completion: nil)
-        }
+        self.performSegueWithIdentifier("goProfil", sender: self)
     }
     
     @IBAction func demanderService(sender: AnyObject) {
@@ -162,11 +134,7 @@ class Annonce_ViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "goMP" {
-            let dvc = segue.destinationViewController as! MP_ViewController
-            dvc.contact = service?.proposeur!
-        }
-        else if segue.identifier == "goDemanderService"
+         if segue.identifier == "goDemanderService"
         {
             let dvc = segue.destinationViewController as! DemandeServiceViewController
             dvc.serviceG = service
