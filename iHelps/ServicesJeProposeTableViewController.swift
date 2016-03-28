@@ -64,17 +64,28 @@ class ServicesJeProposeTableViewController: UITableViewController {
         cell.titre.text = service.serviceGlobal!.titre
         var login = ""
         var mess = "Demandé par "
+        let noteString = "Note reçue de "
         if proposeur
         {
             login = (service.consommateur?.loginUtilisateur)!
+            
+               if service.cAnote == true
+            {
+            cell.note.text = noteString + String(service.noteConso!) + "/5"
+            }
         }
         else
         {
             login = (service.serviceGlobal?.proposeur?.loginUtilisateur)!
             mess = "Proposé par "
+            
+            if service.pAnote == true
+            {
+                cell.note.text = noteString + String(service.noteProposeur!) + "/5"
+            }
         }
         //cell.notestars.rating = Double(service.noteProposeur!)
-        cell.note.text = "Sa note moyenne : " + String(service.noteProposeur!) + "/5"
+        
         
         cell.consommateur.text = mess + login
         // Configure the cell...
