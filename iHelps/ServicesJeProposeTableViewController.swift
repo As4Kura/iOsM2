@@ -101,7 +101,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
             gradientLayer.startPoint = CGPoint(x: 1, y: 0)
             gradientLayer.endPoint = CGPoint(x: 0, y: 0)
             cell.layer.addSublayer(gradientLayer)*/
-            cell.monimage.backgroundColor = UIColor.yellowColor()
+            cell.monfond.backgroundColor = UIColor.yellowColor()
             cell.monimage.image = UIImage(named: "clock.png")
         }
             
@@ -118,7 +118,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
             gradientLayer.endPoint = CGPoint(x: 0, y: 0)
             cell.layer.addSublayer(gradientLayer)
             */
-            cell.monimage.backgroundColor = UIColor.greenColor()
+            cell.monfond.backgroundColor = UIColor.greenColor()
             cell.monimage.image = UIImage(named: "basket.png")
         }
             
@@ -135,7 +135,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
             gradientLayer.endPoint = CGPoint(x: 0, y: 0)
             cell.layer.addSublayer(gradientLayer)
             */
-            cell.monimage.backgroundColor = UIColor.lightGrayColor()
+            cell.monfond.backgroundColor = UIColor.lightGrayColor()
             cell.monimage.image = UIImage(named: "paper.png")
         }
         return cell
