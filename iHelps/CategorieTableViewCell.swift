@@ -11,6 +11,8 @@ import UIKit
 class CategorieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titreCategorie: UILabel!
+    @IBOutlet weak var imageCategorie: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

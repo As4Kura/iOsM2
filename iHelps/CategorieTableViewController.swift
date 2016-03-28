@@ -49,7 +49,26 @@ class CategorieTableViewController: UITableViewController {
         let categorie = categories[indexPath.row]
 
         cell.titreCategorie.text = categorie.nomCategorie
-        // Configure the cell...
+        if categorie.nomCategorie == "Service maison"
+        {
+            cell.imageCategorie.image = UIImage(named: "home.png")
+        }
+        else if categorie.nomCategorie == "Cours particuliers"
+        {
+            cell.imageCategorie.image = UIImage(named: "work.png")
+        }
+        else if categorie.nomCategorie == "Animaux"
+        {
+            cell.imageCategorie.image = UIImage(named: "animal.png")
+        }
+        else if categorie.nomCategorie == "Dépannage"
+        {
+            cell.imageCategorie.image = UIImage(named: "settings.png")
+        }
+        else
+        {
+            cell.imageCategorie.image = UIImage(named: "notebook.png")
+        }
 
         return cell
     }

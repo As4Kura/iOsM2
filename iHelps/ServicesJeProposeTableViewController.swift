@@ -65,13 +65,14 @@ class ServicesJeProposeTableViewController: UITableViewController {
         var login = ""
         var mess = "Demandé par "
         let noteString = "Note reçue de "
+        
         if proposeur
         {
             login = (service.consommateur?.loginUtilisateur)!
             
-               if service.cAnote == true
+            if service.cAnote == true
             {
-            cell.note.text = noteString + String(service.noteConso!) + "/5"
+                cell.note.text = noteString + String(service.noteConso!) + "/5"
             }
         }
         else
@@ -86,9 +87,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
         }
         //cell.notestars.rating = Double(service.noteProposeur!)
         
-        
         cell.consommateur.text = mess + login
-        // Configure the cell...
         
         if servicesWaiting.contains(service)
         {
@@ -106,7 +105,6 @@ class ServicesJeProposeTableViewController: UITableViewController {
             cell.monimage.image = UIImage(named: "clock.png")
         }
             
-        
         else if servicesAccepted.contains(service)
         {
             /*
@@ -123,7 +121,6 @@ class ServicesJeProposeTableViewController: UITableViewController {
             cell.monimage.backgroundColor = UIColor.greenColor()
             cell.monimage.image = UIImage(named: "basket.png")
         }
-            
             
         else if servicesNotes.contains(service)
         {
@@ -143,7 +140,6 @@ class ServicesJeProposeTableViewController: UITableViewController {
         }
         return cell
     }
-    
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // pass any object as parameter, i.e. the tapped row
