@@ -63,7 +63,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
         let service = services[indexPath.row]
         cell.titre.text = service.serviceGlobal!.titre
         var login = ""
-        var mess = "demandé par "
+        var mess = "Demandé par "
         if proposeur
         {
             login = (service.consommateur?.loginUtilisateur)!
@@ -71,8 +71,10 @@ class ServicesJeProposeTableViewController: UITableViewController {
         else
         {
             login = (service.serviceGlobal?.proposeur?.loginUtilisateur)!
-            mess = "proposé par "
+            mess = "Proposé par "
         }
+        //cell.notestars.rating = Double(service.noteProposeur!)
+        cell.note.text = "Sa note moyenne : " + String(service.noteProposeur!) + "/5"
         
         cell.consommateur.text = mess + login
         // Configure the cell...
@@ -136,7 +138,7 @@ class ServicesJeProposeTableViewController: UITableViewController {
         // pass any object as parameter, i.e. the tapped row
         let service = services[indexPath.row]
         let date = formaterDate(service.dateRealisation!)
-        var titre = "Accepter Demande ?"
+        var titre = "Accepter la demande ?"
         var mess = ""
         var login = ""
         if proposeur

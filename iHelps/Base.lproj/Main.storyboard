@@ -552,36 +552,47 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wb-Yy-dK8">
-                                            <rect key="frame" x="90" y="34" width="141" height="48"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wb-Yy-dK8">
+                                            <rect key="frame" x="89" y="8" width="231" height="48"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDI-Ni-Dwj">
-                                            <rect key="frame" x="12" y="87" width="296" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDI-Ni-Dwj">
+                                            <rect key="frame" x="89" y="64" width="231" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1P-oY-AkB">
+                                            <rect key="frame" x="89" y="87" width="187" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f6T-63-o1B">
-                                            <rect key="frame" x="0.0" y="0.0" width="52" height="116"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="81" height="116"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="cDI-Ni-Dwj" firstAttribute="leading" secondItem="o8T-au-VEd" secondAttribute="leadingMargin" constant="5" id="6j1-Iv-Fn7"/>
-                                        <constraint firstItem="cDI-Ni-Dwj" firstAttribute="top" secondItem="5Wb-Yy-dK8" secondAttribute="bottom" constant="5" id="JFT-pC-M9O"/>
-                                        <constraint firstItem="5Wb-Yy-dK8" firstAttribute="centerX" secondItem="o8T-au-VEd" secondAttribute="centerX" id="KSt-qV-FBw"/>
+                                        <constraint firstItem="K1P-oY-AkB" firstAttribute="leading" secondItem="cDI-Ni-Dwj" secondAttribute="leading" id="5dn-kE-z0c"/>
+                                        <constraint firstItem="cDI-Ni-Dwj" firstAttribute="leading" secondItem="o8T-au-VEd" secondAttribute="leadingMargin" constant="81" id="6j1-Iv-Fn7"/>
+                                        <constraint firstItem="cDI-Ni-Dwj" firstAttribute="top" secondItem="5Wb-Yy-dK8" secondAttribute="bottom" constant="8" id="JFT-pC-M9O"/>
+                                        <constraint firstItem="5Wb-Yy-dK8" firstAttribute="centerX" secondItem="o8T-au-VEd" secondAttribute="centerX" constant="44.5" id="KSt-qV-FBw"/>
                                         <constraint firstItem="cDI-Ni-Dwj" firstAttribute="centerX" secondItem="5Wb-Yy-dK8" secondAttribute="centerX" id="L0t-uU-qRj"/>
-                                        <constraint firstItem="5Wb-Yy-dK8" firstAttribute="leading" secondItem="o8T-au-VEd" secondAttribute="leadingMargin" constant="82" id="PmH-7p-H8H"/>
-                                        <constraint firstItem="cDI-Ni-Dwj" firstAttribute="bottom" secondItem="o8T-au-VEd" secondAttribute="bottomMargin" id="ZVE-as-SEh"/>
-                                        <constraint firstItem="5Wb-Yy-dK8" firstAttribute="top" secondItem="o8T-au-VEd" secondAttribute="topMargin" constant="26" id="im6-LF-nSe"/>
-                                        <constraint firstItem="5Wb-Yy-dK8" firstAttribute="centerY" secondItem="o8T-au-VEd" secondAttribute="centerY" id="pkC-tG-dFw"/>
+                                        <constraint firstItem="5Wb-Yy-dK8" firstAttribute="leading" secondItem="o8T-au-VEd" secondAttribute="leadingMargin" constant="81" id="PmH-7p-H8H"/>
+                                        <constraint firstItem="cDI-Ni-Dwj" firstAttribute="bottom" secondItem="o8T-au-VEd" secondAttribute="bottomMargin" constant="-23" id="ZVE-as-SEh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="K1P-oY-AkB" secondAttribute="trailing" constant="36" id="fbM-AO-2Su"/>
+                                        <constraint firstItem="5Wb-Yy-dK8" firstAttribute="top" secondItem="o8T-au-VEd" secondAttribute="topMargin" id="im6-LF-nSe"/>
+                                        <constraint firstItem="cDI-Ni-Dwj" firstAttribute="top" secondItem="K1P-oY-AkB" secondAttribute="bottom" constant="-44" id="kUx-ts-cSc"/>
+                                        <constraint firstItem="5Wb-Yy-dK8" firstAttribute="centerY" secondItem="o8T-au-VEd" secondAttribute="centerY" constant="-26" id="pkC-tG-dFw"/>
+                                        <constraint firstItem="K1P-oY-AkB" firstAttribute="top" secondItem="5Wb-Yy-dK8" secondAttribute="bottom" constant="31" id="qlq-R4-6nL"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="consommateur" destination="cDI-Ni-Dwj" id="QCC-1R-nan"/>
                                     <outlet property="monimage" destination="f6T-63-o1B" id="HNX-EW-jdP"/>
+                                    <outlet property="note" destination="K1P-oY-AkB" id="DAv-iu-E3u"/>
                                     <outlet property="titre" destination="5Wb-Yy-dK8" id="fCN-i4-XKi"/>
                                 </connections>
                             </tableViewCell>
@@ -630,23 +641,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h7b-Qg-7Ha" customClass="CosmosView" customModule="iHelps" customModuleProvider="target">
-                                <rect key="frame" x="98" y="126" width="125" height="21"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
-                                        <color key="value" red="0.0" green="1" blue="0.098211094799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Profil pas encore noté" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggr-eB-quQ">
                                 <rect key="frame" x="40" y="105" width="240" height="21"/>
                                 <constraints>
@@ -672,6 +666,23 @@
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h7b-Qg-7Ha" customClass="CosmosView" customModule="iHelps" customModuleProvider="target">
+                                <rect key="frame" x="98" y="126" width="125" height="21"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                        <color key="value" red="0.0" green="1" blue="0.098211094799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1287,7 +1298,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="neutral" translatesAutoresizingMaskIntoConstraints="NO" id="K9G-rg-HWB">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleToFill" editable="NO" text="Description" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucA-jb-TWK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" editable="NO" text="Description" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucA-jb-TWK">
                                 <rect key="frame" x="20" y="186" width="280" height="52"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
@@ -1380,17 +1391,6 @@
                                     <action selector="clickProposeur:" destination="p0q-JB-lHo" eventType="touchUpInside" id="nW3-7t-lbS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7S-lQ-TeI">
-                                <rect key="frame" x="20" y="246" width="280" height="30"/>
-                                <color key="backgroundColor" red="0.46987457069999999" green="0.9267220223" blue="0.46803026310000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                <state key="normal" title="Demander service !">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="demanderService:" destination="p0q-JB-lHo" eventType="touchUpInside" id="7dV-LH-JIy"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Au :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjA-KV-6qE">
                                 <rect key="frame" x="162" y="130" width="28" height="21"/>
                                 <constraints>
@@ -1435,6 +1435,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7S-lQ-TeI">
+                                <rect key="frame" x="20" y="246" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.46987457069999999" green="0.9267220223" blue="0.46803026310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <state key="normal" title="Demander un coup de main !">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="demanderService:" destination="p0q-JB-lHo" eventType="touchUpInside" id="7dV-LH-JIy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1656,17 +1667,6 @@
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX5-0l-JRr">
-                                <rect key="frame" x="20" y="396" width="280" height="30"/>
-                                <color key="backgroundColor" red="0.46987457069999999" green="0.9267220223" blue="0.46803026310000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                <state key="normal" title="Noter ">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="enregistrerNoteEtCom:" destination="eBW-gx-4n5" eventType="touchUpInside" id="mUc-wj-m7u"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8Z-qw-woP">
                                 <rect key="frame" x="20" y="176" width="66" height="21"/>
                                 <constraints>
@@ -1693,6 +1693,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX5-0l-JRr">
+                                <rect key="frame" x="20" y="396" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.46987457069999999" green="0.9267220223" blue="0.46803026310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <state key="normal" title="Noter ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="enregistrerNoteEtCom:" destination="eBW-gx-4n5" eventType="touchUpInside" id="mUc-wj-m7u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1772,11 +1783,11 @@
         <segue reference="5sO-fJ-Fxz"/>
         <segue reference="Fz7-jR-6So"/>
         <segue reference="YcY-eT-6Qc"/>
-        <segue reference="ZKo-6m-YOf"/>
+        <segue reference="8k5-eO-Jpv"/>
         <segue reference="bB5-gD-Hm8"/>
         <segue reference="qY9-De-1e3"/>
         <segue reference="g1z-Gm-gvI"/>
-        <segue reference="0GO-y4-d6o"/>
+        <segue reference="lD8-gO-hpo"/>
         <segue reference="bfe-2R-g8F"/>
     </inferredMetricsTieBreakers>
 </document>
