@@ -39,7 +39,7 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         //self.locationManager.requestAlwaysAuthorization()
         
         // Pour l'utilisation en premier plan
-        self.locationManager.requestWhenInUseAuthorization()
+        //self.locationManager.requestWhenInUseAuthorization()
         
         // Centrage de la carte
         if CLLocationManager.locationServicesEnabled() {
@@ -51,8 +51,16 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         
         mapView.delegate = self
         
+        //mapView.mapType = MKMapType(rawValue: 0)!
+        //mapView.setUserTrackingMode(MKUserTrackingMode(rawValue: 2)!, animated: true)
+        //mapView.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
         // Génération des annotations
         getMapAnnotations()
+        
+        mapView.showsUserLocation = true
+        let myLocation:MKUserLocation = mapView.userLocation
+        myLocation.title = "Je suis ici !"
+// ... Voir CalloutView sur internet pour plus, là j'en peux plus pour ce soir j'arrive pas à faire juste un point bleu
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,17 +69,18 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+        //manager.delegate = self
+        //manager.desiredAccuracy = kCLLocationAccuracyBest
+        //manager.requestWhenInUseAuthorization()
+        //manager.startUpdatingLocation()
         let coords:CLLocationCoordinate2D = manager.location!.coordinate
         let span = MKCoordinateSpanMake(0.1, 0.1)
         let center = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
         let region = MKCoordinateRegion(center: center, span: span)
-        mapView.setRegion(region, animated:true)
+        self.mapView.setRegion(region, animated:true)
         locationManager.stopUpdatingLocation()
     }
+    
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Erreur pendant la localisation " + error.localizedDescription)
