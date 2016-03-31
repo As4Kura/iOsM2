@@ -44,6 +44,13 @@ class Annonce_ViewController: UIViewController {
         
 
         if ( service != nil ){
+            
+            if service?.proposeur == Facade().estConnecte()
+            {
+                goDemanderService.hidden = true
+                proposeur.hidden = true
+            }
+            
             //var moyenneString = ""
             var moyenne  = 0
             var i = 0

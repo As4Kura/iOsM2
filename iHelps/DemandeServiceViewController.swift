@@ -48,37 +48,7 @@ class DemandeServiceViewController: UIViewController {
         
                 self.presentViewController(alertController, animated: true, completion: nil)
         
-        
-        
-        
-      /*  let instancesS = facade.getAllInstanceS()
-        let services = facade.getAllServiceG()
-            for s in services
-            {
-                print("serviceG : " + String(s.periodeDebut!))
-                
-        }
-        
-        
-        if instancesS.count > 0
-        {
-            
-            
-            
-            for instance in instancesS
-            {
-                
-                if let conso = instance.serviceGlobal
-                {
-                    // print("description:"+instance.description)
-                    print("titre:" + conso.titre! + "date:" + String(instance.dateRealisation!) )
-                    
-                    
-                    
-                }
-            }
-        }*/
-    }
+         }
     
     
     

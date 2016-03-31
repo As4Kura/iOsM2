@@ -60,7 +60,6 @@
 		EDE282D81C8752E200B34565 /* FServiceGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE282D71C8752E200B34565 /* FServiceGlobal.swift */; };
 		EDE282FB1C87568700B34565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE282FA1C87568700B34565 /* AppDelegate.swift */; };
 		EDEEAD221C88A65500BE6EFE /* FUtilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD211C88A65500BE6EFE /* FUtilisateur.swift */; };
-		EDEEAD241C88BA2500BE6EFE /* TestsBdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD231C88BA2500BE6EFE /* TestsBdd.swift */; };
 		EDEEAD2B1C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD251C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift */; };
 		EDEEAD2C1C88C3D100BE6EFE /* MessageMur.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD261C88C3D100BE6EFE /* MessageMur.swift */; };
 		EDEEAD2D1C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEAD271C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift */; };
@@ -146,7 +145,6 @@
 		EDE282D71C8752E200B34565 /* FServiceGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FServiceGlobal.swift; sourceTree = "<group>"; };
 		EDE282FA1C87568700B34565 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDEEAD211C88A65500BE6EFE /* FUtilisateur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUtilisateur.swift; sourceTree = "<group>"; };
-		EDEEAD231C88BA2500BE6EFE /* TestsBdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsBdd.swift; sourceTree = "<group>"; };
 		EDEEAD251C88C3D100BE6EFE /* MessageMur+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessageMur+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EDEEAD261C88C3D100BE6EFE /* MessageMur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageMur.swift; sourceTree = "<group>"; };
 		EDEEAD271C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Categorie+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -185,10 +183,10 @@
 		252C79191C96F15E00B1DBCF /* Controleurs */ = {
 			isa = PBXGroup;
 			children = (
+				ED7330091CA42FE200C489E3 /* TableControleurs */,
 				49DDCA311CA9735200BE3298 /* VoirNoteViewController.swift */,
 				492CCB371CA680E3005B6F77 /* MonCompteViewController.swift */,
 				4930326F1CA72F1700A40119 /* ProfilUtilisateurViewController.swift */,
-				ED7330091CA42FE200C489E3 /* TableControleurs */,
 				252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */,
 				25DEDEEA1C99C18C00FA17F0 /* Home_ViewController.swift */,
 				25DEDEEC1C99D59E00FA17F0 /* Annonce_ViewController.swift */,
@@ -282,9 +280,7 @@
 				EDE282FC1C875A3900B34565 /* Facades */,
 				ED23EE401C8830AA00E2CC70 /* Facade.swift */,
 				4927A4C71C9AE5D900FFC841 /* JeuDeDonnees.swift */,
-				EDEEAD231C88BA2500BE6EFE /* TestsBdd.swift */,
 				252C79191C96F15E00B1DBCF /* Controleurs */,
-				25547F951C8D72E30044C7AA /* ViewController.swift */,
 				ED395B291C86342C00FF6D49 /* Main.storyboard */,
 				EDE282D41C874D0500B34565 /* Model.xcdatamodeld */,
 				ED395B2C1C86342C00FF6D49 /* Assets.xcassets */,
@@ -317,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				49356C8A1CA073260020DC20 /* Cells */,
+				25547F951C8D72E30044C7AA /* ViewController.swift */,
 				ED7330051CA4254400C489E3 /* ServicesJeProposeTableViewController.swift */,
 				4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */,
 				4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */,
@@ -517,7 +514,6 @@
 				ED23EE491C883A5000E2CC70 /* Utilisateur.swift in Sources */,
 				EDE282FB1C87568700B34565 /* AppDelegate.swift in Sources */,
 				EDEEAD2E1C88C3D100BE6EFE /* Categorie.swift in Sources */,
-				EDEEAD241C88BA2500BE6EFE /* TestsBdd.swift in Sources */,
 				49DF01181C9DE9FE002A58FB /* MessagePrive.swift in Sources */,
 				EDDC88121CA052B900C313D3 /* DemandeServiceViewController.swift in Sources */,
 				5C2B56EA1CA44D6D00F1A7B4 /* CosmosText.swift in Sources */,

@@ -11,7 +11,7 @@ import MapKit
 
 class ViewController: UIViewController {
     
-    let testsBdd = TestsBdd ()
+
     let facade = Facade()
     let jeu = JeuDeDonnee()
     
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func lancerTestsBDD(sender: AnyObject) {
-        testsBdd.fonctionDeTestsEnBase()
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
