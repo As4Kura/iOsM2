@@ -58,8 +58,13 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        jeu.creationJeuDonnees()
+       
         
+        let firstRun = NSUserDefaults.standardUserDefaults().objectForKey("firstRun")
+        if firstRun == nil {
+            NSUserDefaults.standardUserDefaults().setObject(true, forKey:"firstRun")
+            jeu.creationJeuDonnees()
+        }
     }
 
     override func didReceiveMemoryWarning() {
