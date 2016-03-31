@@ -19,6 +19,7 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     let services = Facade().getAllServiceG()
     var currentPin = ServiceGlobal? ()
     var tableau: [MKPointAnnotation] = []
+    let pinutilisateur = ColorPointAnnotation(pinColor: UIColor.blueColor())
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -30,23 +31,28 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         else {
             self.performSegueWithIdentifier("newService", sender: self)
         }
-
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Demande d'autorisation de l'utilisateur
-        //self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestAlwaysAuthorization()
         
         // Pour l'utilisation en premier plan
-        //self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
         
         // Centrage de la carte
-        if CLLocationManager.locationServicesEnabled() {
+        if (CLLocationManager.locationServicesEnabled().boolValue) {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
+            if let coord  = locationManager.location?.coordinate  {
+                pinutilisateur.coordinate = coord
+            }
+            //pinutilisateur.title = "Je suis ici !"
+            self.mapView.addAnnotation(pinutilisateur)
         }
         
         mapView.delegate = self
@@ -57,10 +63,9 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         // Génération des annotations
         getMapAnnotations()
         
-        mapView.showsUserLocation = true
-        let myLocation:MKUserLocation = mapView.userLocation
-        myLocation.title = "Je suis ici !"
-// ... Voir CalloutView sur internet pour plus, là j'en peux plus pour ce soir j'arrive pas à faire juste un point bleu
+        //mapView.showsUserLocation = true
+        //let myLocation:MKUserLocation = mapView.userLocation
+        //myLocation.title = "Je suis ici !"
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,10 +74,17 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //manager.delegate = self
-        //manager.desiredAccuracy = kCLLocationAccuracyBest
-        //manager.requestWhenInUseAuthorization()
-        //manager.startUpdatingLocation()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+        if let coord  = manager.location?.coordinate  {
+            pinutilisateur.coordinate = coord
+        }
+        //pinutilisateur.title = "Je suis ici !"
+        self.mapView.addAnnotation(pinutilisateur)
+        
         let coords:CLLocationCoordinate2D = manager.location!.coordinate
         let span = MKCoordinateSpanMake(0.1, 0.1)
         let center = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
@@ -92,6 +104,9 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = "pin"
         var view = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+        if annotation is MKUserLocation {
+            return nil
+        }
         if view == nil {
             view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view!.canShowCallout = true
@@ -100,7 +115,14 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         }
         
         view?.leftCalloutAccessoryView = nil
-        view?.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+        //if (annotation.subtitle! != facade.estConnecte()?.loginUtilisateur) {
+        if (CLLocationManager.locationServicesEnabled()) {
+            if (annotation.subtitle! != pinutilisateur.subtitle) {
+                view?.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+            } else {
+                view?.alpha = 0.5
+            }
+        }
         return view
     }
     
@@ -112,11 +134,7 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         }
     }
     
-    
-    
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goDetailAnnonce" {
             let aux = sender as! MKAnnotationView
             
@@ -127,20 +145,18 @@ class Map_ViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         }
     }
     
-    
+    // Récupération des informations utilisateurs
     func getMapAnnotations() {
-       
-        
         for s in services {
             let proposeur = s.proposeur
             let adr = proposeur!.adresseUtilisateur
             let login = proposeur!.loginUtilisateur
             
-                placer(adr!, titre: s.titre!, login:login!)
-            
+            placer(adr!, titre: s.titre!, login:login!)
         }
     }
     
+    // Placement des annotations sur la map
     func placer(adr:NSString,titre: String, login:String) {
         let geocoder = CLGeocoder()
         let annotation = MKPointAnnotation()

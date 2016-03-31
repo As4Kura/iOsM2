@@ -26,6 +26,7 @@
 		49DDCA321CA9735200BE3298 /* VoirNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DDCA311CA9735200BE3298 /* VoirNoteViewController.swift */; };
 		49DF01171C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF01151C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift */; };
 		49DF01181C9DE9FE002A58FB /* MessagePrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF01161C9DE9FE002A58FB /* MessagePrive.swift */; };
+		5C1901DF1CAD6F1600E9EB5A /* ColorPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1901DE1CAD6F1600E9EB5A /* ColorPointAnnotation.swift */; };
 		5C2B56D61CA43D8900F1A7B4 /* Note_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56D51CA43D8900F1A7B4 /* Note_ViewController.swift */; };
 		5C2B56DA1CA44AF000F1A7B4 /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56D91CA44AF000F1A7B4 /* CosmosAccessibility.swift */; };
 		5C2B56DC1CA44BAF00F1A7B4 /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B56DB1CA44BAF00F1A7B4 /* CosmosDefaultSettings.swift */; };
@@ -105,6 +106,7 @@
 		49DDCA311CA9735200BE3298 /* VoirNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoirNoteViewController.swift; sourceTree = "<group>"; };
 		49DF01151C9DE9FE002A58FB /* MessagePrive+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagePrive+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		49DF01161C9DE9FE002A58FB /* MessagePrive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePrive.swift; sourceTree = "<group>"; };
+		5C1901DE1CAD6F1600E9EB5A /* ColorPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPointAnnotation.swift; sourceTree = "<group>"; };
 		5C2B56D51CA43D8900F1A7B4 /* Note_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note_ViewController.swift; sourceTree = "<group>"; };
 		5C2B56D91CA44AF000F1A7B4 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosAccessibility.swift; sourceTree = "<group>"; };
 		5C2B56DB1CA44BAF00F1A7B4 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDefaultSettings.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				ED23EE471C883A5000E2CC70 /* Utilisateur.swift */,
 				ED23EE421C883A1F00E2CC70 /* ServiceGlobal+CoreDataProperties.swift */,
 				ED23EE431C883A1F00E2CC70 /* ServiceGlobal.swift */,
+				5C1901DE1CAD6F1600E9EB5A /* ColorPointAnnotation.swift */,
 			);
 			name = Modele;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				25DEDEED1C99D59E00FA17F0 /* Annonce_ViewController.swift in Sources */,
 				EDEEAD2F1C88C3D100BE6EFE /* InstanceService+CoreDataProperties.swift in Sources */,
 				EDEEAD2D1C88C3D100BE6EFE /* Categorie+CoreDataProperties.swift in Sources */,
+				5C1901DF1CAD6F1600E9EB5A /* ColorPointAnnotation.swift in Sources */,
 				491E7AB31CA3245C0089FFCE /* Map_ViewController.swift in Sources */,
 				5C2B56F21CA457E900F1A7B4 /* StarFillMode.swift in Sources */,
 				494A24D11C8C89CB0059DE7C /* FInstanceService.swift in Sources */,
