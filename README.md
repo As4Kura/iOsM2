@@ -65,7 +65,7 @@ Cette alerte propose :
 
 ###### Accepter et contacter 
 Lorsqu'il accepte, il est redirigé vers la page de contact en privé avec l'utilisateur en question. 
-Si il re-selectionne ce service dans la liste, on lui propose alors de ```noter``.
+Si il re-selectionne ce service dans la liste, on lui propose alors de ```noter```.
 
 ###### Refuser
 Il est également possible de refuser une demande de service. Le service sera supprimé et donc ne sera plus visible par l'autre utilisateur, ni par l'utilisateur courrant.
