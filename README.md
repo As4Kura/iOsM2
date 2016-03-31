@@ -1,5 +1,5 @@
 # READ ME
-#### Travail effectué par Nicolas Catanoso Xavier Ferry Nicolas Opériol-Gerbal @
+#### Travail effectué par Nicolas Catanoso Xavier Ferry Nicolas Opériol-Gerbal ~~~ NXN
 ### A. Lancement de l'application
 
 Au lancement de l'application, une page de login est affichée. 
