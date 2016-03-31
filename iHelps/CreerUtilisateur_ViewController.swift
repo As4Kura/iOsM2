@@ -51,7 +51,11 @@ class CreerUtilisateur_ViewController: UIViewController {
                 
                 let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel) {
                     UIAlertAction in
-                    self.performSegueWithIdentifier("newService", sender: self)
+                    self.performSegueWithIdentifier("creationOK", sender: self)
+                    let currentUser = self.facade.connexionUtilisateur(self.login.text!, mdp: self.motDePasse.text!)
+                    NSUserDefaults.standardUserDefaults().setObject(currentUser!.loginUtilisateur, forKey: "userLogin")
+                    NSUserDefaults.standardUserDefaults().setObject(currentUser!.mdpUtilisateur, forKey: "userMDP")
+                    NSUserDefaults.standardUserDefaults().synchronize()
                 }
                 
                 // Add the actions

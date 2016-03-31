@@ -185,6 +185,7 @@
 			children = (
 				ED7330091CA42FE200C489E3 /* TableControleurs */,
 				49DDCA311CA9735200BE3298 /* VoirNoteViewController.swift */,
+				25547F951C8D72E30044C7AA /* ViewController.swift */,
 				492CCB371CA680E3005B6F77 /* MonCompteViewController.swift */,
 				4930326F1CA72F1700A40119 /* ProfilUtilisateurViewController.swift */,
 				252C791A1C96F17400B1DBCF /* CreerUtilisateur_ViewController.swift */,
@@ -313,7 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				49356C8A1CA073260020DC20 /* Cells */,
-				25547F951C8D72E30044C7AA /* ViewController.swift */,
 				ED7330051CA4254400C489E3 /* ServicesJeProposeTableViewController.swift */,
 				4972FAF81C9EEC8E0074553A /* CategorieTableViewController.swift */,
 				4952C1121C9B25C80048B403 /* ServiceGTableViewController.swift */,
