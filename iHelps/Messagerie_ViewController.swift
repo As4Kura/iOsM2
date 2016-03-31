@@ -36,7 +36,7 @@ class Messagerie_ViewController: UIViewController,  UITableViewDataSource, UITab
             }
         }
         
-        print(senders)
+        //print(senders)
         
         // Do any additional setup after loading the view.
     }

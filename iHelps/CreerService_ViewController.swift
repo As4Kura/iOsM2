@@ -98,7 +98,7 @@ class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
             
             
             let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) {
-                UIAlertAction in
+                UIAlertAction in self.navigationController?.popViewControllerAnimated(true)
             }
             
             // Add the actions
