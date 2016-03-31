@@ -60,7 +60,7 @@ class Annonce_ViewController: UIViewController {
                 {
                    if Int(noteConso) > 0
                    {
-                    i++
+                    i += 1
                     moyenne += Int(noteConso)
                    }
                     

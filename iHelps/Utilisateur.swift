@@ -42,7 +42,7 @@ class Utilisateur: NSManagedObject {
         for i in getServicesRecusAsAnArray()
         {
             note += Int(i.noteProposeur!)
-            index++
+            index += 1
         }
         
         for servicesG in getServicesProposesAsAnArray()
@@ -50,7 +50,7 @@ class Utilisateur: NSManagedObject {
             for i in servicesG.getInstancesServiceAsAnArray()
             {
                 note += Int(i.noteConso!)
-                index++
+                index += 1
             }
             
         }

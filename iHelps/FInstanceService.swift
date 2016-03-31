@@ -77,20 +77,9 @@ class FInstanceService
         
         //  requete.returnsObjectsAsFaults = false
         
-        
-        
-        
-        do
-        {
-            try contexte.deleteObject(service)            // print("titreS:" + services[0].titre!)
-            
-        }
-            
-        catch
-        {
-            print("Echec de la requête Fetch !")
-            
-        }
+    
+        contexte.deleteObject(service)
+        // print("titreS:" + services[0].titre!)
         
     }
     
@@ -118,7 +107,7 @@ class FInstanceService
                 
             }
                 
-            catch
+         catch
             {
                 print("Echec de la requête Fetch !")
                 
