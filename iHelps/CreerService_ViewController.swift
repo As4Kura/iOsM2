@@ -67,7 +67,11 @@ class CreerService_ViewController: UIViewController, UIPickerViewDelegate {
             let alertController = facade.alerte(msgAlerte)
             self.presentViewController(alertController, animated: true, completion: nil)
         }
-        
+        else if ( dateDebut.date.timeIntervalSince1970 > dateFin.date.timeIntervalSince1970 )
+        {
+            let alertController = facade.alerte("Veuillez selectionner une date de fin correcte")
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
         else if ( titre.text != "" && descriptionService.text != "" && boolSwitch && tmpAConsacrer.text != "" && tmpAConsacrer.text != "")
         {
             
