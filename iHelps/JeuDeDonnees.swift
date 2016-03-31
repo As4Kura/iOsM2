@@ -23,8 +23,8 @@ class JeuDeDonnee
         facade.creerCategorie("Dépannage")
         facade.creerCategorie("Autre")
         
-        facade.creerUtilisateur("login0", mdp: "0", adresse: "3 rue Issoudin Orleans", maDescription: "J'adore les poneys")
-        facade.creerUtilisateur("login1", mdp: "1", adresse: "2 rue Madeleine Orleans", maDescription: "J'adore les furets")
+        facade.creerUtilisateur("Logan", mdp: "l", adresse: "3 rue Issoudin Orleans", maDescription: "J'adore les poneys")
+        facade.creerUtilisateur("Xavier", mdp: "x", adresse: "2 rue Madeleine Orleans", maDescription: "J'adore les furets")
         facade.creerUtilisateur("Michel", mdp: "m", adresse: "5 rue Jeanne dArc Orleans", maDescription: "J'adore les bonobos")
         facade.creerUtilisateur("Fernande", mdp: "f", adresse: "6 rue du Bourdon Blanc Orleans", maDescription: "J'adore les carottes rapées")
         facade.creerUtilisateur("Emma", mdp: "e", adresse: "1 rue Charles de Coulomb Orleans", maDescription: "J'adore les points d'exclamations !!!!!!!")
@@ -59,9 +59,9 @@ class JeuDeDonnee
         if services.count > 0
         {
             
-            facade.creerInstanceS(utilisateurs[1], serviceGlobal: services[0], dateRealisation: NSDate(timeIntervalSinceNow: 5000),statut: "waiting")
+            //facade.creerInstanceS(utilisateurs[1], serviceGlobal: services[0], dateRealisation: NSDate(timeIntervalSinceNow: 5000),statut: "waiting")
             
-            facade.creerInstanceS(utilisateurs[2], serviceGlobal: services[0], dateRealisation: NSDate(timeIntervalSinceNow: 8000),statut: "accepted")
+           // facade.creerInstanceS(utilisateurs[2], serviceGlobal: services[0], dateRealisation: NSDate(timeIntervalSinceNow: 8000),statut: "accepted")
             
             facade.envoyerMessageMur("Ca marche pour les animaux?", emetteur: utilisateurs[4], serviceG: services[0])
             facade.envoyerMessageMur("Les somnifères? Oui.", emetteur: services[0].proposeur!, serviceG: services[0])
