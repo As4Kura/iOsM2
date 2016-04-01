@@ -54,7 +54,7 @@ Ici, on peut voir les informations saisies à la création du compte. On peut é
 ##### F.2 Messagerie
 En plus du mur public, il est possible d'avoir une communication privée avec un utilisateur. En cliquant sur ```messagerie```, une liste des personnes avec qui le contact a déjà été initié est visible. Evidemment, il est possible de cliquer sur une personne et de lui envoyer autant de message que l'on souhaite. Le fonctionnement est identique à celui du mur décris précédemment.
 
-Pour initier le contact avec quelqu'un, il faut trouver un service proposé par cette personne et cliquer sur son nom. Il n'est pas possible d'envoyer de message à quelqu'un sans passer par cette étape ( hormis pour repondre à quelqu'un qui est passé par cette étape ).
+Pour initier le contact avec quelqu'un, il faut trouver un service proposé par cette personne et cliquer sur son nom. Il n'est pas possible d'envoyer de message à quelqu'un sans passer par cette étape (hormis pour repondre à quelqu'un qui est passé par cette étape).
 
 ##### F.3 Services que je propose
 Une liste contenant les demandes qui sont effectuées envers l'utilisateur est affichée. Au clic sur une demande, une alerte comportant le login de l'autre utilisateur et la date qu'il souhaite apparait. 
@@ -72,7 +72,7 @@ Il est également possible de refuser une demande de service. Le service sera su
 
 ##### F.4 Services que je demande
 Lorsque le service n'est pas encore accepté, une alerte s'affiche au clic sur une des cellules de la liste. 
-Lorsque celui-ci est accepté par l'utilisateur qui propose le service, l'alerte est différente de la précédente. On propose maintenant de noter l'autre utilisateur.
+Lorsque celui-ci est accepté par l'utilisateur qui propose le service, l'alerte est différente de la précédente. On propose maintenant de noter l'autre utilisateur et de voir la note qu'il nous a laissé (si il nous a déjà noté).
 
 ### G. Notation
 On peut noter et attribuer un nombre d'```étoiles```à un utilisateur ainsi qu'un commentaire.
